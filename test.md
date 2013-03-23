@@ -1,6 +1,6 @@
 ---
 layout: default
 title: Test
-videoId: RDX89cgw1-w
 ---
+# NO video
 Lorem ipsum
