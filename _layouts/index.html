@@ -17,17 +17,23 @@
     </script>
     {{ content }}
 
+    {{ site.time }}
+
     <h2>Upcomming events</h2>
     <ul>
       {% for post in site.posts reversed %}
-        <li>{{ post.date | date: "%d %B %Y" }}: <a href="/blog{{ post.url }}">{{ post.title }}</a></li>
+        {% if post.date > site.time %}
+          <li>{{ post.date | date: "%d %B %Y" }}: <a href="/blog{{ post.url }}">{{ post.title }}</a></li>
+        {% endif %}
       {% endfor %}
     </ul>
 
     <h2>Past events</h2>
     <ul>
       {% for post in site.posts %}
-        <li>{{ post.date | date: "%d %B %Y" }}: <a href="/blog{{ post.url }}">{{ post.title }}</a></li>
+        {% if post.date < site.time %}
+          <li>{{ post.date | date: "%d %B %Y" }}: <a href="/blog{{ post.url }}">{{ post.title }}</a></li>
+        {% endif %}
       {% endfor %}
     </ul>
   </body>
