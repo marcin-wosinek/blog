@@ -17,9 +17,17 @@
     </script>
     {{ content }}
 
+    <h2>Upcomming events</h2>
+    <ul>
+      {% for post in site.posts reversed %}
+        <li>{{ post.date | date: "%d %B %Y" }}: <a href="/blog{{ post.url }}">{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>
+
+    <h2>Past events</h2>
     <ul>
       {% for post in site.posts %}
-        <li><a href="/blog{{ post.url }}">{{ post.title }}</a></li>
+        <li>{{ post.date | date: "%d %B %Y" }}: <a href="/blog{{ post.url }}">{{ post.title }}</a></li>
       {% endfor %}
     </ul>
   </body>
