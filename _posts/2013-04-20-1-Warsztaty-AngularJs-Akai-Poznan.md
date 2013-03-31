@@ -1,6 +1,7 @@
 ---
 layout: default
 category: warsztaty
+title: Warsztaty AngularJs Akai Poznań
 tags: [AngularJs, Akai, Poznań]
 ---
 # 1 Warsztaty AngularJs

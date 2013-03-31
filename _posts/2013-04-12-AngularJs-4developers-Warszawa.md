@@ -1,7 +1,8 @@
 ---
 layout: default
-category : prezentacja
-tags : [AngularJs, 4developers, Warszawa]
+category: prezentacja
+title: AngularJs 4developers Warszawa
+tags: [AngularJs, 4developers, Warszawa]
 ---
 # AngularJs
 ## Kim jestem?
