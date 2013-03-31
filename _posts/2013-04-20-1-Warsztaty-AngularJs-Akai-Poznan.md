@@ -64,3 +64,7 @@ Pierwsze warsztaty będą wprowadzeniem do świata frontendowych aplikacji. Nast
 * optymalne środowsko programistyczne
 * unit testy i testowalność aplikacji
 * komunikacja z backendem
+
+## Materiały do nauki
+* http://angularjs.org/
+* http://egghead.io/

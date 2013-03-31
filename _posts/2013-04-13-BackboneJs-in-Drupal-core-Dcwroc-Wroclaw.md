@@ -46,6 +46,14 @@ tags : [BackboneJs, AngularJs, Drupal, DCWroc, Wrocław]
 
 ### Presentation
 
+## Materials
+
 ## Questions
+
+## Summary
+
+## Contact
+* link to blog
+* marcin.wosinek@gmail.com
 
 ## Credits

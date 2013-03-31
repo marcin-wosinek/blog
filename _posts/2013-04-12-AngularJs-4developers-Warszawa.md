@@ -79,4 +79,8 @@ tags : [AngularJs, 4developers, Warszawa]
 * AngularJs jest narzedziem pozwalającym na bardzo dojrzałe programowanie we front endzie
 * Warto zapoznać się z yeomanem
 
+## Kontakt
+* namiary na bloga
+* marcin.wosinek@gmail.com
+
 ## Podziękowania
