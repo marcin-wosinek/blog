@@ -70,7 +70,13 @@ tags : [AngularJs, 4developers, Warszawa]
 ## Pytania
 
 ## Materiały
+* http://angularjs.org/
+* http://egghead.io/
+* http://www.youtube.com/user/angularjs
 
 ## Podsumowanie
+* koncepcje znane z backendowych techologi będą zadomowiać sie w js
+* AngularJs jest narzedziem pozwalającym na bardzo dojrzałe programowanie we front endzie
+* Warto zapoznać się z yeomanem
 
-## Credits
+## Podziękowania
