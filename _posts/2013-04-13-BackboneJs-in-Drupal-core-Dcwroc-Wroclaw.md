@@ -16,15 +16,35 @@ tags : [BackboneJs, AngularJs, Drupal, DCWroc, Wrocław]
 
 ## Why js matters?
 
-## What is wrong with jQuery
+## jQuery is not enouth
 
-## What is wrong with front end js in general?
+## Change in front end & backend relationship
 
-## Solutions
+## Fundemental best practices in front end
+* in short - front end js is quite hacky
+* unit tests are rare
+* lack of design patterns and serious aproach to architecture
+
+## Solution
 
 ## Browserside js frameworks
 
 ## Backbone is in Drupal Core
+
+## Is it worth it?
+
+## What we can use Backbone for?
+
+## How to start using
+
+## Using backbone in a module
+
+### Presentation
+
+## More radical approach
+* One page app based on static files, and json communication with drupal
+
+### Presentation
 
 ## Questions
 
