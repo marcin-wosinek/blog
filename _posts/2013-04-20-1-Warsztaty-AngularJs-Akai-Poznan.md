@@ -53,7 +53,7 @@ Zalecane programy z interfejsem tekstowym.
 Zajęcia będą sie opierać o przykładowy projekt dostępy <tutaj>.
 
 ## Jak będą wyglądać zajęcia
-Będziemy omawiać podstawowe koncepcje angulara na przykładowym kodzie, i potem przechodzić do powtarzania kroków samemu. Wiec pokarze Wam jak wygląda prosty kontroler, i poproszę o stworzenie dodatkowego. I tak dla każdej z omawianych koncepcji.
+Będziemy omawiać podstawowe koncepcje angulara na przykładowym kodzie, i potem przechodzić do powtarzania kroków samemu. Wiec pokaże Wam jak wygląda prosty kontroler, i poproszę o stworzenie dodatkowego. I tak dla każdej z omawianych koncepcji.
 
 ## Co dalej?
 
