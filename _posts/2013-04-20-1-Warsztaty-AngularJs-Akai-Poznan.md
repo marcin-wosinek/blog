@@ -45,7 +45,7 @@ Uczestnicy będą pracować na własnych komputerach. Będziemy korzystać z:
 Dowolny: notepad++, vim etc.
 
 ### Przeglądarka
-Zalecany chrome lub firefox.
+Współczesna przeglądarka z konsolą developerską. Na przyklad firefox z firebugiem lub chrome.
 
 ### Git
 Zalecane programy z interfejsem tekstowym. 
