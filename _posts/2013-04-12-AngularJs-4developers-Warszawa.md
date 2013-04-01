@@ -61,36 +61,70 @@ tags: [AngularJs, 4developers, Warszawa]
 * brak zależności:
  * może używać jQuery, o ile jest dostępne przy uruchomieniu
 
-## Architektura MVVM
+## Architektura MV*
+* początkowo MVC, wyewoluowało do MVVM
+* w skrócie - to czym zamuje sie logika, determinuje gdzie powinna się znajdować
 
 ## Kontrolery
+* wiąże 'swój' widok z resztą aplikacji
+* zawiera prostą logikę, związaną z samym wyświetlaniem
+(slajd zawierający mockup strony z podpisanymi kontrolerami)
 
 ## $scope
-
-## Walidacja formularza
-
-### Prezentacja
-1. przykład walidującego się formularza - zmiana kolorów kontrolek
-2. Rzut oka na kod
+* obiekt wiążący kontroler z widokiem
+* $scope.title będzie dostępny jako {{title}} w widoku
 
 ## Proste obiekty js
+* pracujemy na prostych funkcjach i obiektach js
+(slajd z Backbone.model.extend({}) emberem, batmanemen i czystym kodem angulara)
+
+## Directives
+* niestandardowe tagi i atrybuty zdefiniowane przez angulara, lub developera aplikacji
+* rozszeżają działanie html o nowe feature
+* do nich należy manipulacja DOMem
+* ng-model - wiąże elementy formularza z modelem
+* ng-repeat - pozwala interować po tablicach zdefiniowanych na $scope
+
+### Prezentacja
+1. Angularowe 'Hello world'
+2. Templatkowanie z ng-repeat
+
+## Filtry
+* pozwalają na wygodne zarządzanie tym co jest wyświetlane w ng-repeat
+* usprawniają tworzeni zawęrzającego się wyszukiwania, sortowania
 
 ## Two ways binding
 * model jest jedynym źródłem prawdy
 * zmiany na modelu aktualizują widok
 * zmiany w widoku aktualizują model
 
+## Wsparcie dla formularza
+* rozumie atrybuty należącę html5 - required, pattern, date
+* automatycznie dodaje klasy opisujące stan elementu do wprowadzania danych
+
+### Prezentacja
+1. przykład walidującego się formularza - zmiana kolorów kontrolek
+2. Rzut oka na kod
+
 ## Wstrzykiwanie zależności
-
-## Directives
-
-## Filtry
+* nasz komponent ma przekazywane jego zależności jak parametry do funkcji go opakowywującej
+* ładna definiacji powiązań między komponentami
+* zwiększa testowalność
 
 ## Serwisy
+* reużywalne kawałki kodu
+* wstrzykiwane do kontrolerów, directives i innych serwisów
+* większość logiki aplikacji powinna być w nich realizowana
 
 ## Ścieżki - $routeProvider
+* dla aplikacji możemy zdefiniować ścieżki (z argumentami), przekierowania etc.
+* ładnie współpracuje z przyciskami dalej i wstecz
+* wspiera adresy z /# i bez
 
 ## Komunikacja z backendem - $resource
+* serwis do generowani api komuniujacego się po restcie
+* zalecany sposób użycia: $resource -> serwis opakowujący model -> kontroler
+(slajd ze sposobem użycia)
 
 ## Yeoman (yo, grunt + bower)
 * Zestaw narzędzi usprawniających workflow developerski
@@ -147,6 +181,10 @@ tags: [AngularJs, 4developers, Warszawa]
  * pobranie danych z $resource
  * jest odpalane za pomocą directives: ng-model, ng-clic
 * w sytuacji użycia zmian przychodzących z poza angularowego świata może być konieczne wywołanie fukncji $digest
+
+## Gotchas - $ w nazwach serwisów
+* odróżnia serwisy frameworkowe od aplikacyjnych
+* używanie $ w nazwach własnych serwisów pozbawia $ sensu
 
 ## Pytania
 1. Czemu angular a nie backbone?
