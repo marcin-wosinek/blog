@@ -17,11 +17,15 @@ tags: [BackboneJs, AngularJs, Drupal, DCWroc, Wrocław]
 
 ## Why js matters?
 
+## Emerging pattern of back-front end relationship
+
+## Raise of front end responsibilites
+
+## Chalanges
+
 ## jQuery is not enouth
 
-## Change in front end & backend relationship
-
-## Fundemental best practices in front end
+## Programming best practices in front end?
 * in short - front end js is quite hacky
 * unit tests are rare
 * lack of design patterns and serious aproach to architecture
@@ -32,11 +36,22 @@ tags: [BackboneJs, AngularJs, Drupal, DCWroc, Wrocław]
 
 ## Backbone is in Drupal Core
 
-## Is it worth it?
+## What is Backbone?
+
+## Model
+
+## View
+
+## Collection
+
+## Routing
+
+## Front end templating
+
+## What is already implemented using backbone in drupal?
 
 ## What we can use Backbone for?
-
-## How to start using
+* current implementations
 
 ## Using backbone in a module
 
@@ -47,9 +62,9 @@ tags: [BackboneJs, AngularJs, Drupal, DCWroc, Wrocław]
 
 ### Presentation
 
-## Materials
-
 ## Questions
+
+## Materials
 
 ## Summary
 
