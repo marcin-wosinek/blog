@@ -6,6 +6,12 @@ tags: [AngularJs, 4developers, Warszawa]
 ---
 # AngularJs
 ## Kim jestem?
+* Marcin Wosinek
+* 5 lat doświadczenia w IT
+ * Pracy w C# zawdzięczam mocne przekonanie do testów jednostkowych
+ * Pracy we front endzie - js
+* aktualnie js kontraktor w Poznaniu
+
 ## Wy?
 * kto korzysta z frameworków js?
  * backbone?
@@ -47,24 +53,50 @@ tags: [AngularJs, 4developers, Warszawa]
 * Zamiast DRY - WET (We Enjoy Typing)
 
 ## AngularJs
+* framework aplikacji
+* 29KB zminimalizowany i spakowany
+ * backbone: 19KB (z underscore & backbone)
+ * backbone: 32KB (z lodash & jQuery)
+ * ember: 49KB
+* brak zależności:
+ * może używać jQuery, o ile jest dostępne przy uruchomieniu
 
-## Angular: two ways binding
+## Architektura MVVM
 
-## Angular: wstrzykiwanie zależności
+## Proste obiekty js
 
-## Angular: directives
+## Two ways binding
 
-## Angular: router
+## Wstrzykiwanie zależności
 
-## Angular: kontrolery
+## Directives
 
-## Angular: serwisy
+## Router
 
-## Karma (Testacular)
+## Kontrolery
+
+## Serwisy
+
+## Yeoman (yo, grunt + bower)
+* Zestaw narzędzi usprawniających workflow developerski
+* yo - generatory kodu:
+ * dla angulara automatyzuje tworzenie:
+  * serwisów
+  * directives
+  * kontrolerów
+  * ścieżek - kotrolera wraz z widokiem i ścieżką dostępu
+ * wspiera również inne frameworki i czystego js
+* grunt - automatyzacja częstych zadań
+ * minimalizacja i paczkowanie kodu
+ * serwer developerski z automatycznym odświeżaniem otwartej strony
+* bower - zarządzanie zależnościami
 
 ### Prezentacja
 
-## Yeoman (yo, grunt + bower)
+## Karma (Testacular)
+* test runner pozwalający uruchamiać testy w przeglądarkach
+* uruchamiamy serwer na maszynie na której tworzymy kod
+* łaczymy z nim przeglądarki i serwer odpala w nich testy
 
 ### Prezentacja
 
