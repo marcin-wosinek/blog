@@ -63,19 +63,34 @@ tags: [AngularJs, 4developers, Warszawa]
 
 ## Architektura MVVM
 
+## Kontrolery
+
+## $scope
+
+## Walidacja formularza
+
+### Prezentacja
+1. przykład walidującego się formularza - zmiana kolorów kontrolek
+2. Rzut oka na kod
+
 ## Proste obiekty js
 
 ## Two ways binding
+* model jest jedynym źródłem prawdy
+* zmiany na modelu aktualizują widok
+* zmiany w widoku aktualizują model
 
 ## Wstrzykiwanie zależności
 
 ## Directives
 
-## Router
-
-## Kontrolery
+## Filtry
 
 ## Serwisy
+
+## Ścieżki - $routeProvider
+
+## Komunikacja z backendem - $resource
 
 ## Yeoman (yo, grunt + bower)
 * Zestaw narzędzi usprawniających workflow developerski
@@ -92,6 +107,10 @@ tags: [AngularJs, 4developers, Warszawa]
 * bower - zarządzanie zależnościami
 
 ### Prezentacja
+1. Utworzenie aplikacji angularowej w nowym folderze
+2. Odpalenie serwer i otworzenie strony w przeglądarce
+3. Dodanie ścieżki do aplikacji i otworzenie w przeglądarce
+4. Zmiana widoku i automatyczne odświerzenie strony
 
 ## Karma (Testacular)
 * test runner pozwalający uruchamiać testy w przeglądarkach
@@ -99,8 +118,34 @@ tags: [AngularJs, 4developers, Warszawa]
 * łaczymy z nim przeglądarki i serwer odpala w nich testy
 
 ### Prezentacja
+1. Dodanie przycisku do widoku
+2. Dodanie testu sprawdzającego czy alert został włączony
+3. Napisanie kodu przechodzącego test
+
+## Gotchas - pisanie directives
+* Narzędzie na który jest opartę bardzo wiele corowych featurów frameworka - 2 ways binding
+* rough developer experience - w szególności na tle bardzo gładkiej współpracy z resztą frameworka
+
+## Gotchas - minimalizowanie kodu
+* wiązanie $scopu w kontrolerze i w widoku odbywa sie po nazwach atrybutów - wymagana jest odpowiednia konfiguracja
+* wstrzykiwanie zależności jest zależne od nazwy argumentu funkcji - potrzebne dodatkowe zdefiniowanie zależności
+
+## Gotchas - $resource
+* istnieje w osobnym pliku, który trzeba załadować
+* zwraca puste obiektu lub tablice które będa dopiero uzupełnione po odebraniu odpowiedzi
+* w zwiazku z tym musimy odraz zadeklarować czy mowa jest o tablicy czy obiekcie
+
+## Gotchas - filtry działają tylko na tablicach
+
+## Gotchas - e2e testing
+
+## Gotchas - akualizowanie scope z poza frameworka
 
 ## Pytania
+1. Czemu angular a nie backbone?
+2. Czy to podejścia da się zintegrować z legacy code?
+3. Co walidatory na html dostosowany do angulara?
+4. Z jakim backendem używać angulara?
 
 ## Materiały
 * http://angularjs.org/
