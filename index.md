@@ -9,4 +9,4 @@ I'm Marcin Wosinek \[MAR-chin vo-SHE-neck\] and this is my personal page. I post
 I'm really exicted about 'put more logic in broser js' trend so mostly I speak about that stuff. I enjoy AngularJs framework for it's wonderful testability, out of the box two way bindings and directive - therefor most of my presentations are somewhere around AngularJs. 
 
 ## Who am I?
-Poznań, Poland based IT specialist; since January 2013 meetup an conference speaker and self proclaimed Angular evengelist.
+Poznań, Poland based IT specialist; since January 2013 meetup an conference speaker and self proclaimed AngularJs evengelist.
