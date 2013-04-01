@@ -136,10 +136,17 @@ tags: [AngularJs, 4developers, Warszawa]
 * w zwiazku z tym musimy odraz zadeklarować czy mowa jest o tablicy czy obiekcie
 
 ## Gotchas - filtry działają tylko na tablicach
+* ng-repeat przeinteruje po obiekcie - ale filtry nie bedą działać
 
 ## Gotchas - e2e testing
+* skonfigurowanie testów jest skomplikowane
+* może w porywach być uznane za feature pułapkę
 
 ## Gotchas - akualizowanie scope z poza frameworka
+* wiekszość zmian modelu odbywa się we frameworku:
+ * pobranie danych z $resource
+ * jest odpalane za pomocą directives: ng-model, ng-clic
+* w sytuacji użycia zmian przychodzących z poza angularowego świata może być konieczne wywołanie fukncji $digest
 
 ## Pytania
 1. Czemu angular a nie backbone?
