@@ -5,6 +5,14 @@ title: AngularJs 4developers Warszawa
 tags: [AngularJs, 4developers, Warszawa]
 ---
 # AngularJs
+TODO:
+
+* przykłady kodu do slajdów
+* przygotować prezentacje featurów
+* naszkicować slajdy 
+* kolorowanie kodu 
+* solarized light dla kodu
+
 ## Kim jestem?
 * Marcin Wosinek
 * 5 lat doświadczenia w IT
