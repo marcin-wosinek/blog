@@ -16,14 +16,21 @@ tags: [BackboneJs, AngularJs, Drupal, DCWroc, Wrocław]
 * Who have bad experience with huge browserside js codebases?
 
 ## Why js matters?
+* the power of js is rasing - more things can be developed with it
+* different implementation have decent approach to standards
+* rich ui in javascript offers better user experience
 
 ## Emerging pattern of back-front end relationship
-
-## Raise of front end responsibilites
+* static js code - front end application
+* templates done on browser side
+* data get via rest form server
 
 ## Chalanges
+* more code needs better code quality
 
 ## jQuery is not enouth
+* jQuery is cool, but it's just DOM manipulation library 
+* beside it we need some sollution for architecture
 
 ## Programming best practices in front end?
 * in short - front end js is quite hacky
@@ -31,8 +38,12 @@ tags: [BackboneJs, AngularJs, Drupal, DCWroc, Wrocław]
 * lack of design patterns and serious aproach to architecture
 
 ## Solution
+* using frameworks
 
 ## Browserside js frameworks
+* backbone
+* angular
+* ember 
 
 ## Backbone is in Drupal Core
 
