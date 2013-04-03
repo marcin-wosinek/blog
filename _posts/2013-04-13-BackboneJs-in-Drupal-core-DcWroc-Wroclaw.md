@@ -5,6 +5,12 @@ title: BackboneJs in Drupal core DcWroc Wroclaw
 tags: [BackboneJs, AngularJs, Drupal, DCWroc, Wrocław]
 ---
 # BackboneJs in Drupal core
+TODO:
+
+* finish notes
+* figure out slides
+* prepare code
+
 ## How am I?
 * Marcin Wosinek
 * Currently js contractor in Poznań
