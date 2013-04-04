@@ -10,8 +10,6 @@ TODO:
 * przykłady kodu do slajdów
 * przygotować prezentacje featurów
 * naszkicować slajdy 
-* kolorowanie kodu 
-* solarized light dla kodu
 
 ## Kim jestem?
 * Marcin Wosinek
@@ -54,7 +52,20 @@ TODO:
 ## Komunikacja z backendem
 * wysyłanie requestów restowych 
 * odbieranie danych w Json
-(przykład jsona)
+
+```js
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "age": 25,
+  "address": {
+    "streetAddress": "21 2nd Street",
+    "city": "New York",
+    "state": "NY",
+    "postalCode": 10021
+  }
+}
+```
 
 ## Wyzwania 
 * zmiana słownika - mniej atrybutów, tagów i klas, a wiecej modeli należących do domeny aplikacji (klienci, produktu etc.)
@@ -64,12 +75,50 @@ TODO:
 ## Testowalność
 * w tradycyjnym jQuerowym kodzie bardzo niska
 * jeśli logika dotyka DOM - w testach będziemy musieli mockować DOM
-(przykład kodu grzebiącego w DOM)
+```js
+function PasswordCtrl() {
+  // get references to DOM elements
+  var msg = $('.ex1 span');
+  var input = $('.ex1 input');
+  var strength;
+
+  this.grade = function() {
+    msg.removeClass(strength);
+    var pwd = input.val();
+    password.text(pwd);
+    if (pwd.length > 8) {
+      strength = 'strong';
+    }
+    else {
+      strength = 'weak';
+    }
+    msg
+     .addClass(strength)
+     .text(strength);
+  }
+}
+```
 
 ## Boilerplate
 * Kod powtarzany dla każdego kontrolera - słuchanie eventów, aktualizowanie dom etc.
 * Zamiast DRY - WET (We Enjoy Typing)
-(krótki boilerplace backbona)
+
+```js
+initialize: function () {
+  this.allCheckbox = this.$('#toggle-all')[0];
+  this.$input = this.$('#new-todo');
+  this.$footer = this.$('#footer');
+  this.$main = this.$('#main');
+
+  this.listenTo(app.Todos, 'add', this.addOne);
+  this.listenTo(app.Todos, 'reset', this.addAll);
+  this.listenTo(app.Todos, 'change:completed', this.filterOne);
+  this.listenTo(app.Todos, 'filter', this.filterAll);
+  this.listenTo(app.Todos, 'all', this.render);
+
+  app.Todos.fetch();
+}
+```
 
 ## AngularJs
 * framework aplikacji
@@ -197,6 +246,12 @@ TODO:
 * Narzędzie na który jest opartę bardzo wiele corowych featurów frameworka - 2 ways binding
 * rough developer experience - w szególności na tle bardzo gładkiej współpracy z resztą frameworka
 (przykład najprostrzej directives)
+
+## Gotchas - ng-model w ng-repeat
+* ng-repeat tworzy nowe scopy dla elementów
+* scopy dzieci, dziedziczą prototypowo z parenta
+* ng-model="value" działa bardzo inaczej niż ng-model="object.value"
+* występuje wszędzie tam gdzie mamy podscopy
 
 ## Gotchas - minimalizowanie kodu
 * wiązanie $scopu w kontrolerze i w widoku odbywa sie po nazwach atrybutów - wymagana jest odpowiednia konfiguracja minimalizacji
