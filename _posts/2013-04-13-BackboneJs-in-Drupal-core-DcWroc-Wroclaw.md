@@ -32,7 +32,7 @@ TODO:
 * templates done on browser side
 
 ## Chalanges
-* more code needs better code quality
+* more logic needs better code quality
 
 ## jQuery is not enouth
 * jQuery is cool, but it's just DOM manipulation library 
