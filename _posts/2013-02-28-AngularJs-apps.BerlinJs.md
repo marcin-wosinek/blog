@@ -253,8 +253,7 @@ All is safly separeted into scopes.
 ## How to catch me
 * marcin.wosinek@gmail.com
 * \#marcin.wosinek
-* write up and links:
-* http://marcin-wosinek.github.com/angular.berlin.js
+* [write up and links](http://bit.ly/AngularBerlinJs)
 
 [1]: https://plus.google.com/+AngularJS/posts/aZNVhj355G2   "G+"
 [2]: http://angular-ui.github.com/bootstrap/   "angular-ui-bootstrap"
