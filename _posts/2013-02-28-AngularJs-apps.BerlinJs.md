@@ -7,6 +7,11 @@ tags: [AngularJs, BerlinJs, Berlin]
 ---
 # AngularJs
 ### apps.berlin.js 28 February 2013
+Handouts:
+
+* [slides](https://docs.google.com/presentation/d/1lAWCOU_ELJEKAy4kKldXVaF5fOITsWpqqVCLSXsdubo/edit#slide=id.p)
+* [utils install script](https://github.com/marcin-wosinek/angular-dev)
+* [vbox with all utils installed](https://docs.google.com/folder/d/0Bzhquk4DfXAtYUhKNlJhb01jaEk/edit)
 
 ## Who am I?
 * Marcin Wosinak
