@@ -102,6 +102,10 @@ function PasswordCtrl() {
 ## Boilerplate
 * Kod powtarzany dla każdego kontrolera - słuchanie eventów, aktualizowanie dom etc.
 * Zamiast DRY - WET (We Enjoy Typing)
+* Boiler plate zabija testowalność kodu:
+ * jest kluczowy do działania aplikacji
+ * jeśli go nie testujemy - to nie sprawdzamy elementów bez których aplikacja nie działa
+ * jeśli go testujemy - to dostajemy 2 razy wiecej boilerplate
 
 ```js
 initialize: function () {
