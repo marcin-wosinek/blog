@@ -217,7 +217,16 @@ todos.push({
 (html przetworzony przez angulara)
 
 ```html
-TODO
+<form name="exampleForm" class="ng-pristine ng-invalid ng-invalid-required">
+
+    Required field:
+  <input ng-model="required" required="" class="ng-pristine ng-invalid ng-invalid-required"></label> <br>
+
+    Email field: 
+  <input ng-model="email" type="email" class="ng-pristine ng-valid ng-valid-email"></label> <br>
+
+  <button ng-disabled="!exampleForm.$valid" disabled="disabled">Submit</button>
+</form>
 ```
 
 ### Prezentacja

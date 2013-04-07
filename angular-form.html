@@ -13,9 +13,14 @@
   </style>
   <body>
     <form name="exampleForm">
-      <label>Required field: <input ng-model="required" required/></label> <br>
-      <label>Email field: <input ng-model="email" type="email"/></label> <br>
+        Required field:
+      <input ng-model="required" required/><br>
+
+        Email field:
+      <input ng-model="email" type="email"/><br>
+
       <button ng-disabled='!exampleForm.$valid'>Submit</button>
+
     </form>
   </body>
 </html>

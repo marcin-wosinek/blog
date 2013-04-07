@@ -1,0 +1,105 @@
+---
+layout: default
+category: presentation
+title: BackboneJs in Drupal core DcWroc Wroclaw
+tags: [BackboneJs, AngularJs, Drupal, DCWroc, Wrocław]
+---
+# BackboneJs in Drupal core
+TODO:
+
+* PREPARE MODULE CODE EXAMPLE
+* finish notes
+* figure out slides
+
+## How am I?
+* Marcin Wosinek
+* Currently js contractor in Poznań
+* 1 year of working with d6 & d7
+* 8 month after swithing completly into frontend js
+
+## You?
+* Who likes js?
+* Who have bad experience with huge browser side js codebases?
+
+## Why js matters?
+* there is increasing amount of stuff you can use js for
+* all modern engines have decent approach to standards
+* rich ui in javascript offers better user experience
+
+## Emerging pattern of back-front end relationship
+* static js code - front end application
+* data get via rest form server
+* templates done on browser side
+
+## Chalanges
+* more logic needs better code quality
+
+## jQuery is not enouth
+* jQuery is cool, but it's just DOM manipulation library 
+* beside it we need some sollution for architecture
+(screen with jquery description about it self)
+
+## Programming best practices in front end?
+* in short - front end js used to be quite hacky
+* unit tests are rare
+* lack of design patterns and serious aproach to architecture
+
+## Solution
+* just use frameworks
+(framework slide?)
+
+## Browserside js frameworks
+* backbone
+* angular
+* ember 
+(logos)
+
+## Backbone is in Drupal Core
+* introduced mid October 2012
+
+## What is Backbone?
+* one of the most popular js MV\* framework
+
+## Model
+* one pice of data 
+
+## View
+* binds DOM events to model
+* update DOM on model changej 
+
+## Collection
+* puts together bunch of models
+
+## Routing
+* mechanism of fireing functions based on place in aplication
+
+## Front end templating
+* allows us to dynamically build html on browser side
+
+## What is already implemented using backbone in drupal?
+* edit - inplace editing for fields
+
+## What we can use Backbone for?
+* current implementations
+
+## Using backbone in a module
+(waits for example code)
+
+### Presentation
+
+## More radical approach
+* One page app based on static files, and json communication with drupal
+
+### Presentation
+
+## Questions
+
+## Materials
+
+## Summary
+
+## Contact
+* link to blog
+* marcin.wosinek@gmail.com
+
+## Credits
