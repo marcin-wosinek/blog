@@ -169,10 +169,27 @@ initialize: function () {
 
 ## Proste obiekty js
 * pracujemy na prostych funkcjach i obiektach js
-(slajd z Backbone.model.extend({}) emberem, batmanemen i czystym kodem angulara)
 
 ```js
-TODO
+// Backbone
+app.Todo = Backbone.Model.extend({
+  defaults: {
+    title: '',
+    completed: false
+  }
+});
+
+// Ember
+Todos.Todo = DS.Model.extend({
+  title: DS.attr('string'),
+  isCompleted: DS.attr('boolean')
+});
+
+// Angular
+todos.push({
+  title: $scope.newTodo,
+  completed: false
+});
 ```
 
 ## Filtry
@@ -181,7 +198,11 @@ TODO
 (przykład z zastosowaniem filter i orderby)
 
 ```html
-TODO
+<ul>
+  <li ng-repeat="project in projects | filter:search | orderBy:'name'">
+    <a href="{{project.site}}">{{project.name}}</a>: {{project.description}}
+  </li>
+</ul>
 ```
 
 ## Two ways binding
@@ -210,7 +231,11 @@ TODO
 (kontroler z kilkoma wstrzykniętymi seriwiami - $scope, $log, $window)
 
 ```js
-TODO
+function HelloCtrl($scope, $window, $log) {
+  $scope.message = 'Display me in view';
+  $window.alert('Use window via $window service - that improves testability');
+  $log.log('We can even test console log calls - thats to $log wrapper');
+}
 ```
 
 ## Serwisy
@@ -220,7 +245,22 @@ TODO
 (prosty serwis - opakowanie dla webstorage)
 
 ```js
-TODO
+/**
+ * Services that persists and retrieves TODOs from localStorage
+ */
+todomvc.factory('todoStorage', function () {
+  var STORAGE_ID = 'todos-angularjs';
+
+  return {
+    get: function () {
+      return JSON.parse(localStorage.getItem(STORAGE_ID) || '[]');
+    },
+
+    put: function (todos) {
+      localStorage.setItem(STORAGE_ID, JSON.stringify(todos));
+    }
+  };
+});
 ```
 
 ## Ścieżki - $routeProvider
@@ -230,13 +270,27 @@ TODO
 (przykład rejestracji kilku ścieżek)
 
 ```js
-TODO
+angular.module('phonecat', [])
+  .config(['$routeProvider', function($routeProvider) {
+    $routeProvider
+      .when('/phones', {
+        templateUrl: 'partials/phone-list.html',
+        controller: PhoneListCtrl
+      })
+      .when('/phones/:phoneId', {
+        templateUrl: 'partials/phone-detail.html',
+        controller: PhoneDetailCtrl
+      })
+      .otherwise({
+        redirectTo: '/phones'
+      });
+  }]);
 ```
 
 ## Komunikacja z backendem - $resource
 * serwis do generowani api komuniujacego się po restcie
 * zalecany sposób użycia: $resource -> serwis opakowujący model -> kontroler
-(slajd ze sposobem użycia)
+(slajd ze sposobem użycia - examples)
 
 ```js
 TODO
@@ -246,7 +300,29 @@ TODO
 * niestandardowe tagi i atrybuty zdefiniowane przez angulara, lub developera aplikacji
 * rozszeżają działanie html o nowe feature
 * do nich należy manipulacja DOMem
-(wiecej directivsów)
+* w miejsce '{expression}' np 'variable' żeby dostać się do $scope.variable
+* przykłady:
+ * ng-show - ukrywa jeśli false
+ * ng-hide - ukrywa jeśli true
+ * ng-view - podstawia widok zdefiniowany dla ścieżki
+ * ng-clas - pozwala ustawiać inteligentie klasy
+ * ng-switch - wyświelta jedną z opcji
+
+```html
+<ANY class="ng-show: {expression};"> <ANY ng-show="{expression}">
+<ANY class="ng-hide: {expression};"> <ANY ng-hide="{expression}">
+
+<ng-view> <any ng-view>
+
+<ANY ng-class="{expression}"> <ANY class="ng-class: {expression};">
+
+<ANY ng-switch="expression">
+  <ANY ng-switch-when="matchValue1">...</ANY>
+  <ANY ng-switch-when="matchValue2">...</ANY>
+  ...
+  <ANY ng-switch-default>...</ANY>
+</ANY>
+```
 
 ## Yeoman (yo, grunt + bower)
 * Zestaw narzędzi usprawniających workflow developerski
@@ -283,7 +359,20 @@ TODO
 ## Gotchas - pisanie directives
 * Narzędzie na który jest opartę bardzo wiele corowych featurów frameworka - 2 ways binding
 * rough developer experience - w szególności na tle bardzo gładkiej współpracy z resztą frameworka
-(przykład najprostrzej directives)
+
+```js
+angular.module('blink', [])
+  .directive('blink', function() {
+    return {
+      restrict: 'E',
+      link: function(scope, elm, attr) {
+        setInterval(function() {
+          elm.toggle();
+        }, parseInt(attr.interval, 10) || 1000);
+      }
+    };
+  });
+```
 
 ## Gotchas - ng-model w ng-repeat
 * ng-repeat tworzy nowe scopy dla elementów
@@ -309,7 +398,6 @@ TODO
 ## Gotchas - e2e testing
 * skonfigurowanie testów jest skomplikowane
 * może w porywach być uznane za feature pułapkę
-(screen z e2e testu?)
 
 ## Gotchas - akualizowanie scope z poza frameworka
 * wiekszość zmian modelu odbywa się we frameworku:
@@ -321,14 +409,12 @@ TODO
 ## Gotchas - $ w nazwach serwisów
 * odróżnia serwisy frameworkowe od aplikacyjnych
 * używanie $ w nazwach własnych serwisów pozbawia $ sensu
-(lista serwisów angularowchy, przykładowa lista naszych serwisów)
 
 ## Pytania
 1. Czemu angular a nie backbone?
 2. Czy to podejścia da się zintegrować z legacy code?
 3. Co walidatory na html dostosowany do angulara?
 4. Z jakim backendem używać angulara?
-(znak zpytania)
 
 ## Materiały
 * http://angularjs.org/
