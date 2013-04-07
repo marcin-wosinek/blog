@@ -302,7 +302,34 @@ angular.module('phonecat', [])
 (slajd ze sposobem użycia - examples)
 
 ```js
-TODO
+myApp.factory('ProductService', function($resource) {
+  var ProductService = {};
+
+  var ProductResource = $resource('/product/:productId');
+
+  ProductService.getItem = function (index) {
+    return ProductResource.get({productId: index});
+  }
+
+  ProductService.addItem = function (item) {
+    resource.save({}, item));
+  }
+
+  ProductService.removeItem = function (item) {
+    // Calls method delete on ProductResource - that way, just to make ie8 happy
+    return ProductResource['delete']({productId: item.id});
+  }
+
+  ProductService.getList = function () {
+    return ProductResource.query();
+  }
+
+  return ProductService;
+});
+
+function ProductCtrl($scope, ProductService) {
+  // Take products form ProductService and put it on $scope
+}
 ```
 
 ## Directives
@@ -333,7 +360,7 @@ TODO
 </ANY>
 ```
 
-## Yeoman (yo, grunt + bower)
+## Yeoman
 * Zestaw narzędzi usprawniających workflow developerski
 * yo - generatory kodu:
  * dla angulara automatyzuje tworzenie:
