@@ -16,6 +16,7 @@ tags: [AngularJs, 4developers, Warszawa]
 * kto korzysta z frameworków js?
  * backbone?
  * ember?
+ * angular?
 * kto uważa że pisanie testów jest konieczne w dobrym rzemiośle programistycznym?
 * kto uważa że jak pisać kod i testy to w TDD?
 * kto stosuje TDD przy pisaniu przeglądarkowego js?
@@ -61,7 +62,7 @@ tags: [AngularJs, 4developers, Warszawa]
 * słownik - mniej atrybutów, tagów i klas, a wiecej modeli należących do domeny aplikacji (klienci, produktu etc.)
 * nowe wymagania w stosunku do jakości - wzrost ilość i znaczenia kodu realizowanego w przeglądarce
 
-## Testowalność
+## Wyzwania - testowalność
 * w tradycyjnym jQuerowym kodzie bardzo niska
 * jeśli logika dotyka DOM - w testach będziemy musieli mockować DOM
 
@@ -89,7 +90,7 @@ function PasswordCtrl() {
 }
 ```
 
-## Boilerplate
+## Wyzwania - boilerplate
 * Kod powtarzany dla każdego kontrolera - słuchanie eventów, aktualizowanie dom etc.
 * Zamiast DRY - WET (We Enjoy Typing)
 * Boiler plate zabija testowalność kodu:
@@ -134,7 +135,7 @@ initialize: function () {
 * jest rozszeżony przez framework
 
 ```html
-<ul class="unstyled">
+<ul>
   <li ng-repeat="todo in todos">
     <span>{{todo.text}}</span>
   </li>
@@ -143,6 +144,19 @@ initialize: function () {
   <input ng-model="todoText" />
   <input type="submit" value="add" />
 </form>
+```
+
+## Filtry
+* pozwalają na wygodne zarządzanie tym co jest wyświetlane w ng-repeat
+* usprawniają tworzeni zawęrzającego się wyszukiwania, sortowania
+(przykład z zastosowaniem filter i orderby)
+
+```html
+<ul>
+  <li ng-repeat="project in projects | filter:search | orderBy:'name'">
+    <a href="{{project.site}}">{{project.name}}</a>: {{project.description}}
+  </li>
+</ul>
 ```
 
 ## Kontrolery
@@ -186,19 +200,6 @@ todos.push({
   title: $scope.newTodo,
   completed: false
 });
-```
-
-## Filtry
-* pozwalają na wygodne zarządzanie tym co jest wyświetlane w ng-repeat
-* usprawniają tworzeni zawęrzającego się wyszukiwania, sortowania
-(przykład z zastosowaniem filter i orderby)
-
-```html
-<ul>
-  <li ng-repeat="project in projects | filter:search | orderBy:'name'">
-    <a href="{{project.site}}">{{project.name}}</a>: {{project.description}}
-  </li>
-</ul>
 ```
 
 ## Two ways binding
@@ -277,7 +278,8 @@ todomvc.factory('todoStorage', function () {
 
 ```js
 angular.module('phonecat', [])
-  .config(['$routeProvider', function($routeProvider) {
+  .config(['$routeProvider', function($routeProvider, $locationProvider) {
+    // $locationProvider.html5Mode(true);
     $routeProvider
       .when('/phones', {
         templateUrl: 'partials/phone-list.html',
