@@ -25,12 +25,14 @@ TODO:
 * there is increasing amount of stuff you can use js for
 * all modern engines have decent approach to standards
 * rich ui in javascript offers better user experience
+
 (js logo)
 
 ## Emerging pattern of back-front end relationship
 * static js code - front end application
 * data get via rest form server
 * templates done on browser side
+
 (reuse 4developer js slide: Podejście aplikacyjne)
 
 ## Chalanges
@@ -39,6 +41,7 @@ TODO:
 ## jQuery is not enouth
 * jQuery is cool, but it's just DOM manipulation library 
 * beside it we need some sollution for architecture
+
 (screen with jquery description about it self: What is jQuery? section from http://jquery.com/)
 
 ## Programming best practices in front end?
@@ -50,10 +53,12 @@ TODO:
 * backbone
 * angular
 * ember 
+
 (logos)
 
 ## Backbone is in Drupal Core
 * introduced mid October 2012
+
 (Backbone logo)
 
 ## What is Backbone?
@@ -82,6 +87,7 @@ TODO:
 * current implementations
 
 ## Using backbone in a module
+
 (waits for example code)
 
 ### Presentation
