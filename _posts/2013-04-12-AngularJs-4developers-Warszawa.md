@@ -5,12 +5,6 @@ title: AngularJs 4developers Warszawa
 tags: [AngularJs, 4developers, Warszawa]
 ---
 # AngularJs
-TODO:
-
-* przykłady kodu do slajdów
-* przygotować prezentacje featurów
-* naszkicować slajdy 
-
 ## Kim jestem?
 * Marcin Wosinek
 * 5 lat doświadczenia w IT
@@ -167,6 +161,8 @@ initialize: function () {
 1. Angularowe 'Hello world'
 2. Templatkowanie z ng-repeat
 
+[prezentacja](/blog/angular-hello.html)
+
 ## Proste obiekty js
 * pracujemy na prostych funkcjach i obiektach js
 
@@ -214,9 +210,9 @@ todos.push({
 ## Wsparcie dla formularza
 * rozumie atrybuty należącę html5 - required, pattern, date
 * automatycznie dodaje klasy opisujące stan elementu do wprowadzania danych
-(html przetworzony przez angulara)
 
 ```html
+<!-- Html updated by angular -->
 <form name="exampleForm" class="ng-pristine ng-invalid ng-invalid-required">
 
     Required field:
@@ -233,11 +229,13 @@ todos.push({
 1. przykład walidującego się formularza - zmiana kolorów kontrolek
 2. Rzut oka na kod
 
+[prezentacja](/blog/angular-form.html)
+
 ## Wstrzykiwanie zależności
 * nasz komponent ma przekazywane jego zależności jak parametry do funkcji go opakowywującej
 * ładna definiacji powiązań między komponentami
 * zwiększa testowalność
-(kontroler z kilkoma wstrzykniętymi seriwiami - $scope, $log, $window)
+(kontroler z kilkoma wstrzykniętymi serwisami - $scope, $log, $window)
 
 ```js
 function HelloCtrl($scope, $window, $log) {
@@ -276,7 +274,6 @@ todomvc.factory('todoStorage', function () {
 * dla aplikacji możemy zdefiniować ścieżki (z argumentami), przekierowania etc.
 * ładnie współpracuje z przyciskami dalej i wstecz
 * wspiera adresy z /# i bez
-(przykład rejestracji kilku ścieżek)
 
 ```js
 angular.module('phonecat', [])
@@ -299,7 +296,6 @@ angular.module('phonecat', [])
 ## Komunikacja z backendem - $resource
 * serwis do generowani api komuniujacego się po restcie
 * zalecany sposób użycia: $resource -> serwis opakowujący model -> kontroler
-(slajd ze sposobem użycia - examples)
 
 ```js
 myApp.factory('ProductService', function($resource) {
@@ -380,6 +376,7 @@ function ProductCtrl($scope, ProductService) {
 2. Odpalenie serwer i otworzenie strony w przeglądarce
 3. Dodanie ścieżki do aplikacji i otworzenie w przeglądarce
 4. Zmiana widoku i automatyczne odświerzenie strony
+(TODO przygotować środowisko)
 
 ## Karma (Testacular)
 * test runner pozwalający uruchamiać testy w przeglądarkach
@@ -391,6 +388,7 @@ function ProductCtrl($scope, ProductService) {
 1. Dodanie przycisku do widoku
 2. Dodanie testu sprawdzającego czy alert został włączony
 3. Napisanie kodu przechodzącego test
+(TODO przygotować środowisko)
 
 ## Gotchas - pisanie directives
 * Narzędzie na który jest opartę bardzo wiele corowych featurów frameworka - 2 ways binding
@@ -416,20 +414,43 @@ angular.module('blink', [])
 * ng-model="value" działa bardzo inaczej niż ng-model="object.value"
 * występuje wszędzie tam gdzie mamy podscopy
 
+```html
+// Gotcha!
+<ul>
+  <li ng-repeat="item in list">
+    <input ng-model="item" />
+  </li>
+</ul>
+
+// Work as expected
+<ul>
+  <li ng-repeat="item in list">
+    <input ng-model="item.name" />
+  </li>
+</ul>
+```
+
 ## Gotchas - minimalizowanie kodu
 * wiązanie $scopu w kontrolerze i w widoku odbywa sie po nazwach atrybutów - wymagana jest odpowiednia konfiguracja minimalizacji
 * wstrzykiwanie zależności jest zależne od nazwy argumentu funkcji - potrzebne dodatkowe zdefiniowanie zależności
-(Przykład kodów - przed i po minimalizacji)
+
+```js
+syngularApp.controller('ProductCtrl', function($scope, ProductApi) {
+  // easy but minification unfriendly
+});
+
+syngularApp.controller('ProductCtrl', ['$scope', 'ProductApi', function($scope, ProductApi) {
+  // minification resistant
+}]);
+```
 
 ## Gotchas - $resource
 * istnieje w osobnym pliku, który trzeba załadować
 * zwraca puste obiektu lub tablice które będa dopiero uzupełnione po odebraniu odpowiedzi
 * w zwiazku z tym musimy odraz zadeklarować czy mowa jest o tablicy czy obiekcie
-(screen z firebuga z odpytaniem resourca i dostaniem pustego obiektu)
 
 ## Gotchas - filtry działają tylko na tablicach
 * ng-repeat przeinteruje po obiekcie - ale filtry nie bedą działać
-(Przykład filtru)
 
 ## Gotchas - e2e testing
 * skonfigurowanie testów jest skomplikowane
@@ -440,7 +461,6 @@ angular.module('blink', [])
  * pobranie danych z $resource
  * jest odpalane za pomocą directives: ng-model, ng-clic
 * w sytuacji użycia zmian przychodzących z poza angularowego świata może być konieczne wywołanie fukncji $digest
-(przykład kodu z użyciem directive)
 
 ## Gotchas - $ w nazwach serwisów
 * odróżnia serwisy frameworkowe od aplikacyjnych
