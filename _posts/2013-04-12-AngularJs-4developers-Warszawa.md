@@ -30,7 +30,6 @@ TODO:
 * zmiany w myśleniu o front endzie
 * konieczność dostosowania praktyki do nowych realiów
 * przykład frameworku odpowiadającego nowym potrzebą
-(?)
 
 ## Nowa rzeczywistość
 * Js się rozwija 
@@ -39,10 +38,12 @@ TODO:
 ## Tradycyjna architektura stron
 * generowanie html po stronie serwera
 * przesyłanie danych razem ze znacznikami html
+(grafika do narysowania)
 
 ## Podejście aplikacyjne
 * wiecej logiki po stronie front endu
 * templaty jsowe
+(grafika do narysowania)
 
 ## Komunikacja z backendem
 * wysyłanie requestów restowych 
@@ -62,10 +63,9 @@ TODO:
 }
 ```
 
-## Wyzwania 
-* zmiana słownika - mniej atrybutów, tagów i klas, a wiecej modeli należących do domeny aplikacji (klienci, produktu etc.)
+## Zmiany
+* słownik - mniej atrybutów, tagów i klas, a wiecej modeli należących do domeny aplikacji (klienci, produktu etc.)
 * nowe wymagania w stosunku do jakości - wzrost ilość i znaczenia kodu realizowanego w przeglądarce
-(?)
 
 ## Testowalność
 * w tradycyjnym jQuerowym kodzie bardzo niska
@@ -132,7 +132,7 @@ initialize: function () {
 ## Architektura MV*
 * początkowo przypominała MVC, teraz bardziej MVVM - nazywan MVW(hatever) przez twórców
 * w skrócie - to czym zamuje sie logika, determinuje gdzie powinna się znajdować
-(?)
+(grafika do narysowania)
 
 ## Widok
 * oparty o zwykły html
@@ -154,14 +154,14 @@ initialize: function () {
 ## Kontrolery
 * wiąże 'swój' widok z resztą aplikacji
 * zawiera prostą logikę, związaną z samym wyświetlaniem
-(slajd zawierający mockup strony z podpisanymi kontrolerami)
+(grafika do narysowania - balsamique)
 
 ## $scope
 * obiekt wiążący kontroler z widokiem
 * $scope.title będzie dostępny jako {{title}} w widoku
 * ng-model - wiąże elementy formularza z modelem
 * ng-repeat - pozwala interować po tablicach zdefiniowanych na $scope
-(Obrazek z wyjaśniemie co to jest scope)
+(Obrazek z wyjaśniemie co to jest scope: taki jak ten: https://docs.google.com/presentation/d/1moRrmS6ogVlOBzVidsPgLc1_w-vYC3Bt87Wk3oak5rU/edit#slide=id.gb58ffdb9_015)
 
 ### Prezentacja
 1. Angularowe 'Hello world'
@@ -171,10 +171,18 @@ initialize: function () {
 * pracujemy na prostych funkcjach i obiektach js
 (slajd z Backbone.model.extend({}) emberem, batmanemen i czystym kodem angulara)
 
+```js
+TODO
+```
+
 ## Filtry
 * pozwalają na wygodne zarządzanie tym co jest wyświetlane w ng-repeat
 * usprawniają tworzeni zawęrzającego się wyszukiwania, sortowania
 (przykład z zastosowaniem filter i orderby)
+
+```html
+TODO
+```
 
 ## Two ways binding
 * model jest jedynym źródłem prawdy
@@ -187,6 +195,10 @@ initialize: function () {
 * automatycznie dodaje klasy opisujące stan elementu do wprowadzania danych
 (html przetworzony przez angulara)
 
+```html
+TODO
+```
+
 ### Prezentacja
 1. przykład walidującego się formularza - zmiana kolorów kontrolek
 2. Rzut oka na kod
@@ -197,11 +209,19 @@ initialize: function () {
 * zwiększa testowalność
 (kontroler z kilkoma wstrzykniętymi seriwiami - $scope, $log, $window)
 
+```js
+TODO
+```
+
 ## Serwisy
 * reużywalne kawałki kodu
 * wstrzykiwane do kontrolerów, directives i innych serwisów
 * większość logiki aplikacji powinna być w nich realizowana
 (prosty serwis - opakowanie dla webstorage)
+
+```js
+TODO
+```
 
 ## Ścieżki - $routeProvider
 * dla aplikacji możemy zdefiniować ścieżki (z argumentami), przekierowania etc.
@@ -209,10 +229,18 @@ initialize: function () {
 * wspiera adresy z /# i bez
 (przykład rejestracji kilku ścieżek)
 
+```js
+TODO
+```
+
 ## Komunikacja z backendem - $resource
 * serwis do generowani api komuniujacego się po restcie
 * zalecany sposób użycia: $resource -> serwis opakowujący model -> kontroler
 (slajd ze sposobem użycia)
+
+```js
+TODO
+```
 
 ## Directives
 * niestandardowe tagi i atrybuty zdefiniowane przez angulara, lub developera aplikacji
