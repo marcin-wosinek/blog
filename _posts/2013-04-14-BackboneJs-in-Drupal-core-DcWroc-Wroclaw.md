@@ -16,6 +16,7 @@ TODO:
 * Currently js contractor in Poznań
 * 1 year of working with d6 & d7
 * 8 month after swithing completly into frontend js
+* Much more experience with AngularJs then BackboneJs
 
 ## You?
 * Who likes js?
@@ -63,22 +64,32 @@ TODO:
 
 ## What is Backbone?
 * one of the most popular js MV\* framework
+* TODO: popularity data
+* TODO: file size
+
+## MV* in Bakcbone
+* some graph with explanation
 
 ## Model
 * one pice of data 
+* TODO check model responsibilities
 
 ## View
 * binds DOM events to model
 * update DOM on model changej 
+* TODO check view responsibilities
 
 ## Collection
 * puts together bunch of models
+* TODO check collection responsibilities
 
 ## Routing
 * mechanism of fireing functions based on place in aplication
+* allow us to build bookmarkable urls for our backbone views
 
 ## Front end templating
 * allows us to dynamically build html on browser side
+* non-hacky approach to ajax
 
 ## What is already implemented using backbone in drupal?
 * edit - inplace editing for fields
@@ -92,6 +103,10 @@ TODO:
 
 ### Presentation
 
+## One page apps
+
+### Presentation - one page app ofline?
+
 ## Drupal as webservice
 * One page app based on static files, and json communication with drupal
 
@@ -100,6 +115,9 @@ TODO:
 ## Materials
 
 ## Summary
+* checkout what's new in browser side js - especially frameworks Backbone and AngularJs
+* Backbone is in drupal core - consider using it in your modules
+* We are going to have more one page apps - don't fall behined and turn your drupal site into webservice
 
 ## Contact
 * link to blog
