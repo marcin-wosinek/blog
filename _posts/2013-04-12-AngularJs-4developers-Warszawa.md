@@ -17,7 +17,6 @@ TODO:
  * Pracy w C# zawdzięczam mocne przekonanie do testów jednostkowych
  * Pracy we front endzie - js
 * aktualnie js kontraktor w Poznaniu
-(legalne zdjecia z Poznania - wikipedia?)
 
 ## Wy?
 * kto korzysta z frameworków js?
@@ -26,7 +25,6 @@ TODO:
 * kto uważa że pisanie testów jest konieczne w dobrym rzemiośle programistycznym?
 * kto uważa że jak pisać kod i testy to w TDD?
 * kto stosuje TDD przy pisaniu przeglądarkowego js?
-(Legalne zdjecie z publicznością)
 
 ## Temat
 * zmiany w myśleniu o front endzie
@@ -37,17 +35,14 @@ TODO:
 ## Nowa rzeczywistość
 * Js się rozwija 
 * jQuery to nie wszystko
-(loga technologii jsowych - node, ember, karma, backbone)
 
 ## Tradycyjna architektura stron
 * generowanie html po stronie serwera
 * przesyłanie danych razem ze znacznikami html
-(schemat z serwerem przesyłającym html na request)
 
 ## Podejście aplikacyjne
 * wiecej logiki po stronie front endu
 * templaty jsowe
-(logo mustacha, handlebara i angulara)
 
 ## Komunikacja z backendem
 * wysyłanie requestów restowych 
@@ -75,6 +70,7 @@ TODO:
 ## Testowalność
 * w tradycyjnym jQuerowym kodzie bardzo niska
 * jeśli logika dotyka DOM - w testach będziemy musieli mockować DOM
+
 ```js
 function PasswordCtrl() {
   // get references to DOM elements
@@ -132,7 +128,6 @@ initialize: function () {
  * ember: 49KB
 * brak zależności:
  * może używać jQuery, o ile jest dostępne przy uruchomieniu
-(logo angulara)
 
 ## Architektura MV*
 * początkowo przypominała MVC, teraz bardziej MVVM - nazywan MVW(hatever) przez twórców
@@ -143,7 +138,18 @@ initialize: function () {
 * oparty o zwykły html
 * wyświetla wartości w \{\{ model \}\}
 * jest rozszeżony przez framework
-(przykład krótkiego html z ng-model i ng-repeat)
+
+```html
+<ul class="unstyled">
+  <li ng-repeat="todo in todos">
+    <span>{{todo.text}}</span>
+  </li>
+</ul>
+<form ng-submit="addTodo()">
+  <input ng-model="todoText" />
+  <input type="submit" value="add" />
+</form>
+```
 
 ## Kontrolery
 * wiąże 'swój' widok z resztą aplikacji
@@ -174,7 +180,7 @@ initialize: function () {
 * model jest jedynym źródłem prawdy
 * zmiany na modelu aktualizują widok
 * zmiany w widoku aktualizują model
-(two ways binding z angulara)
+(two ways binding z angulara: http://docs.angularjs.org/guide/dev_guide.templates.databinding - zadowolony obrazek, potrzeba tylko dodać do podziekowań)
 
 ## Wsparcie dla formularza
 * rozumie atrybuty należącę html5 - required, pattern, date
@@ -227,7 +233,7 @@ initialize: function () {
  * minimalizacja i paczkowanie kodu
  * serwer developerski z automatycznym odświeżaniem otwartej strony
 * bower - zarządzanie zależnościami
-(trzy loga)
+(trzy loga: http://yeoman.io/ yo, grunt, bower)
 
 ### Prezentacja
 1. Utworzenie aplikacji angularowej w nowym folderze
@@ -239,7 +245,7 @@ initialize: function () {
 * test runner pozwalający uruchamiać testy w przeglądarkach
 * uruchamiamy serwer na maszynie na której tworzymy kod
 * łaczymy z nim przeglądarki i serwer odpala w nich testy
-(karma logo)
+(karma logo: http://karma-runner.github.io/0.8/index.html - cały napis: Karma, specacular test runner...)
 
 ### Prezentacja
 1. Dodanie przycisku do widoku
