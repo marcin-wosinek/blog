@@ -1,0 +1,21 @@
+<!doctype html>
+<html ng-app>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
+  </head>
+  <style>
+    input.ng-pristine {
+      background-color: blue;
+    }
+    input.ng-invalid {
+      color: red;
+    }
+  </style>
+  <body>
+    <form name="exampleForm">
+      <label>Required field: <input ng-model="required" required/></label> <br>
+      <label>Email field: <input ng-model="email" type="email"/></label> <br>
+      <button ng-disabled='!exampleForm.$valid'>Submit</button>
+    </form>
+  </body>
+</html>

@@ -246,7 +246,7 @@ function HelloCtrl($scope, $window, $log) {
 
 ```js
 /**
- * Services that persists and retrieves TODOs from localStorage
+ * Services that persists and retrieves ToDos from localStorage
  */
 todomvc.factory('todoStorage', function () {
   var STORAGE_ID = 'todos-angularjs';
