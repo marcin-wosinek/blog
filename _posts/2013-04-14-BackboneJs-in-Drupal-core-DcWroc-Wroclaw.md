@@ -27,14 +27,10 @@ TODO:
 * all modern engines have decent approach to standards
 * rich ui in javascript offers better user experience
 
-(js logo)
-
 ## Emerging pattern of back-front end relationship
 * static js code - front end application
 * data get via rest form server
 * templates done on browser side
-
-(reuse 4developer js slide: Podejście aplikacyjne)
 
 ## Chalanges
 * more logic needs better code quality
@@ -42,7 +38,6 @@ TODO:
 ## jQuery is not enouth
 * jQuery is cool, but it's just DOM manipulation library 
 * beside it we need some sollution for architecture
-
 (screen with jquery description about it self: What is jQuery? section from http://jquery.com/)
 
 ## Programming best practices in front end?
@@ -55,17 +50,15 @@ TODO:
 * angular
 * ember 
 
-(logos)
-
 ## Backbone is in Drupal Core
 * introduced mid October 2012
-
-(Backbone logo)
+* used in edit - inplace editing for fields
 
 ## What is Backbone?
 * one of the most popular js MV\* framework
-* TODO: popularity data
-* TODO: file size
+* dependencies: jQuery, underscore
+  * backbone 6.3kb gziped & minified
+  * underscore 4kb gziped & minified
 
 ## MV* in Bakcbone
 * some graph with explanation
@@ -87,12 +80,13 @@ TODO:
 * mechanism of fireing functions based on place in aplication
 * allow us to build bookmarkable urls for our backbone views
 
+## Unserscore
+* utility belt for js
+* foreach, map, reduce, templating
+
 ## Front end templating
 * allows us to dynamically build html on browser side
 * non-hacky approach to ajax
-
-## What is already implemented using backbone in drupal?
-* edit - inplace editing for fields
 
 ## What we can use Backbone for?
 * current implementations
@@ -102,10 +96,12 @@ TODO:
 (waits for example code)
 
 ### Presentation
+* code overview
+* showing working code
 
 ## One page apps
 
-### Presentation - one page app ofline?
+### Presentation - one page app offline?
 
 ## Drupal as webservice
 * One page app based on static files, and json communication with drupal
