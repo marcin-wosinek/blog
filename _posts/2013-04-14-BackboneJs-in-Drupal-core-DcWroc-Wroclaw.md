@@ -100,15 +100,32 @@ TODO:
 * showing working code
 
 ## One page apps
+* seems as more resonable design option
+* can be design to work off line
+* spare server memory and computation power
 
 ### Presentation - one page app offline?
+(prepare simple off line app)
+
+## AngularJs
+
+## AngularJs - declarative view
+
+## AngularJs - two ways binding
+
+## AngularJs - testability
 
 ## Drupal as webservice
 * One page app based on static files, and json communication with drupal
 
 ## Questions
+* what framework would you recomend?
 
 ## Materials
+* [Backbone fundamentals by Andy Osmani](http://addyosmani.github.io/backbone-fundamentals/)
+* [Choosing right js framework with ToDo MVc](http://todomvc.com/)
+* [Backbone tutorials](http://backbonetutorials.com/)
+* [AngularJs - one page app tutorial](http://docs.angularjs.org/tutorial)
 
 ## Summary
 * checkout what's new in browser side js - especially frameworks Backbone and AngularJs
