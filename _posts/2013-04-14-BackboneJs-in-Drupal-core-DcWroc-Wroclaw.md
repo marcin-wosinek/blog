@@ -27,13 +27,23 @@ TODO:
 * all modern engines have decent approach to standards
 * rich ui in javascript offers better user experience
 
+## (just slide - it's creative commons, we need to make attribution for it)
+http://www.teaching-materials.org/jsmvc/#/2
+
+## (just slide - it's creative commons, we need to make attribution for it)
+http://www.teaching-materials.org/jsmvc/#/3
+
+## (just slide - it's creative commons, we need to make attribution for it)
+http://www.teaching-materials.org/jsmvc/#/4
+
+## Chalanges
+* more logic needs better code quality
+Coursera: 29k lines of JS code..
+
 ## Emerging pattern of back-front end relationship
 * static js code - front end application
 * data get via rest form server
 * templates done on browser side
-
-## Chalanges
-* more logic needs better code quality
 
 ## jQuery is not enouth
 * jQuery is cool, but it's just DOM manipulation library 
@@ -61,7 +71,9 @@ TODO:
   * underscore 4kb gziped & minified
 
 ## MV* in Bakcbone
-* some graph with explanation
+* route choose view according to #link
+* view is responsible for DOM manipulation
+(we can use this image: http://www.teaching-materials.org/jsmvc/#/18 - it's licesed on CreativeCommons, we just neet atribution for them)
 
 ## Model
 * one pice of data 
