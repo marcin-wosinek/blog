@@ -6,10 +6,8 @@ tags: [BackboneJs, AngularJs, Drupal, DCWroc, Wrocław]
 ---
 # BackboneJs in Drupal core
 TODO:
-
-* PREPARE MODULE CODE EXAMPLE
-* finish notes
 * figure out slides
+* prepare module code example
 
 ## How am I?
 * Marcin Wosinek
@@ -27,27 +25,29 @@ TODO:
 * all modern engines have decent approach to standards
 * rich ui in javascript offers better user experience
 
-## (just slide - it's creative commons, we need to make attribution for it)
-http://www.teaching-materials.org/jsmvc/#/2
+## Web 1.0: JS for Almost Nothing
 
-## (just slide - it's creative commons, we need to make attribution for it)
-http://www.teaching-materials.org/jsmvc/#/3
+## Web 2.0: JS for AJAX
+* unfortunatly most of ajax method return partial html
+* seems like what I know from Drupal world
 
-## (just slide - it's creative commons, we need to make attribution for it)
-http://www.teaching-materials.org/jsmvc/#/4
-
-## Chalanges
-* more logic needs better code quality
-Coursera: 29k lines of JS code..
-
-## Emerging pattern of back-front end relationship
+## Web Today: JS for Everything
+* emergin patter of front - back end relation
 * static js code - front end application
 * data get via rest form server
 * templates done on browser side
 
+## Challenges
+* Coursera: 29k lines of JS code
+* cloud9 - js, browser base IDE
+* more logic needs better code quality
+
+(Coursera, cloud9 logos)
+
 ## jQuery is not enouth
-* jQuery is cool, but it's just DOM manipulation library 
+* jQuery is cool, but it's just DOM manipulation library
 * beside it we need some sollution for architecture
+
 (screen with jquery description about it self: What is jQuery? section from http://jquery.com/)
 
 ## Programming best practices in front end?
@@ -58,11 +58,12 @@ Coursera: 29k lines of JS code..
 ## Solution: Browserside js frameworks
 * backbone
 * angular
-* ember 
+* ember
 
 ## Backbone is in Drupal Core
 * introduced mid October 2012
 * used in edit - inplace editing for fields
+* should lead to better dev experience
 
 ## What is Backbone?
 * one of the most popular js MV\* framework
@@ -73,20 +74,19 @@ Coursera: 29k lines of JS code..
 ## MV* in Bakcbone
 * route choose view according to #link
 * view is responsible for DOM manipulation
-(we can use this image: http://www.teaching-materials.org/jsmvc/#/18 - it's licesed on CreativeCommons, we just neet atribution for them)
 
 ## Model
-* one pice of data 
-* TODO check model responsibilities
-
-## View
-* binds DOM events to model
-* update DOM on model changej 
-* TODO check view responsibilities
+* one piece of data
+* keeps application state
 
 ## Collection
 * puts together bunch of models
-* TODO check collection responsibilities
+* sync with backend, or other persistant mechanizms
+
+## View
+* coordinate user interaction between user and app
+* binds DOM events to model
+* update DOM on model changes
 
 ## Routing
 * mechanism of fireing functions based on place in aplication
@@ -96,12 +96,17 @@ Coursera: 29k lines of JS code..
 * utility belt for js
 * foreach, map, reduce, templating
 
+(underscore logo)
+
 ## Front end templating
 * allows us to dynamically build html on browser side
 * non-hacky approach to ajax
 
+(underscore & handle bar logo)
+
 ## What we can use Backbone for?
 * current implementations
+* moving more UX logic into js, while keeping code sane
 
 ## Using backbone in a module
 
@@ -120,12 +125,20 @@ Coursera: 29k lines of JS code..
 (prepare simple off line app)
 
 ## AngularJs
-
-## AngularJs - declarative view
+* one page app framework
+* guide developer through whole process of app creation
+ * interface
+ * code
+ * test
 
 ## AngularJs - two ways binding
+* we have two ways bingins out of the box
+* model is the single source of truth
 
 ## AngularJs - testability
+* testabiliti is one of main core feature
+* uses dependency injection every where
+* good cooperation with karma/testacular test runner
 
 ## Drupal as webservice
 * One page app based on static files, and json communication with drupal
@@ -140,7 +153,7 @@ Coursera: 29k lines of JS code..
 * [AngularJs - one page app tutorial](http://docs.angularjs.org/tutorial)
 
 ## Summary
-* checkout what's new in browser side js - especially frameworks Backbone and AngularJs
+* checkout what's new in browser side js - especially frameworks like Backbone and AngularJs
 * Backbone is in drupal core - consider using it in your modules
 * We are going to have more one page apps - don't fall behined and turn your drupal site into webservice
 
