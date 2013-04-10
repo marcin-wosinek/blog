@@ -33,12 +33,10 @@ tags: [AngularJs, 4developers, Warszawa]
 ## Tradycyjna architektura stron
 * generowanie html po stronie serwera
 * przesyłanie danych razem ze znacznikami html
-(grafika do narysowania)
 
 ## Podejście aplikacyjne
 * wiecej logiki po stronie front endu
 * templaty jsowe
-(grafika do narysowania)
 
 ## Komunikacja z backendem
 * wysyłanie requestów restowych 
@@ -149,7 +147,6 @@ initialize: function () {
 ## Filtry
 * pozwalają na wygodne zarządzanie tym co jest wyświetlane w ng-repeat
 * usprawniają tworzeni zawęrzającego się wyszukiwania, sortowania
-(przykład z zastosowaniem filter i orderby)
 
 ```html
 <ul>
@@ -162,13 +159,13 @@ initialize: function () {
 ## Kontrolery
 * wiąże 'swój' widok z resztą aplikacji
 * zawiera prostą logikę, związaną z samym wyświetlaniem
-(grafika do narysowania - balsamique)
 
 ## $scope
 * obiekt wiążący kontroler z widokiem
 * $scope.title będzie dostępny jako {{title}} w widoku
 * ng-model - wiąże elementy formularza z modelem
 * ng-repeat - pozwala interować po tablicach zdefiniowanych na $scope
+
 (Obrazek z wyjaśniemie co to jest scope: taki jak ten: https://docs.google.com/presentation/d/1moRrmS6ogVlOBzVidsPgLc1_w-vYC3Bt87Wk3oak5rU/edit#slide=id.gb58ffdb9_015)
 
 ### Prezentacja
@@ -206,6 +203,7 @@ todos.push({
 * model jest jedynym źródłem prawdy
 * zmiany na modelu aktualizują widok
 * zmiany w widoku aktualizują model
+
 (two ways binding z angulara: http://docs.angularjs.org/guide/dev_guide.templates.databinding - zadowolony obrazek, potrzeba tylko dodać do podziekowań)
 
 ## Wsparcie dla formularza
@@ -236,7 +234,6 @@ todos.push({
 * nasz komponent ma przekazywane jego zależności jak parametry do funkcji go opakowywującej
 * ładna definiacji powiązań między komponentami
 * zwiększa testowalność
-(kontroler z kilkoma wstrzykniętymi serwisami - $scope, $log, $window)
 
 ```js
 function HelloCtrl($scope, $window, $log) {
@@ -250,7 +247,6 @@ function HelloCtrl($scope, $window, $log) {
 * reużywalne kawałki kodu
 * wstrzykiwane do kontrolerów, directives i innych serwisów
 * większość logiki aplikacji powinna być w nich realizowana
-(prosty serwis - opakowanie dla webstorage)
 
 ```js
 /**
@@ -310,7 +306,7 @@ myApp.factory('ProductService', function($resource) {
   }
 
   ProductService.addItem = function (item) {
-    resource.save({}, item));
+    ProductResource.save({}, item));
   }
 
   ProductService.removeItem = function (item) {
@@ -371,7 +367,6 @@ function ProductCtrl($scope, ProductService) {
  * minimalizacja i paczkowanie kodu
  * serwer developerski z automatycznym odświeżaniem otwartej strony
 * bower - zarządzanie zależnościami
-(trzy loga: http://yeoman.io/ yo, grunt, bower)
 
 ### Prezentacja
 1. Utworzenie aplikacji angularowej w nowym folderze
@@ -384,7 +379,6 @@ function ProductCtrl($scope, ProductService) {
 * test runner pozwalający uruchamiać testy w przeglądarkach
 * uruchamiamy serwer na maszynie na której tworzymy kod
 * łaczymy z nim przeglądarki i serwer odpala w nich testy
-(karma logo: http://karma-runner.github.io/0.8/index.html - cały napis: Karma, specacular test runner...)
 
 ### Prezentacja
 1. Dodanie przycisku do widoku
@@ -451,8 +445,8 @@ syngularApp.controller('ProductCtrl', ['$scope', 'ProductApi', function($scope, 
 * zwraca puste obiektu lub tablice które będa dopiero uzupełnione po odebraniu odpowiedzi
 * w zwiazku z tym musimy odraz zadeklarować czy mowa jest o tablicy czy obiekcie
 
-## Gotchas - filtry działają tylko na tablicach
-* ng-repeat przeinteruje po obiekcie - ale filtry nie bedą działać
+## Gotchas - filtry działające tylko na tablicach
+* ng-repeat przeinteruje po obiekcie - ale filter i orderBy nie bedą działać
 
 ## Gotchas - e2e testing
 * skonfigurowanie testów jest skomplikowane
