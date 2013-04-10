@@ -204,8 +204,6 @@ todos.push({
 * zmiany na modelu aktualizują widok
 * zmiany w widoku aktualizują model
 
-(two ways binding z angulara: http://docs.angularjs.org/guide/dev_guide.templates.databinding - zadowolony obrazek, potrzeba tylko dodać do podziekowań)
-
 ## Wsparcie dla formularza
 * rozumie atrybuty należącę html5 - required, pattern, date
 * automatycznie dodaje klasy opisujące stan elementu do wprowadzania danych
