@@ -1,6 +1,6 @@
 ---
 layout: index
-title: Test
+title: Marcin Wosinek - blog
 ---
 # Hello World
 I'm Marcin Wosinek \[MAR-chin vo-SHE-neck\] and this is my personal page. I post here slides, notes and videos of IT presentations I'm giving. Some of post are in Polish.
