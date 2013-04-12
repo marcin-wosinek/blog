@@ -381,6 +381,17 @@ function ProductCtrl($scope, ProductService) {
 2. Dodanie testu sprawdzającego czy alert został włączony
 3. Napisanie kodu przechodzącego test
 
+## Nawyki - pisanie callbacków
+* obsługa tego co GET zwaraca nie potrzebuje callbacków
+* ma sens jeśli potrzebujemy pokazać info że dany request się nie udał
+
+## Nawyki - bindowanie
+* do tego służą directives - ng-model, ng-bind klamry \{\{\}\}
+
+## Nawyki - zmienianie DOM w kontrolerze
+* do modyfikacji DOM używamy tylko directives
+* takie directives najlepiej (koniecznie) uzbrajamy w mocne pokrycie testami
+
 ## Gotchas - pisanie directives
 * Narzędzie na który jest opartę bardzo wiele corowych featurów frameworka - 2 ways binding
 * rough developer experience - w szególności na tle bardzo gładkiej współpracy z resztą frameworka
@@ -476,6 +487,7 @@ syngularApp.controller('ProductCtrl', ['$scope', 'ProductApi', function($scope, 
 ## Kontakt
 * namiary na bloga
 * marcin.wosinek@gmail.com
+* [slajdy](https://docs.google.com/presentation/d/1fSW9dXL0Q5PCYUwiB7Z9QH4WuLGBME9k1-X06IDF2wI/edit?usp=sharing)
 
 ## Podziękowania
 * zdjęcie z publicznością: http://www.flickr.com/photos/dougbelshaw/5604047370/in/photostream
