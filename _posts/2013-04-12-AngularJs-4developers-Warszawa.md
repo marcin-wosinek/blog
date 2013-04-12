@@ -167,8 +167,6 @@ initialize: function () {
 * ng-model - wiąże elementy formularza z modelem
 * ng-repeat - pozwala interować po tablicach zdefiniowanych na $scope
 
-(Obrazek z wyjaśniemie co to jest scope: taki jak ten: https://docs.google.com/presentation/d/1moRrmS6ogVlOBzVidsPgLc1_w-vYC3Bt87Wk3oak5rU/edit#slide=id.gb58ffdb9_015)
-
 ### Prezentacja
 1. Angularowe 'Hello world'
 2. Templatkowanie z ng-repeat
@@ -372,7 +370,6 @@ function ProductCtrl($scope, ProductService) {
 2. Odpalenie serwer i otworzenie strony w przeglądarce
 3. Dodanie ścieżki do aplikacji i otworzenie w przeglądarce
 4. Zmiana widoku i automatyczne odświerzenie strony
-(TODO przygotować środowisko)
 
 ## Karma (Testacular)
 * test runner pozwalający uruchamiać testy w przeglądarkach
@@ -383,7 +380,6 @@ function ProductCtrl($scope, ProductService) {
 1. Dodanie przycisku do widoku
 2. Dodanie testu sprawdzającego czy alert został włączony
 3. Napisanie kodu przechodzącego test
-(TODO przygotować środowisko)
 
 ## Gotchas - pisanie directives
 * Narzędzie na który jest opartę bardzo wiele corowych featurów frameworka - 2 ways binding
@@ -482,3 +478,8 @@ syngularApp.controller('ProductCtrl', ['$scope', 'ProductApi', function($scope, 
 * marcin.wosinek@gmail.com
 
 ## Podziękowania
+* zdjęcie z publicznością: http://www.flickr.com/photos/dougbelshaw/5604047370/in/photostream
+* logo BackboneJs: https://github.com/documentcloud/backbone/blob/master/docs/images/backbone.
+* Two ways binding: http://docs.angularjs.org/guide/dev_guide.templates.databinding
+* http://karma-runner.github.io/0.8/index.html
+* http://yeoman.io/
