@@ -3,6 +3,7 @@ layout: default
 category: prezentacja
 title: AngularJs 4developers Warszawa
 videoId: ICUVUZhu4Xg
+slideShareId: 18693187
 tags: [AngularJs, 4developers, Warszawa]
 ---
 # AngularJs
