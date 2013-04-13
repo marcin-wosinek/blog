@@ -6,6 +6,7 @@ tags: [BackboneJs, AngularJs, Drupal, DCWroc, Wrocław]
 ---
 # BackboneJs in Drupal core
 TODO:
+
 * figure out slides
 * prepare module code example
 
@@ -42,13 +43,9 @@ TODO:
 * cloud9 - js, browser base IDE
 * more logic needs better code quality
 
-(Coursera, cloud9 logos)
-
 ## jQuery is not enouth
 * jQuery is cool, but it's just DOM manipulation library
 * beside it we need some sollution for architecture
-
-(screen with jquery description about it self: What is jQuery? section from http://jquery.com/)
 
 ## Programming best practices in front end?
 * in short - front end js used to be quite hacky
@@ -96,13 +93,9 @@ TODO:
 * utility belt for js
 * foreach, map, reduce, templating
 
-(underscore logo)
-
 ## Front end templating
 * allows us to dynamically build html on browser side
 * non-hacky approach to ajax
-
-(underscore & handle bar logo)
 
 ## What we can use Backbone for?
 * current implementations
