@@ -67,7 +67,6 @@ tags: [BackboneJs, AngularJs, Drupal, DCWroc, Wrocław]
 * dependencies: jQuery, underscore
   * backbone 6.3kb gziped & minified
   * underscore 4kb gziped & minified
-(TODO)
 
 ## MV* in Bakcbone
 * route choose view according to #link
@@ -77,29 +76,88 @@ tags: [BackboneJs, AngularJs, Drupal, DCWroc, Wrocław]
 * entity
 * one piece of data
 * keeps application state
-(TODO)
+
+```js
+app.Todo = Backbone.Model.extend({
+  defaults: {
+    title: '',
+    completed: false
+  },
+
+  toggle: function () {
+    this.save({
+      completed: !this.get('completed')
+    });
+  }
+});
+```
 
 # Template
-* html tags mixed with {{ name }}
-* ...
-(TODO)
+* html tags mixed with {{ name }} or
+* backbone cooperate with many different sollutions - underscore, handlebar etc.
+
+```js
+var html = _.template('<li><%= name %></li>', { name: 'John Smith' });
+```
 
 ## Collection
 * puts together bunch of models
 * sync with backend, or other persistant mechanizms
-(TODO)
+
+```js
+var TodoList = Backbone.Collection.extend({
+  model: app.Todo,
+
+  localStorage: new Backbone.LocalStorage('todos-backbone'),
+```
 
 ## View
 * simillar to controllers in frameworks
 * coordinate user interaction between user and app
 * binds DOM events to model
 * update DOM on model changes
-(TODO)
+
+```js
+app.AppView = Backbone.View.extend({
+
+  el: '#todoapp',
+
+  statsTemplate: _.template($('#stats-template').html()),
+
+  events: {
+    'click #clear-completed': 'clearCompleted',
+  },
+
+  initialize: function () {
+    this.$input = this.$('#new-todo');
+
+    this.listenTo(app.Todos, 'add', this.addOne);
+  }
+
+  clearCompleted: function () { /* */},
+
+  addOne: function () { /* */}
+}
+```
 
 ## Router
 * mechanism of fireing functions based on place in aplication
 * allow us to build bookmarkable urls for our backbone views
-(TODO)
+
+```js
+var AppRouter = Backbone.Router.extend({
+  routes: {
+    "posts/:id": "getPost",
+  }
+});
+
+var app_router = new AppRouter;
+app_router.on('route:getPost', function (id) {
+  alert( "Get post number " + id );
+});
+
+Backbone.history.start();
+```
 
 ## Unserscore
 * utility belt for js
@@ -114,10 +172,11 @@ tags: [BackboneJs, AngularJs, Drupal, DCWroc, Wrocław]
 * it isn't crowlable by google
 * features for content authors, and loged user
 * moving more UX logic into js, while keeping code sane
-(TODO)
 
 ## Using backbone in a module
-(TODO)
+
+```php
+```
 
 ### Presentation
 * code overview
@@ -133,9 +192,14 @@ tags: [BackboneJs, AngularJs, Drupal, DCWroc, Wrocław]
  * minimize file
  * development server with automatic page refresh
 * bower - front end dependancies
-(TODO put images)
 
 ### Presantation
+1. Enable server and open page in browser
+2. Add route
+3. Add model
+4. Auto refresh
+
+(TODO - prepare presentation)
 
 ## Drupal as webservice
 * One page app based on static files, and json communication with drupal
