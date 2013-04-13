@@ -73,24 +73,31 @@ TODO:
 * view is responsible for DOM manipulation
 
 ## Model
+* entity
 * one piece of data
 * keeps application state
+
+# Template
+* html tags mixed with {{ name }}
+* ...
 
 ## Collection
 * puts together bunch of models
 * sync with backend, or other persistant mechanizms
 
 ## View
+* simillar to controllers in frameworks
 * coordinate user interaction between user and app
 * binds DOM events to model
 * update DOM on model changes
 
-## Routing
+## Router
 * mechanism of fireing functions based on place in aplication
 * allow us to build bookmarkable urls for our backbone views
 
 ## Unserscore
 * utility belt for js
+* adds features to js
 * foreach, map, reduce, templating
 
 ## Front end templating
@@ -98,7 +105,8 @@ TODO:
 * non-hacky approach to ajax
 
 ## What we can use Backbone for?
-* current implementations
+* it isn't crowlable by google
+* features for content authors, and loged user
 * moving more UX logic into js, while keeping code sane
 
 ## Using backbone in a module
@@ -109,6 +117,19 @@ TODO:
 * code overview
 * showing working code
 
+## Yeoman
+* dev workflow tool box
+* yo - code generator
+ * for backbone we have
+  * ??
+ * supports other frameworks - angularjs
+* grunt - automatization of common tasks
+ * minimize file
+ * development server with automatic page refresh
+* bower - front end dependancies
+
+### Presantation
+
 ## One page apps
 * seems as more resonable design option
 * can be design to work off line
@@ -116,22 +137,6 @@ TODO:
 
 ### Presentation - one page app offline?
 (prepare simple off line app)
-
-## AngularJs
-* one page app framework
-* guide developer through whole process of app creation
- * interface
- * code
- * test
-
-## AngularJs - two ways binding
-* we have two ways bingins out of the box
-* model is the single source of truth
-
-## AngularJs - testability
-* testabiliti is one of main core feature
-* uses dependency injection every where
-* good cooperation with karma/testacular test runner
 
 ## Drupal as webservice
 * One page app based on static files, and json communication with drupal
