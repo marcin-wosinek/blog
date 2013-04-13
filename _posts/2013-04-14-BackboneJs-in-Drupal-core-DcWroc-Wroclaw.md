@@ -228,6 +228,20 @@ function backbone_todo_library_info() {
 ## Drupal as webservice
 * One page app based on static files, and json communication with drupal
 
+```js
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "age": 25,
+  "address": {
+    "streetAddress": "21 2nd Street",
+    "city": "New York",
+    "state": "NY",
+    "postalCode": 10021
+  }
+}
+```
+
 ## Questions
 * what framework would you recomend?
 
