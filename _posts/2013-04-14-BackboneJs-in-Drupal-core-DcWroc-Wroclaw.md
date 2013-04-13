@@ -176,6 +176,30 @@ Backbone.history.start();
 ## Using backbone in a module
 
 ```php
+function backbone_todo_library_info() {
+  $path = drupal_get_path('module', 'backbone_todo');
+
+  $options = array(
+    'scope' => 'footer',
+    'attributes' => array('defer' => TRUE),
+  );
+
+  $libraries['backbone_todo'] = array(
+    'title' => 'Backbone todo list',
+    'version' => '0.1.0',
+    'js' => array(
+      $path . '/js/todo.js' => $options,
+    ),
+
+    'dependencies' => array(
+      array('system', 'jquery'),
+      array('system', 'underscore'),
+      array('system', 'backbone'),
+    )
+  );
+
+  return $libraries;
+}
 ```
 
 ### Presentation
