@@ -5,11 +5,6 @@ title: BackboneJs in Drupal core DcWroc Wroclaw
 tags: [BackboneJs, AngularJs, Drupal, DCWroc, Wrocław]
 ---
 # BackboneJs in Drupal core
-TODO:
-
-* figure out slides
-* prepare module code example
-
 ## How am I?
 * Marcin Wosinek
 * Currently js contractor in Poznań
@@ -37,6 +32,11 @@ TODO:
 * static js code - front end application
 * data get via rest form server
 * templates done on browser side
+
+## Advantages of new approach
+* we embrace http wiht REST
+* we make server to care just only about data - not markup
+* we save server resource, using client resource
 
 ## Challenges
 * Coursera: 29k lines of JS code
@@ -67,6 +67,7 @@ TODO:
 * dependencies: jQuery, underscore
   * backbone 6.3kb gziped & minified
   * underscore 4kb gziped & minified
+(TODO)
 
 ## MV* in Bakcbone
 * route choose view according to #link
@@ -76,24 +77,29 @@ TODO:
 * entity
 * one piece of data
 * keeps application state
+(TODO)
 
 # Template
 * html tags mixed with {{ name }}
 * ...
+(TODO)
 
 ## Collection
 * puts together bunch of models
 * sync with backend, or other persistant mechanizms
+(TODO)
 
 ## View
 * simillar to controllers in frameworks
 * coordinate user interaction between user and app
 * binds DOM events to model
 * update DOM on model changes
+(TODO)
 
 ## Router
 * mechanism of fireing functions based on place in aplication
 * allow us to build bookmarkable urls for our backbone views
+(TODO)
 
 ## Unserscore
 * utility belt for js
@@ -108,10 +114,10 @@ TODO:
 * it isn't crowlable by google
 * features for content authors, and loged user
 * moving more UX logic into js, while keeping code sane
+(TODO)
 
 ## Using backbone in a module
-
-(waits for example code)
+(TODO)
 
 ### Presentation
 * code overview
@@ -127,16 +133,9 @@ TODO:
  * minimize file
  * development server with automatic page refresh
 * bower - front end dependancies
+(TODO put images)
 
 ### Presantation
-
-## One page apps
-* seems as more resonable design option
-* can be design to work off line
-* spare server memory and computation power
-
-### Presentation - one page app offline?
-(prepare simple off line app)
 
 ## Drupal as webservice
 * One page app based on static files, and json communication with drupal
@@ -148,7 +147,6 @@ TODO:
 * [Backbone fundamentals by Andy Osmani](http://addyosmani.github.io/backbone-fundamentals/)
 * [Choosing right js framework with ToDo MVc](http://todomvc.com/)
 * [Backbone tutorials](http://backbonetutorials.com/)
-* [AngularJs - one page app tutorial](http://docs.angularjs.org/tutorial)
 
 ## Summary
 * checkout what's new in browser side js - especially frameworks like Backbone and AngularJs
@@ -160,3 +158,12 @@ TODO:
 * marcin.wosinek@gmail.com
 
 ## Credits
+* logo of BackboneJs: https://github.com/documentcloud/backbone/blob/master/docs/images/backbone.png
+* logo of AngularJs:https://github.com/angular/angular.js/blob/master/images/logo/AngularJS.exports/AngularJS-large.png
+* http://www.teaching-materials.org/jsmvc/#/2
+* http://www.teaching-materials.org/jsmvc/#/3
+* http://www.teaching-materials.org/jsmvc/#/4
+* http://www.teaching-materials.org/jsmvc/#/18
+* photo with audience http://www.flickr.com/photos/dougbelshaw/5604047370/in/photostream/ 
+* kid in sandbox: http://www.flickr.com/photos/thenickster/266142840/
+* underscore logo: https://github.com/documentcloud/underscore/blob/master/docs/images/underscore.png
