@@ -2,6 +2,7 @@
 layout: default
 category: presentation
 title: BackboneJs in Drupal core DcWroc Wroclaw
+slideShareId: 18783227
 tags: [BackboneJs, AngularJs, Drupal, DCWroc, Wrocław]
 ---
 # BackboneJs in Drupal core
@@ -210,7 +211,10 @@ function backbone_todo_library_info() {
 * dev workflow tool box
 * yo - code generator
  * for backbone we have
-  * ??
+  * router
+  * view
+  * model
+  * collection
  * supports other frameworks - angularjs
 * grunt - automatization of common tasks
  * minimize file
