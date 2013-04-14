@@ -15,7 +15,7 @@ Pierwszę z cylku warsztaty prezentujące nowoczesne tworzenie aplikacji fronten
 i ich implementacją w angularze.
 
 ## Zgłoszenia
-Zapisami na warsztaty będzie zajmować sie Akai Poznań - czekajcie na informacjie na http://akai.org.pl/ .
+[Zapisy](http://bit.ly/warsztaty-angularjs).
 
 ## Z jakiej wiedzy będziemy korzystać
 Warsztaty są kierowane do osób które miały stycznośc z programowanie i technologiami webowymi. Poniżej jest lista koncepcji których znajomość i rozumienie będzie potrzebne do pełnego uczestnictwa w warsztatach.
