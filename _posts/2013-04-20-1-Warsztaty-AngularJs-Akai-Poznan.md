@@ -51,7 +51,7 @@ Współczesna przeglądarka z konsolą developerską. Na przyklad firefox z fire
 Zalecane programy z interfejsem tekstowym. 
 
 ## Materiały do pobrania
-Zajęcia będą sie opierać o przykładowy projekt dostępy <tutaj>.
+Zajęcia będą sie opierać o przykładowy projekt dostępy [na githubie](https://github.com/marcin-wosinek/angular-workshop).
 
 ## Jak będą wyglądać zajęcia
 Będziemy omawiać podstawowe koncepcje angulara na przykładowym kodzie, i potem przechodzić do powtarzania kroków samemu. Wiec pokaże Wam jak wygląda prosty kontroler, i poproszę o stworzenie dodatkowego. I tak dla każdej z omawianych koncepcji.
