@@ -4,6 +4,101 @@ category: warsztaty
 title: Warsztaty AngularJs Akai Poznań
 tags: [AngularJs, Akai, Poznań]
 ---
+# AngularJs: Warsztaty - stopień 1
+## Start
+* treść slajdów: http://bit.ly/angular-workshop
+* git clone https://github.com/marcin-wosinek/angular-workshop.git
+* chrome:
+ * linux: chromium-browser --disable-web-security
+ * windows - skopiować link do chroma i edytować: "(originalny link) --disable-web-security"
+
+## AngularJs "Hello world"
+* git checkout slide-1
+* dwu stronne bindowanie
+* działający, nie trywialny kod oparty o sam widok
+
+## ng-include
+* git checkout slide-2
+* wczytywanie cześci widoku dynamicznie
+
+## Kontroler
+* wiąże 'swój' widok z resztą aplikacji
+* zawiera prostą logikę, związaną z samym wyświetlaniem
+
+## $scope
+* obiekt wiążący kontroler z widokiem
+* $scope.title będzie dostępny jako {{title}} w widoku
+* ng-model - wiąże elementy formularza z modelem
+* ng-repeat - pozwala interować po tablicach zdefiniowanych na $scope
+(slide z prezentacji)
+
+## ng-controller
+* git checkout slide-3
+* podpięcie kontrolera do częsci widoku
+* $scope działa tylko wewnątrz kodu
+
+## Zadanie 1
+* git checkout todo-1
+* dodanie kontrolera zawierajacego menu
+* dodanie i wyświetlenie menu w index.html
+
+## Rozwiązanie 1
+* git add .
+* git commit -m '(commit message)'
+* git checkout done-1
+
+## $routeProvider
+* git checkout slide-4
+
+## ng-repeat
+* directive pętla
+
+```js
+<ul>
+  <li ng-repeat="project in projects">
+    <a href="{{project.site}}">{{project.name}}</a>: {{project.description}}
+  </li>
+</ul>
+```
+
+## Zadanie 2
+* git checkout todo-2
+* zbudować menu zawierające linki do wszystkich ścieżek
+
+```js
+var object = {};
+var array = [];
+
+var arrayOfObjects = [
+  {
+    lorem: 1,
+    ipsum: 2
+  },
+  {
+    test: 4
+  }
+]
+```
+
+## Rozwiązanie 2
+* git add .
+* git commit -m '(commit message)'
+* git checkout done-2
+
+## Zadanie 3
+* git checkout todo-3
+* zbudować własną podstronę, z wyświletaniem listy danych podanych w kontrolerze
+
+## Rozwiązanie 3
+* git add .
+* git commit -m '(commit message)'
+* git checkout done-3
+
+
+
+
+
+
 # 1 Warsztaty AngularJs
 Pierwszę z cylku warsztaty prezentujące nowoczesne tworzenie aplikacji frontendowych na przykładzie AngularJs. Zapoznamy się podstawowymi koncepcjami istniejącymi w frameworkach js:
 
@@ -13,9 +108,6 @@ Pierwszę z cylku warsztaty prezentujące nowoczesne tworzenie aplikacji fronten
 * service
 
 i ich implementacją w angularze.
-
-## Zgłoszenia
-[Zapisy](http://bit.ly/warsztaty-angularjs).
 
 ## Z jakiej wiedzy będziemy korzystać
 Warsztaty są kierowane do osób które miały stycznośc z programowanie i technologiami webowymi. Poniżej jest lista koncepcji których znajomość i rozumienie będzie potrzebne do pełnego uczestnictwa w warsztatach.
