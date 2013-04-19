@@ -11,6 +11,7 @@ tags: [AngularJs, Akai, Poznań]
 * chrome:
  * linux: chromium-browser --disable-web-security
  * windows - skopiować link do chroma i edytować: "(originalny link) --disable-web-security"
+* TODO git config alias
 
 ## AngularJs "Hello world"
 * git checkout slide-1
@@ -93,6 +94,108 @@ var arrayOfObjects = [
 * git add .
 * git commit -m '(commit message)'
 * git checkout done-3
+
+## OrderBy
+* git checkout slide-5
+
+```html
+<ul>
+  <li ng-repeat="product in products | orderBy:'price'">
+</ul>
+```
+
+## Zadanie 4
+* git checkout todo-4
+* wymień hardkodowany parametr na pochodzący ze zmiennej
+
+## Rozwiązanie 4
+* git add .
+* git commit -m '(commit message)'
+* git checkout done-4
+
+## filter
+* git checkout slide-6
+* składnia filter: {experesion}
+
+```html
+<tr ng-repeat="person in list | orderBy:orderKey | filter:'oo'"
+```
+
+## filter - argumenty
+{expresion} zwraca:
+
+* string 'Lorem ipsum' - szukamy stringu w całych obiektach na liście
+* obiekt {key: 'value'} - szukamy obietków które pod *key* mają wartośc pasującą do _value_ 
+* obiekt {$: 'value'} - szukamy obietków które gdziekolwkiem mają wartośc pasującą do _value_ 
+
+## Zadanie 5
+* git checkout todo-5
+* zmienić filter na wyszukiwarkę z 3 polami: szukanie po firstName, surName lub wszędzie
+
+## Rozwiązanie 5
+* git add .
+* git commit -m '(commit message)'
+* git checkout done-5
+
+## Funkcje w modelu
+* git checkout slide-7
+
+```html
+{{displayValueReturnedByFunction()}}
+
+<input ng-change="fireFunctionWhenChangeHappen()">
+```
+
+## Zadanie 6
+* git checkout todo-6
+* dodać formularz z danym osoby - obiekt newPerson
+* skorzystać z _ng-click_ do obsługi dodanie
+  * dodać do listy newPerson ( nazwaListy.push(nowyElement) )
+  * podstawić pusty obiekt za ten podstawiony
+
+## Rozwiązanie 6
+* git add .
+* git commit -m '(commit message)'
+* git checkout done-6
+
+
+
+TODO:
+
+## Validowanie formularza
+
+## Trzymanie danych w controlerze
+* strata danych przy przejściu na inną podstronę
+* użycie tego samego controlera 2 razy
+
+## Services
+* nowy serwis - dla kontrolera co 2 razy wystepuje
+
+## Zadanie  7
+* dodanie własnego servius, dla list
+
+## Omówienie resta
+* obiekty
+* tablice
+
+## $resource
+* query
+* get
+* parametry
+
+## przesunięcie danych do json
+
+## dygresja przykład 2000 elementów w danych
+
+## Zadanie 8
+* wyświetlanie danych zbiorczych i indywidualnych z jsona
+
+
+
+
+
+
+
 
 
 
