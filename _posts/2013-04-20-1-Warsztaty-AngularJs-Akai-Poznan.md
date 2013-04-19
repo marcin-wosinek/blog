@@ -130,7 +130,7 @@ var arrayOfObjects = [
 
 ## Zadanie 5
 * git checkout todo-5
-* zmienić filter na wyszukiwarkę z 3 polami: szukanie po firstName, surName lub wszędzie
+* zmienić filter na wyszukiwarkę z 3 polami: szukanie po firstName, lastName lub wszędzie
 
 ## Rozwiązanie 5
 * git add .
@@ -141,7 +141,7 @@ var arrayOfObjects = [
 * git checkout slide-7
 
 ```html
-{{displayValueReturnedByFunction()}}
+<p>{ {displayValueReturnedByFunction()} }</p>
 
 <input ng-change="fireFunctionWhenChangeHappen()">
 ```
@@ -169,20 +169,18 @@ var arrayOfObjects = [
 ## Services
 * git checkout slide-10
 * nowy serwis - dla kontrolera co 2 razy wystepuje
-* stan jest globalny dla applikacji
+* stan jest globalny dla aplikacji
 
 ## Zadanie 7
 * git checkout todo-7
-* dodanie własnego servius, dla ListCtrl
+* dodanie własnego serwisu, People do użytku przez ListCtrl
 
 ## Rozwiązanie 7
 * git add .
 * git commit -m '(commit message)'
 * git checkout done-7
 
-## Omówienie json
-* obiekty
-* tablice
+## Json - obiekty
 
 ```json
 {
@@ -193,6 +191,8 @@ var arrayOfObjects = [
   "arrays": [ "I", "can", "keep", "them", "too" ]
 }
 ```
+
+## Json - tablice
 
 ```json
 [
@@ -211,8 +211,8 @@ var arrayOfObjects = [
 ## Rest
 * dane dostepne pod url
 * ładne url:
- * /products - lista produktów
- * /products/1 - pierwszy product
+ * http://example.com/products - lista produktów
+ * http://example.com/products/1 - pierwszy product
 * na ogół dane w json
 
 ## $resource
@@ -220,7 +220,12 @@ var arrayOfObjects = [
 * get - pobiernie objektu
 * parametry
 
-## przesunięcie danych do json
+```js
+var userResource = $resource('/user/:userId', {});
+userResource.get({userId: 1});
+```
+
+## Dane do json
 * git checkout slide-11
 
 ## Podsumowanie
@@ -230,14 +235,8 @@ var arrayOfObjects = [
 * serice?
 
 ## Materiały do nauki
-* http://docs.angularjs.org/tutorial/
-* http://egghead.io/
-
-## docs.angularjs.org/tutorial
-(Pokazanie aplikacji finalnej)
-
-## egghead.io
-(Pokazanie listy filmów)
+* [http://docs.angularjs.org/tutorial/](http://docs.angularjs.org/tutorial/)
+* [http://egghead.io/](http://egghead.io/)
 
 ## Co dalej?
 
@@ -249,6 +248,6 @@ Pierwsze warsztaty będą wprowadzeniem do świata frontendowych aplikacji. Nast
 * unit testy i testowalność aplikacji
 
 ## Stay tuned
-* http://akai.org.pl/
-* http://poznan.gtug.pl/
-* http://www.meetup.com/Hacking-Poznan/
+* [http://akai.org.pl/](http://akai.org.pl/)
+* [http://poznan.gtug.pl/](http://poznan.gtug.pl/)
+* [http://www.meetup.com/Hacking-Poznan/](http://www.meetup.com/Hacking-Poznan/)
