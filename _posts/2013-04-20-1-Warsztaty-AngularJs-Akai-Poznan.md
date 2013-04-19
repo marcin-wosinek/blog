@@ -11,7 +11,7 @@ tags: [AngularJs, Akai, Poznań]
 * chrome:
  * linux: chromium-browser --disable-web-security
  * windows - skopiować link do chroma i edytować: "(originalny link) --disable-web-security"
-* TODO git config alias
+* git config --global alias.tree "log --oneline --graph --decorate --all"
 
 ## AngularJs "Hello world"
 * git checkout slide-1
@@ -31,7 +31,6 @@ tags: [AngularJs, Akai, Poznań]
 * $scope.title będzie dostępny jako {{title}} w widoku
 * ng-model - wiąże elementy formularza z modelem
 * ng-repeat - pozwala interować po tablicach zdefiniowanych na $scope
-(slide z prezentacji)
 
 ## ng-controller
 * git checkout slide-3
@@ -107,6 +106,7 @@ var arrayOfObjects = [
 ## Zadanie 4
 * git checkout todo-4
 * wymień hardkodowany parametr na pochodzący ze zmiennej
+* użyj ng-model + kilka input type="radio"
 
 ## Rozwiązanie 4
 * git add .
@@ -126,7 +126,7 @@ var arrayOfObjects = [
 
 * string 'Lorem ipsum' - szukamy stringu w całych obiektach na liście
 * obiekt {key: 'value'} - szukamy obietków które pod *key* mają wartośc pasującą do _value_ 
-* obiekt {$: 'value'} - szukamy obietków które gdziekolwkiem mają wartośc pasującą do _value_ 
+* obiekt {$: 'value'} - szukamy obietków które gdziekolwiek mają wartośc pasującą do _value_ 
 
 ## Zadanie 5
 * git checkout todo-5
@@ -146,6 +146,9 @@ var arrayOfObjects = [
 <input ng-change="fireFunctionWhenChangeHappen()">
 ```
 
+## Validowanie formularza
+* git checkout slide-8
+
 ## Zadanie 6
 * git checkout todo-6
 * dodać formularz z danym osoby - obiekt newPerson
@@ -158,109 +161,94 @@ var arrayOfObjects = [
 * git commit -m '(commit message)'
 * git checkout done-6
 
-
-
-TODO:
-
-## Validowanie formularza
-
 ## Trzymanie danych w controlerze
+* git checkout slide-9
 * strata danych przy przejściu na inną podstronę
-* użycie tego samego controlera 2 razy
+* użycie tego samego controlera 2 razy - jak na #/main
 
 ## Services
+* git checkout slide-10
 * nowy serwis - dla kontrolera co 2 razy wystepuje
+* stan jest globalny dla applikacji
 
-## Zadanie  7
-* dodanie własnego servius, dla list
+## Zadanie 7
+* git checkout todo-7
+* dodanie własnego servius, dla ListCtrl
 
-## Omówienie resta
+## Rozwiązanie 7
+* git add .
+* git commit -m '(commit message)'
+* git checkout done-7
+
+## Omówienie json
 * obiekty
 * tablice
 
+```json
+{
+  "about": "I'm an object",
+  "structure": {
+    "key": "value"
+  },
+  "arrays": [ "I", "can", "keep", "them", "too" ]
+}
+```
+
+```json
+[
+  {
+    "objectId": 1
+  },
+  {
+    "objectId": 2
+  },
+  {
+    "objectId": 3
+  }
+]
+```
+
+## Rest
+* dane dostepne pod url
+* ładne url:
+ * /products - lista produktów
+ * /products/1 - pierwszy product
+* na ogół dane w json
+
 ## $resource
-* query
-* get
+* query - pobieranie tablicy
+* get - pobiernie objektu
 * parametry
 
 ## przesunięcie danych do json
+* git checkout slide-11
 
-## dygresja przykład 2000 elementów w danych
+## Podsumowanie
+* kontroler?
+* widok?
+* route?
+* serice?
 
-## Zadanie 8
-* wyświetlanie danych zbiorczych i indywidualnych z jsona
+## Materiały do nauki
+* http://docs.angularjs.org/tutorial/
+* http://egghead.io/
 
+## docs.angularjs.org/tutorial
+(Pokazanie aplikacji finalnej)
 
-
-
-
-
-
-
-
-
-
-
-
-# 1 Warsztaty AngularJs
-Pierwszę z cylku warsztaty prezentujące nowoczesne tworzenie aplikacji frontendowych na przykładzie AngularJs. Zapoznamy się podstawowymi koncepcjami istniejącymi w frameworkach js:
-
-* kontroler
-* widok
-* router
-* service
-
-i ich implementacją w angularze.
-
-## Z jakiej wiedzy będziemy korzystać
-Warsztaty są kierowane do osób które miały stycznośc z programowanie i technologiami webowymi. Poniżej jest lista koncepcji których znajomość i rozumienie będzie potrzebne do pełnego uczestnictwa w warsztatach.
-
-### Html
-* tag
-* atrybut
-* dołaczanie skryptów i styli do strony
-
-### Js
-* bloki sterujące (if, switch)
-* pętle
-* funkcje
-
-### Css 
-Znajomość zastosowania cssa
-
-### Git
-* klonowanie repozytorium
-* przełączenie się między gałęziami (branch)
-* komitowanie
-
-## Środowisko pracy
-Uczestnicy będą pracować na własnych komputerach. Będziemy korzystać z:
-
-### Edytor tekstu
-Dowolny: notepad++, vim etc.
-
-### Przeglądarka
-Współczesna przeglądarka z konsolą developerską. Na przyklad firefox z firebugiem lub chrome.
-
-### Git
-Zalecane programy z interfejsem tekstowym. 
-
-## Materiały do pobrania
-Zajęcia będą sie opierać o przykładowy projekt dostępy [na githubie](https://github.com/marcin-wosinek/angular-workshop).
-
-## Jak będą wyglądać zajęcia
-Będziemy omawiać podstawowe koncepcje angulara na przykładowym kodzie, i potem przechodzić do powtarzania kroków samemu. Wiec pokaże Wam jak wygląda prosty kontroler, i poproszę o stworzenie dodatkowego. I tak dla każdej z omawianych koncepcji.
+## egghead.io
+(Pokazanie listy filmów)
 
 ## Co dalej?
 
 Pierwsze warsztaty będą wprowadzeniem do świata frontendowych aplikacji. Następne spotkania będą poruszać takie tematy jak:
 
 * webstorage i inne js api
-* aplikacja przeglądarkowa - tworzenie
+* komunikacja z 'backendem'
 * optymalne środowsko programistyczne
 * unit testy i testowalność aplikacji
-* komunikacja z backendem
 
-## Materiały do nauki
-* http://angularjs.org/
-* http://egghead.io/
+## Stay tuned
+* http://akai.org.pl/
+* http://poznan.gtug.pl/
+* http://www.meetup.com/Hacking-Poznan/
