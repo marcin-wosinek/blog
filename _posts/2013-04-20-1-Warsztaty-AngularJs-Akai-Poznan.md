@@ -2,6 +2,7 @@
 layout: default
 category: warsztaty
 title: Warsztaty AngularJs Akai Poznań
+slideShareId: 19298860
 tags: [AngularJs, Akai, Poznań]
 ---
 # AngularJs: Warsztaty - stopień 1
@@ -35,7 +36,7 @@ tags: [AngularJs, Akai, Poznań]
 ## ng-controller
 * git checkout slide-3
 * podpięcie kontrolera do częsci widoku
-* $scope działa tylko wewnątrz kodu
+* $scope działa tylko wewnątrz tagu na którym jest kontroler
 
 ## Zadanie 1
 * git checkout todo-1
