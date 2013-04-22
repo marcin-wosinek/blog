@@ -435,9 +435,10 @@ angular.module('blink', [])
 </ul>
 ```
 
-## Gotchas - minimalizowanie kodu
-* wiązanie $scopu w kontrolerze i w widoku odbywa sie po nazwach atrybutów - wymagana jest odpowiednia konfiguracja minimalizacji
+## Gotchas - code minification
+* bind models with parameters defined on $scope is based on name - proper minification configuration is requried
 * wstrzykiwanie zależności jest zależne od nazwy argumentu funkcji - potrzebne dodatkowe zdefiniowanie zależności
+* dependency injection rely on argument's name
 
 ```js
 syngularApp.controller('ProductCtrl', function($scope, ProductApi) {
@@ -450,51 +451,44 @@ syngularApp.controller('ProductCtrl', ['$scope', 'ProductApi', function($scope, 
 ```
 
 ## Gotchas - $resource
-* istnieje w osobnym pliku, który trzeba załadować
-* zwraca puste obiektu lub tablice które będa dopiero uzupełnione po odebraniu odpowiedzi
-* w zwiazku z tym musimy odraz zadeklarować czy mowa jest o tablicy czy obiekcie
+* it's defined in different file
+* returns empty array or object - instant console.log() will show nothing
 
-## Gotchas - filtry działające tylko na tablicach
-* ng-repeat przeinteruje po obiekcie - ale filter i orderBy nie bedą działać
+## Gotchas - filters working only on arrays
+* ng-repeat will iterate on object - but filter & orderBy will not work
 
 ## Gotchas - e2e testing
-* skonfigurowanie testów jest skomplikowane
-* może w porywach być uznane za feature pułapkę
+* setting it up is complicated
+* it can be consider a trap-feature
 
-## Gotchas - akualizowanie scope z poza frameworka
-* wiekszość zmian modelu odbywa się we frameworku:
- * pobranie danych z $resource
- * jest odpalane za pomocą directives: ng-model, ng-clic
-* w sytuacji użycia zmian przychodzących z poza angularowego świata może być konieczne wywołanie fukncji $digest
+## Gotchas - updating data from outside angula
+* most of model update happen in handled by angular
+ * getting data from $resource
+ * happens in directive related code: ng-model, ng-clic
+* in cases when changes are comming form outside of angular world, we need to use $digest function
 
-## Gotchas - $ w nazwach serwisów
-* odróżnia serwisy frameworkowe od aplikacyjnych
-* używanie $ w nazwach własnych serwisów pozbawia $ sensu
-
-## Pytania
-1. Czemu angular a nie backbone?
-2. Czy to podejścia da się zintegrować z legacy code?
-3. Co walidatory na html dostosowany do angulara?
-4. Z jakim backendem używać angulara?
+## Gotchas - $ in service names
+* it prevent names conflict between our app and framework
+* using $ as prefix in custom services makes no sens
 
 ## Materiały
 * http://angularjs.org/
 * http://egghead.io/
 * http://www.youtube.com/user/angularjs
 
-## Podsumowanie
-* koncepcje znane z backendowych techologi będą zadomowiać sie w js
-* AngularJs jest narzedziem pozwalającym na bardzo dojrzałe programowanie we front endzie
-* Warto zapoznać się z yeomanem
+## Summary
+* ideas form backend programming are comming to js
+* AngularJs help us write mature code for browser
+* it's good idea to checkout Yeoman
 
 ## Kontakt
-* namiary na bloga
+* http://marcin-wosinek.github.io/blog/presentation/2013/04/24/AngularJs-AmsterdamJS.html
+* @MarcinWosinek
 * marcin.wosinek@gmail.com
-* [slajdy](https://docs.google.com/presentation/d/1fSW9dXL0Q5PCYUwiB7Z9QH4WuLGBME9k1-X06IDF2wI/edit?usp=sharing)
 
-## Podziękowania
-* zdjęcie z publicznością: http://www.flickr.com/photos/dougbelshaw/5604047370/in/photostream
-* logo BackboneJs: https://github.com/documentcloud/backbone/blob/master/docs/images/backbone.
+## Credits
+* Audience photo: http://www.flickr.com/photos/dougbelshaw/5604047370/in/photostream
+* BackboneJs logo: https://github.com/documentcloud/backbone/blob/master/docs/images/backbone.
 * Two ways binding: http://docs.angularjs.org/guide/dev_guide.templates.databinding
 * http://karma-runner.github.io/0.8/index.html
 * http://yeoman.io/
