@@ -158,24 +158,25 @@ initialize: function () {
 </ul>
 ```
 
-## Kontrolery
-* wiąże 'swój' widok z resztą aplikacji
-* zawiera prostą logikę, związaną z samym wyświetlaniem
+## Controller
+* binds 'own' view with the rest of application
+* contains simple logic, connected to display
 
 ## $scope
-* obiekt wiążący kontroler z widokiem
-* $scope.title będzie dostępny jako {{title}} w widoku
-* ng-model - wiąże elementy formularza z modelem
-* ng-repeat - pozwala interować po tablicach zdefiniowanych na $scope
+* binds controller and view together
+* $scope.title will be available as {{title}} in view
+* ng-model - directives binding input on view with data in scope
+* ng-repeat - template side loop
 
-### Prezentacja
-1. Angularowe 'Hello world'
-2. Templatkowanie z ng-repeat
+### Presenation
+1. Angular 'Hello world'
+2. Templating with ng-repeat
 
-[prezentacja](/blog/angular-hello.html)
+[presentation](/blog/angular-hello.html)
 
-## Proste obiekty js
-* pracujemy na prostych funkcjach i obiektach js
+## Simple js objects
+* we are working with simple js objects and functions
+* no 'extend' magic
 
 ```js
 // Backbone
@@ -200,13 +201,13 @@ todos.push({
 ```
 
 ## Two ways binding
-* model jest jedynym źródłem prawdy
-* zmiany na modelu aktualizują widok
-* zmiany w widoku aktualizują model
+* model is the only source of true
+* chanage on model update view
+* changes on view update model
 
-## Wsparcie dla formularza
-* rozumie atrybuty należącę html5 - required, pattern, date
-* automatycznie dodaje klasy opisujące stan elementu do wprowadzania danych
+## Forms support
+* understands html5 attributs - required, pattern, date
+* add classes describing input states
 
 ```html
 <!-- Html updated by angular -->
@@ -222,16 +223,15 @@ todos.push({
 </form>
 ```
 
-### Prezentacja
-1. przykład walidującego się formularza - zmiana kolorów kontrolek
-2. Rzut oka na kod
+### Presentation
+1. Example of validating code
 
-[prezentacja](/blog/angular-form.html)
+[presentation](/blog/angular-form.html)
 
-## Wstrzykiwanie zależności
-* nasz komponent ma przekazywane jego zależności jak parametry do funkcji go opakowywującej
-* ładna definiacji powiązań między komponentami
-* zwiększa testowalność
+## Dependecy injection
+* all dependency of our compotnent is injected as arguments of wrapping function
+* defines nicelly interaction between compontents
+* increas testability
 
 ```js
 function HelloCtrl($scope, $window, $log) {
@@ -241,10 +241,10 @@ function HelloCtrl($scope, $window, $log) {
 }
 ```
 
-## Serwisy
-* reużywalne kawałki kodu
-* wstrzykiwane do kontrolerów, directives i innych serwisów
-* większość logiki aplikacji powinna być w nich realizowana
+## Services
+* reusable pieces of code
+* injected into controllers, directives and other services
+* most of application logic should be placed into services
 
 ```js
 /**
@@ -265,10 +265,12 @@ todomvc.factory('todoStorage', function () {
 });
 ```
 
-## Ścieżki - $routeProvider
-* dla aplikacji możemy zdefiniować ścieżki (z argumentami), przekierowania etc.
+## Routing - $routeProvider
+* we can define route (with arguments), redirections etc.
 * ładnie współpracuje z przyciskami dalej i wstecz
-* wspiera adresy z /# i bez
+* bookmarkable adresses
+* it's cooperate nicely with back and forward
+* support routes with and without /#
 
 ```js
 angular.module('phonecat', [])
@@ -289,9 +291,9 @@ angular.module('phonecat', [])
   }]);
 ```
 
-## Komunikacja z backendem - $resource
-* serwis do generowani api komuniujacego się po restcie
-* zalecany sposób użycia: $resource -> serwis opakowujący model -> kontroler
+## REST - $resource
+* service generating endpoint to communication with 
+* synchronously returns empty array or object - to be used in view; when data arrives, empyt shell is filled out
 
 ```js
 myApp.factory('ProductService', function($resource) {
@@ -325,16 +327,16 @@ function ProductCtrl($scope, ProductService) {
 ```
 
 ## Directives
-* niestandardowe tagi i atrybuty zdefiniowane przez angulara, lub developera aplikacji
-* rozszeżają działanie html o nowe feature
-* do nich należy manipulacja DOMem
-* w miejsce '{expression}' np 'variable' żeby dostać się do $scope.variable
-* przykłady:
- * ng-show - ukrywa jeśli false
- * ng-hide - ukrywa jeśli true
- * ng-view - podstawia widok zdefiniowany dla ścieżki
- * ng-clas - pozwala ustawiać inteligentie klasy
- * ng-switch - wyświelta jedną z opcji
+* nonstandard tags and attributes defined by angular, or application developer
+* extensiate html with new features
+* the only place in angular app to do DOM manipulation
+* in place of '{expression}' we put 'variable' to get data form $scope.variable
+* examples:
+ * ng-show - hide element when false
+ * ng-hide - hide element when true
+ * ng-view - place to put view from route
+ * ng-class - allow us to conditionally apply classes
+ * ng-switch - diplay one of options
 
 ```html
 <ANY class="ng-show: {expression};"> <ANY ng-show="{expression}">
