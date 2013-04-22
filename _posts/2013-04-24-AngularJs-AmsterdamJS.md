@@ -267,7 +267,6 @@ todomvc.factory('todoStorage', function () {
 
 ## Routing - $routeProvider
 * we can define route (with arguments), redirections etc.
-* ładnie współpracuje z przyciskami dalej i wstecz
 * bookmarkable adresses
 * it's cooperate nicely with back and forward
 * support routes with and without /#
@@ -355,49 +354,42 @@ function ProductCtrl($scope, ProductService) {
 ```
 
 ## Yeoman
-* Zestaw narzędzi usprawniających workflow developerski
-* yo - generatory kodu:
- * dla angulara automatyzuje tworzenie:
-  * serwisów
+* toolset improving programming workflow
+* yo - code generator:
+ * for angular it generatre:
+  * services
   * directives
-  * kontrolerów
-  * ścieżek - kotrolera wraz z widokiem i ścieżką dostępu
- * wspiera również inne frameworki i czystego js
-* grunt - automatyzacja częstych zadań
- * minimalizacja i paczkowanie kodu
- * serwer developerski z automatycznym odświeżaniem otwartej strony
-* bower - zarządzanie zależnościami
+  * controllers
+  * routes - controller, view & route
+ * supports other frameworks and plane js apps
+* grunt - common task automatization
+ * minification and code packaging
+ * development server with auto reload
+* bower - dependency manangement
 
-### Prezentacja
-1. Utworzenie aplikacji angularowej w nowym folderze
-2. Odpalenie serwer i otworzenie strony w przeglądarce
-3. Dodanie ścieżki do aplikacji i otworzenie w przeglądarce
-4. Zmiana widoku i automatyczne odświerzenie strony
+### Presentation
+1. Open a server and page in a browser
+2. Change view and show it in browser
 
 ## Karma (Testacular)
-* test runner pozwalający uruchamiać testy w przeglądarkach
-* uruchamiamy serwer na maszynie na której tworzymy kod
-* łaczymy z nim przeglądarki i serwer odpala w nich testy
+* test runner firing our tests in any browser
+* it started on machin we are writing code
+* browsers are connecting to server which starts tests
 
-### Prezentacja
-1. Dodanie przycisku do widoku
-2. Dodanie testu sprawdzającego czy alert został włączony
-3. Napisanie kodu przechodzącego test
+## Habits - writing callbacks
+* displaying what was received with GET needs no callback
+* make sens only when we want to react to success or failer
 
-## Nawyki - pisanie callbacków
-* obsługa tego co GET zwaraca nie potrzebuje callbacków
-* ma sens jeśli potrzebujemy pokazać info że dany request się nie udał
+## Habits - imperative binding
+* for that we use directives and \{\{\}\}
 
-## Nawyki - bindowanie
-* do tego służą directives - ng-model, ng-bind klamry \{\{\}\}
+## Habits - changing DOM in controller
+* we use only directive to modify DOM
+* when we write own directives is recomended to have good test coverage
 
-## Nawyki - zmienianie DOM w kontrolerze
-* do modyfikacji DOM używamy tylko directives
-* takie directives najlepiej (koniecznie) uzbrajamy w mocne pokrycie testami
-
-## Gotchas - pisanie directives
-* Narzędzie na który jest opartę bardzo wiele corowych featurów frameworka - 2 ways binding
-* rough developer experience - w szególności na tle bardzo gładkiej współpracy z resztą frameworka
+## Gotchas - writing directives
+* directives are the tool used for meny core feature
+* rough developer experience - especially when compare to other framework features
 
 ```js
 angular.module('blink', [])
@@ -413,11 +405,11 @@ angular.module('blink', [])
   });
 ```
 
-## Gotchas - ng-model w ng-repeat
-* ng-repeat tworzy nowe scopy dla elementów
-* scopy dzieci, dziedziczą prototypowo z parenta
-* ng-model="value" działa bardzo inaczej niż ng-model="object.value"
-* występuje wszędzie tam gdzie mamy podscopy
+## Gotchas - ng-model in ng-repeat
+* ng-repeat creates new scope for each element
+* child scopes has parrent as prototype
+* ng-model="value" works supprisingly, while ng-model="object.value" as expected
+* the same issue is always when we have sub scopes
 
 ```html
 // Gotcha!
@@ -437,7 +429,6 @@ angular.module('blink', [])
 
 ## Gotchas - code minification
 * bind models with parameters defined on $scope is based on name - proper minification configuration is requried
-* wstrzykiwanie zależności jest zależne od nazwy argumentu funkcji - potrzebne dodatkowe zdefiniowanie zależności
 * dependency injection rely on argument's name
 
 ```js
@@ -471,7 +462,7 @@ syngularApp.controller('ProductCtrl', ['$scope', 'ProductApi', function($scope, 
 * it prevent names conflict between our app and framework
 * using $ as prefix in custom services makes no sens
 
-## Materiały
+## Materials
 * http://angularjs.org/
 * http://egghead.io/
 * http://www.youtube.com/user/angularjs
@@ -481,7 +472,7 @@ syngularApp.controller('ProductCtrl', ['$scope', 'ProductApi', function($scope, 
 * AngularJs help us write mature code for browser
 * it's good idea to checkout Yeoman
 
-## Kontakt
+## Contact
 * http://marcin-wosinek.github.io/blog/presentation/2013/04/24/AngularJs-AmsterdamJS.html
 * @MarcinWosinek
 * marcin.wosinek@gmail.com
