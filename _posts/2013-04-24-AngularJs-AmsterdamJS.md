@@ -2,6 +2,8 @@
 layout: default
 category: presentation
 title: AngularJs - AmsterdamJS
+videoId: 9sDiy0QIVuA
+slideShareId: 19963430
 tags: [AngularJs, AmsterdamJS, Amsterdam]
 ---
 # AngularJs
