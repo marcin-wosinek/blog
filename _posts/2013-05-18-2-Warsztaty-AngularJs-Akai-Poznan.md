@@ -14,6 +14,11 @@ tags: [AngularJs, Akai, Poznań]
 * geolokalizacja
 * battery status
 * cache manifest
+* chrome application (package app)
+* Chromium Embedded Framewor
+* commertial apps:
+  * spotify? access to music
+  * rebtel calling inside app
 
 ## Project ?
 * chat?
