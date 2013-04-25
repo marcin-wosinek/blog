@@ -465,9 +465,9 @@ syngularApp.controller('ProductCtrl', ['$scope', 'ProductApi', function($scope, 
 * using $ as prefix in custom services makes no sens
 
 ## Materials
-* http://angularjs.org/
-* http://egghead.io/
-* http://www.youtube.com/user/angularjs
+* [http://angularjs.org/](http://angularjs.org/)
+* [http://egghead.io/](http://egghead.io/)
+* [http://www.youtube.com/user/angularjs](http://www.youtube.com/user/angularjs)
 
 ## Summary
 * ideas form backend programming are comming to js
