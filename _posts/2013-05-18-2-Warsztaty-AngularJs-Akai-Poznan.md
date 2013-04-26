@@ -8,17 +8,26 @@ tags: [AngularJs, Akai, Poznań]
 # AngularJs: Warsztaty - stopień 2
 ## Temat 
 * webstorage
+ * key-value strings
+* indexDb
+ * key-value
+ * transaction
+ * indexed properties
+* webworker
+ * heavy computation
 * websocket
+
 * full screen api
+* cache manifest
+
+* pointer locking api
 * loading local data api
 * geolokalizacja
 * battery status
-* cache manifest
 * chrome application (package app)
 * Chromium Embedded Framewor
 * commertial apps:
   * spotify? access to music
-  * rebtel calling inside app
 
 ## Project ?
 * chat?
