@@ -7,15 +7,17 @@ tags: [AngularJs, Akai, Poznań]
 ---
 # AngularJs: Warsztaty - stopień 2
 ## Temat 
-* webstorage
- * key-value strings
 * indexDb
  * key-value
  * transaction
  * indexed properties
+ * http://www.html5rocks.com/en/tutorials/indexeddb/todo/
+* webstorage
+ * key-value strings
 * webworker
  * heavy computation
 * websocket
+ * help: http://www.html5rocks.com/en/tutorials/frameworks/angular-websockets/
 
 * full screen api
 * cache manifest
@@ -42,3 +44,9 @@ tags: [AngularJs, Akai, Poznań]
 * notatnik:
  * zapisuje zdalnie
  * aktualizuje zmiany z serwera
+
+## Stopnie
+1. Strona
+2. Strona ofline
+3. Aplikacja chrom
+ * http://developer.chrome.com/dev/apps/first_app.html
