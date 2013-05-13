@@ -7,46 +7,24 @@ tags: [AngularJs, Akai, Poznań]
 ---
 # AngularJs: Warsztaty - stopień 2
 ## Temat 
-* indexDb
- * key-value
- * transaction
- * indexed properties
- * http://www.html5rocks.com/en/tutorials/indexeddb/todo/
 * webstorage
  * key-value strings
-* webworker
- * heavy computation
-* websocket
- * help: http://www.html5rocks.com/en/tutorials/frameworks/angular-websockets/
 
-* full screen api
-* cache manifest
+## Koncepcje
+1. Szkielet aplikacji yeomanowe
+2. pisanie filtrów
+3. pisanie directive
+4. korzystanie z animacji
+5. angular-ui
+ * mask
+ * key-press
+6. Angular bootstrap
+ * pagination
+ * tooltip
 
-* pointer locking api
-* loading local data api
-* geolokalizacja
-* battery status
-* chrome application (package app)
-* Chromium Embedded Framewor
-* commertial apps:
-  * spotify? access to music
-
-## Project ?
-* chat?
-* gra - chodzimy i gadamy itp?
-* collaborative webboard
-* coś opartego o node?
-* coś z hoodie
-* sklep:
- * aktualizacja stanu produktów via web socket
- * koszyk w webstorage
- * powiększenie produktów w full screen api
-* notatnik:
- * zapisuje zdalnie
- * aktualizuje zmiany z serwera
-
-## Stopnie
-1. Strona
-2. Strona ofline
-3. Aplikacja chrom
- * http://developer.chrome.com/dev/apps/first_app.html
+## Project
+1. książka kontaktów
+ * lista
+ * paginacja
+ * search
+ * dodawanie
