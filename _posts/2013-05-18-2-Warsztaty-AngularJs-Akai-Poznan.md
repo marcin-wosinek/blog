@@ -13,8 +13,11 @@ tags: [AngularJs, Akai, Poznań]
 ## Koncepcje
 1. Szkielet aplikacji yeomanowe
 2. pisanie filtrów
-3. pisanie directive
-4. korzystanie z animacji
+ * filtr przedziału
+3. korzystanie z animacji (http://www.yearofmoo.com/2013/04/animation-in-angularjs.html)
+
+4. pisanie directive
+ * kontrolka dla filtru przedziału
 5. angular-ui
  * mask
  * key-press
