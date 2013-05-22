@@ -17,11 +17,23 @@
     </script>
     {{ content }}
 
+    <h2>Posts</h2>
+    <ul>
+      {% for post in site.posts reversed %}
+        {% if post.category contains "post" %}
+          <li>{{ post.date | date: "%d %B %Y" }}: <a href="/blog{{ post.url }}">{{ post.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+
     <h2>Upcomming events</h2>
     <ul>
       {% for post in site.posts reversed %}
-        {% if post.date > site.time %}
-          <li>{{ post.date | date: "%d %B %Y" }}: <a href="/blog{{ post.url }}">{{ post.title }}</a></li>
+        {% if post.category contains "post" %}
+        {% else %}
+          {% if post.date > site.time %}
+            <li>{{ post.date | date: "%d %B %Y" }}: <a href="/blog{{ post.url }}">{{ post.title }}</a></li>
+          {% endif %}
         {% endif %}
       {% endfor %}
     </ul>
@@ -29,8 +41,11 @@
     <h2>Past events</h2>
     <ul>
       {% for post in site.posts %}
-        {% if post.date < site.time %}
-          <li>{{ post.date | date: "%d %B %Y" }}: <a href="/blog{{ post.url }}">{{ post.title }}</a></li>
+        {% if post.category contains "post" %}
+        {% else %}
+          {% if post.date < site.time %}
+            <li>{{ post.date | date: "%d %B %Y" }}: <a href="/blog{{ post.url }}">{{ post.title }}</a></li>
+          {% endif %}
         {% endif %}
       {% endfor %}
     </ul>

@@ -1,6 +1,6 @@
 ---
 layout: default
-category: warsztaty
+category: warsztaty event
 title: Warsztaty AngularJs Akai Poznań
 slideShareId: 19298860
 tags: [AngularJs, Akai, Poznań]
