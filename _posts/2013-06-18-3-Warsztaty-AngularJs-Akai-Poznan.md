@@ -18,7 +18,8 @@ http://news.turbulenz.com/post/49430669886/turbulenz-engine-goes-open-source
 * webworker
  * heavy computation
 * websocket
- * help: http://www.html5rocks.com/en/tutorials/frameworks/angular-websockets/
+ * http://www.html5rocks.com/en/tutorials/frameworks/angular-websockets/
+ * http://www.netmagazine.com/tutorials/angularjs-collaboration-board-socketio
 
 * full screen api
 * cache manifest
@@ -31,6 +32,8 @@ http://news.turbulenz.com/post/49430669886/turbulenz-engine-goes-open-source
 * Chromium Embedded Framewor
 * commertial apps:
   * spotify? access to music
+* no backend - firebase:
+ http://ngmodules.org/modules/angularFire
 
 ## Project ?
 * chat?
