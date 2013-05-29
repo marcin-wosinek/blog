@@ -15,15 +15,21 @@ tags: [AngularJs, Akai, Poznań]
 2. pisanie filtrów
  * filtr przedziału
 3. korzystanie z animacji (http://www.yearofmoo.com/2013/04/animation-in-angularjs.html)
-
-4. pisanie directive
+4. cookies
+ * prosty przykład ciasteczka
+5. pisanie directive
  * kontrolka dla filtru przedziału
-5. angular-ui
+ * directive z ogłoszeniem o ciasteczkach
+ * directive gadajace ze sobą - input numeru z ograniczeniem do nr międzynarodowych, stancjonarnych komórkowych
+   <phonenumber cabel mobile international>
+   http://www.befundoo.com/blog/angularjs-directives-tutorial/
+6. angular-ui
  * mask
  * key-press
-6. Angular bootstrap
+7. Angular bootstrap
  * pagination
  * tooltip
+ * dialog
 
 ## Project
 1. książka kontaktów
