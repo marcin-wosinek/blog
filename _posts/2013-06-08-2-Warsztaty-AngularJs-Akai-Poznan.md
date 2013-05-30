@@ -38,6 +38,7 @@ tags: [AngularJs, Akai, Poznań]
 6. pisanie directive
  * template + ng-transclude omówienie
  * Zadanie4: directive 'wizytówka'
+  * uncopyable
  * directive + logika
  * Zadanie5: directive z ogłoszeniem o ciasteczkach
  * izolowanie scope - demonstracja problemów:
@@ -47,21 +48,3 @@ tags: [AngularJs, Akai, Poznań]
  * Zadanie6: kontrolka dla filtru przedziału
  * demo - chack żeby nie dało się min przekroczyć max
  * Zadanie?: ustawianie klas dla inputów gdzie piszemy + timeout
-
-7. angular-ui
- * mask
- * key-press
- * nested routes ?
- * hightlight ?
- * scroll fix ?
-8. Angular bootstrap
- * pagination
- * tooltip
- * dialog
-
-## Project
-1. książka kontaktów
- * lista
- * paginacja
- * search
- * dodawanie
