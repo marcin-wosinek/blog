@@ -13,7 +13,7 @@ tags: [AngularJs, Akai, Poznań]
 2. Szkielet aplikacji yeomanowe
  * omówienie yeomana 
  * demo korzystystania z yo
- * struktura plików angularówowych
+ * struktura plików angularowych
 3. pisanie filtrów
  * przypomnienie filtrów w angularze
  * TODO: Zadanie1: filtr usuwania polskich znaków
@@ -34,14 +34,20 @@ tags: [AngularJs, Akai, Poznań]
 
 6. pisanie directive
  * template + ng-transclude omówienie
- * Zadanie4: directive 'wizytówka'
-  * uncopyable
+ * Zadanie4: directive z ogłoszeniem o ciasteczkach - guzik z akceptacją
+ * linking function
+  * dostęp do elementu - ustawieni klasy na elemencie zawierającym
  * directive + logika
- * Zadanie5: directive z ogłoszeniem o ciasteczkach
+ * Zadanie5: directive z ogłoszeniem o ciasteczkach - implementacja chowania
+ * linking function - przechwytywanie eventów
+ * Zadanie6: unselectable directive
  * izolowanie scope - demonstracja problemów:
   * &
   * =
-  * @
  * Zadanie6: kontrolka dla filtru przedziału
- * demo - chack żeby nie dało się min przekroczyć max
+ * demo - hack żeby nie dało się min przekroczyć max
+ * izolowanie scope - wywoływanie funcji
+  * @
+ * Zadanie7: wsFocusOn, wsFocusOf
+ * Zadanie?: wcConfirmClick
  * Zadanie?: ustawianie klas dla inputów gdzie piszemy + timeout
