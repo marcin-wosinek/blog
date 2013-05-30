@@ -11,22 +11,50 @@ tags: [AngularJs, Akai, Poznań]
  * key-value strings
 
 ## Koncepcje
-1. Szkielet aplikacji yeomanowe
-2. pisanie filtrów
- * filtr przedziału
-3. korzystanie z animacji (http://www.yearofmoo.com/2013/04/animation-in-angularjs.html)
-4. cookies
- * prosty przykład ciasteczka
-5. pisanie directive
- * kontrolka dla filtru przedziału
- * directive z ogłoszeniem o ciasteczkach
- * directive gadajace ze sobą - input numeru z ograniczeniem do nr międzynarodowych, stancjonarnych komórkowych
-   <phonenumber cabel mobile international>
-   http://www.befundoo.com/blog/angularjs-directives-tutorial/
-6. angular-ui
+1. Projekt
+ * Przeklikanie strony
+2. Szkielet aplikacji yeomanowe
+ * omówienie yeomana 
+ * demo korzystystania z yo
+ * struktura plików angularówowych
+3. pisanie filtrów
+ * przypomnienie filtrów w angularze
+ * TODO: Zadanie1: filtr usuwania polskich znaków
+ * Zadanie2: filtr przedziału
+4. Animacje
+ * rys historyczny: PITA w angularze
+ * mówienie aktualnego rozwiązania http://www.yearofmoo.com/2013/04/animation-in-angularjs.html
+ * Demo http://www.nganimate.org/
+ * Zadanie2: implementacja animacji
+5. cookies
+ * omówienie cookiesów
+ * Narzędzia do cookiesów w angularze
+ * zastosowanie ciasteczek:
+  * przechowywanie danych - stara metoda
+  * session id dla zalogowanego user - lepiej uzywać tej koncepcji http://witoldsz.github.io/angular-http-auth/
+  * śledzenie użytkownika/liczenie UU
+ * Zadanie3: tracking cookies
+
+6. pisanie directive
+ * template + ng-transclude omówienie
+ * Zadanie4: directive 'wizytówka'
+ * directive + logika
+ * Zadanie5: directive z ogłoszeniem o ciasteczkach
+ * izolowanie scope - demonstracja problemów:
+  * &
+  * =
+  * @
+ * Zadanie6: kontrolka dla filtru przedziału
+ * demo - chack żeby nie dało się min przekroczyć max
+ * Zadanie?: ustawianie klas dla inputów gdzie piszemy + timeout
+
+7. angular-ui
  * mask
  * key-press
-7. Angular bootstrap
+ * nested routes ?
+ * hightlight ?
+ * scroll fix ?
+8. Angular bootstrap
  * pagination
  * tooltip
  * dialog
