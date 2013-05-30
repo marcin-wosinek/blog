@@ -8,14 +8,19 @@ tags: [AngularJs, Akai, Poznań]
 # AngularJs: Warsztaty - stopień 4+
 
 ## Temat 
-* htmlowy silnik do gier:
-http://news.turbulenz.com/post/49430669886/turbulenz-engine-goes-open-source
+* webstorage
+ * key-value strings
+
+* no backend - firebase:
+ http://ngmodules.org/modules/angularFire
 
 * indexDb
  * key-value
  * transaction
  * indexed properties
  * http://www.html5rocks.com/en/tutorials/indexeddb/todo/
+
+
 * webworker
  * heavy computation
 * websocket
@@ -33,8 +38,9 @@ http://news.turbulenz.com/post/49430669886/turbulenz-engine-goes-open-source
 * Chromium Embedded Framewor
 * commertial apps:
   * spotify? access to music
-* no backend - firebase:
- http://ngmodules.org/modules/angularFire
+
+* htmlowy silnik do gier:
+http://news.turbulenz.com/post/49430669886/turbulenz-engine-goes-open-source
 
 ## Project ?
 * chat?

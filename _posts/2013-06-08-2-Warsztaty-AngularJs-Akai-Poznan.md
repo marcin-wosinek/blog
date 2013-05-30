@@ -6,9 +6,6 @@ published: false
 tags: [AngularJs, Akai, Poznań]
 ---
 # AngularJs: Warsztaty - stopień 2
-## Temat 
-* webstorage
- * key-value strings
 
 ## Koncepcje
 1. Projekt
