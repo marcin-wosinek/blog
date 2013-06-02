@@ -8,17 +8,21 @@ tags: [AngularJs, Akai, Poznań]
 # AngularJs: Warsztaty - stopień 3
 
 ## Koncepcje
-1. angular-ui
+1. digest & apply
+2. directives
+ * izolowanie scope - wywoływanie funcji
+  * &
+3. angular-ui
  * mask
  * key-press
  * nested routes ?
  * hightlight ?
  * scroll fix ?
-2. Angular bootstrap
+4. Angular bootstrap
  * pagination
  * tooltip
  * dialog
-3. Unit testy
+5. Unit testy
 
 ## Co dalej?
 
