@@ -22,9 +22,9 @@ tags: [AngularJs, Akai, Poznań]
 
 ## Projekt (screen appki)
 * Książka kontaktów
-  * lista kontaktów
-  * strona osoby
-  * formularz edycji
+ * lista kontaktów
+ * strona osoby
+ * formularz edycji
 
 ## Struktura plików (screen folderów)
 * git checkout slide-1
@@ -48,8 +48,8 @@ tags: [AngularJs, Akai, Poznań]
 3. Automatyczne odświerzenie na zmianę
 
 ## pisanie filtrów
- * pozwalają zmieniać dane z poziomu widoku
- * wbudowane filtry
+* pozwalają zmieniać dane z poziomu widoku
+* wbudowane filtry
 
 ```html
 <p>{{ someText | uppercase }}</p>
@@ -61,10 +61,10 @@ tags: [AngularJs, Akai, Poznań]
 ```
 
 ## Zadanie 1: filtr przedziału
- * filtr wybierający ludzi z odpowiedniego przedziału wieku
- * git checkout todo-1
- * użycie: app/views/showContacts.html +9
- * implementacja: app/scripts/filters/between.js
+* filtr wybierający ludzi z odpowiedniego przedziału wieku
+* git checkout todo-1
+* użycie: app/views/showContacts.html +9
+* implementacja: app/scripts/filters/between.js
 
 ## Rozwiązanie 1
 * git add .
@@ -82,17 +82,17 @@ tags: [AngularJs, Akai, Poznań]
 * do wersji 1.1.4 nie było wsparcia dla animacji
 
 ## ngAnimation
- * pozwala odpalać animacje na zmiana DOM:
-  * ng-repeat
-  * ng-include
-  * ng-hide
-  * ng-show
- * Demo http://www.nganimate.org/
+* pozwala odpalać animacje na zmiana DOM:
+ * ng-repeat
+ * ng-include
+ * ng-hide
+ * ng-show
+* Demo http://www.nganimate.org/
 
 ## Zadanie 2: zastosowanie animacji
- * animowanie zmiany wyświeltanych elementów
- * git checkout todo-1
- * implementacja: app/views/showContacts.html & app/styles/main.css
+* animowanie zmiany wyświeltanych elementów
+* git checkout todo-1
+* implementacja: app/views/showContacts.html & app/styles/main.css
 
 ## Rozwiązanie 2:
 * git add .
@@ -101,39 +101,39 @@ tags: [AngularJs, Akai, Poznań]
 * Pytania?
 
 ## Global controller
- * git checkout slide-3
- * pliki: app/index.html +26
- * hack na zawsze uruchamiany kontroler
+* git checkout slide-3
+* pliki: app/index.html +26
+* hack na zawsze uruchamiany kontroler
 
 ## Generator UUID (Universally unique identifier)
- * git checkout slide-4
- * pliki: app/scripts/services/wsUuidGenerator.js
- * prawdopodobieństwo kolizji:
-  * miliard co sekunde: w 100 lat mamy 50%
-  * 600 milionów dla każdego człowieka na ziemi: 50%
-  * ryzyko że udeży mnie meteor w ciągu roku = kolizja przy kilku dziesiątkach bilionów UUID
+* git checkout slide-4
+* pliki: app/scripts/services/wsUuidGenerator.js
+* prawdopodobieństwo kolizji:
+ * miliard co sekunde: w 100 lat mamy 50%
+ * 600 milionów dla każdego człowieka na ziemi: 50%
+ * ryzyko że udeży mnie meteor w ciągu roku = kolizja przy kilku dziesiątkach bilionów UUID
 
 ## Ciasteczka - cookies
- * do 4 kb danych
- * przesyłane z każdym requestem do serwera
+* do 4 kb danych
+* przesyłane z każdym requestem do serwera
 
 ## Cel: śledzenie userów
- * liczenie odwiedzin
- * śledzenie aktywności
+* liczenie odwiedzin
+* śledzenie aktywności
 
 ## Zastosowanie
- * śledzenie użytkowników/liczenie odwidzin
- * <del>przechowywanie danych</del>: lepiej użyć [webstorage](http://dev.w3.org/html5/webstorage/)
- * logowanie usera - dobrze zainteresować się tym http://witoldsz.github.io/angular-http-auth/
+* śledzenie użytkowników/liczenie odwidzin
+* <del>przechowywanie danych</del>: lepiej użyć [webstorage](http://dev.w3.org/html5/webstorage/)
+* logowanie usera - dobrze zainteresować się tym http://witoldsz.github.io/angular-http-auth/
 
 ## Cookies w angularze
- * ngCookies - dodatkowy plik do załadowania
- * $cookies - sewis opakowywujący użycie cookies
+* ngCookies - dodatkowy plik do załadowania
+* $cookies - sewis opakowywujący użycie cookies
 
 ## Zadanie 3: tracking cookies
- * git checkout todo-3
- * implementacja: app/scripts/controllers/global.js
- * Jeśli nie ma 'trackingId' na ciasteczku - ustawamy je na nowo wygenerowany UUID
+* git checkout todo-3
+* implementacja: app/scripts/controllers/global.js
+* Jeśli nie ma 'trackingId' na ciasteczku - ustawamy je na nowo wygenerowany UUID
 
 ## Rozwiązanie 3
 * git add .
@@ -142,8 +142,8 @@ tags: [AngularJs, Akai, Poznań]
 * Pytania?
 
 ## Directives
- * rozszeżenia do html
- * formy użycia
+* rozszeżenia do html
+* formy użycia
 
 ```html
 <span my-dir="exp"></span>
@@ -153,27 +153,27 @@ tags: [AngularJs, Akai, Poznań]
 ```
 
 ## Pisanie directives
- * git checkout slide-5
- * plik: app/scripts/directives/ws-accept-cookies.js
- * tak definiujemy tak jak kontrolery serwisy czy filtry
- * properties zwracanego obiektu:
-  * template - html który zastąpi zawartość
-  * restrict - ograniczenie uzycia directive:
-   * E - element, tag
-   * A - atrybut
-   * C - klasa
-   * M - komentarz
-  * link - funkcja opalana po podpięciu directive
+* git checkout slide-5
+* plik: app/scripts/directives/ws-accept-cookies.js
+* tak definiujemy tak jak kontrolery serwisy czy filtry
+* properties zwracanego obiektu:
+ * template - html który zastąpi zawartość
+ * restrict - ograniczenie uzycia directive:
+  * E - element, tag
+  * A - atrybut
+  * C - klasa
+  * M - komentarz
+ * link - funkcja opalana po podpięciu directive
 
 ## ngTransclude
- * pozwala na wstawienie oryginalnej zawartości tagu wewnątrz templatu
- * wymaga transclude: true
+* pozwala na wstawienie oryginalnej zawartości tagu wewnątrz templatu
+* wymaga transclude: true
 
 ## Zadanie 4: template dla ws-accept-cookies
- * git checkout todo-4
- * przykład użycia: app/index.htm +27
- * implementacja: app/scripts/directives/ws-accept-cookies.js
- * to co jest oryginalnie wewnatrz tagu chcemy mieć wciąż w directive + chcemy mieć guzik 'accept'
+* git checkout todo-4
+* przykład użycia: app/index.htm +27
+* implementacja: app/scripts/directives/ws-accept-cookies.js
+* to co jest oryginalnie wewnatrz tagu chcemy mieć wciąż w directive + chcemy mieć guzik 'accept'
 
 ## Rozwiązanie 4
 * git add .
@@ -182,8 +182,8 @@ tags: [AngularJs, Akai, Poznań]
 * Pytania?
 
 ## Directives
- * rozszeżenia do html
- * formy użycia
+* rozszeżenia do html
+* formy użycia
 
 ```html
 <span my-dir="exp"></span>
@@ -193,27 +193,27 @@ tags: [AngularJs, Akai, Poznań]
 ```
 
 ## Pisanie directives
- * git checkout slide-5
- * plik: app/scripts/directives/ws-accept-cookies.js
- * tak definiujemy tak jak kontrolery serwisy czy filtry
- * properties zwracanego obiektu:
-  * template - html który zastąpi zawartość
-  * restrict - ograniczenie uzycia directive:
-   * E - element, tag
-   * A - atrybut
-   * C - klasa
-   * M - komentarz
-  * link - funkcja opalana po podpięciu directive
+* git checkout slide-5
+* plik: app/scripts/directives/ws-accept-cookies.js
+* tak definiujemy tak jak kontrolery serwisy czy filtry
+* properties zwracanego obiektu:
+ * template - html który zastąpi zawartość
+ * restrict - ograniczenie uzycia directive:
+  * E - element, tag
+  * A - atrybut
+  * C - klasa
+  * M - komentarz
+ * link - funkcja opalana po podpięciu directive
 
 ## ngTransclude
- * pozwala na wstawienie oryginalnej zawartości tagu wewnątrz templatu
- * wymaga transclude: true
+* pozwala na wstawienie oryginalnej zawartości tagu wewnątrz templatu
+* wymaga transclude: true
 
 ## Zadanie 4: template dla ws-accept-cookies
- * git checkout todo-4
- * przykład użycia: app/index.htm +27
- * implementacja: app/scripts/directives/ws-accept-cookies.js
- * to co jest oryginalnie wewnatrz tagu chcemy mieć wciąż w directive + chcemy mieć guzik 'accept'
+* git checkout todo-4
+* przykład użycia: app/index.htm +27
+* implementacja: app/scripts/directives/ws-accept-cookies.js
+* to co jest oryginalnie wewnatrz tagu chcemy mieć wciąż w directive + chcemy mieć guzik 'accept'
 
 ## Rozwiązanie 4
 * git add .
@@ -222,11 +222,11 @@ tags: [AngularJs, Akai, Poznań]
 * Pytania?
 
 ## linking function
- * miejsce na logikę directive
- * argumenty - kolejność jest istotna:
-  * scope - zakres. W najprostrzym przypadku dzielony ze światem zewnętrznym
-  * element - element jQuery lub jqLite do którego podpinany logikę
-  * attrs - obiekt z atrybutami na elemencie do którego się wpinamy
+* miejsce na logikę directive
+* argumenty - kolejność jest istotna:
+ * scope - zakres. W najprostrzym przypadku dzielony ze światem zewnętrznym
+ * element - element jQuery lub jqLite do którego podpinany logikę
+ * attrs - obiekt z atrybutami na elemencie do którego się wpinamy
 
 ## Zadanie 5: ws-accept-cookies - implementacja chowania
 * git checkout todo-5
