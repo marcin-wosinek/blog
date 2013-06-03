@@ -4,7 +4,7 @@ category: warsztaty
 title: Warsztaty AngularJs Akai Poznań
 tags: [AngularJs, Akai, Poznań]
 ---
-# AngularJs: Warsztaty - stopień 2
+# AngularJs: Warsztaty - stopień 2 (8 VI sobota)
 
 ## Środowisko
 * konsolowy git
@@ -284,3 +284,15 @@ tags: [AngularJs, Akai, Poznań]
 ## Instalowanie yeomana
 * Do przyszłych warsztatów będziemy korzytać z yeomana
 * Dla chetnych: sprubujcie teraz zainstalować [yeoman](http://yeoman.io/)
+
+## Co na następnych warsztatach?
+* directives
+* unit testy & TDD we frontendzie
+* warte uwagii projekty:
+ * angular-ui
+ * angular-bootstrap
+
+## Stay tuned
+* [Akai](http://akai.org.pl/)
+* [GDG Poznań](https://plus.google.com/110191013153077917985)
+* [Hacking-Poznan](http://www.meetup.com/Hacking-Poznan/)
