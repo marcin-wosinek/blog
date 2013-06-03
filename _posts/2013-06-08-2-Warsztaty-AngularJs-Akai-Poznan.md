@@ -229,7 +229,9 @@ tags: [AngularJs, Akai, Poznań]
   * attrs - obiekt z atrybutami na elemencie do którego się wpinamy
 
 ## Zadanie 5: ws-accept-cookies - implementacja chowania
- * git checkout todo-5
+* git checkout todo-5
+* dodanie obsługki kliknięcia guzika akceptuj
+* ukrywanie elementu jesli ciasteczka były już zaakceptowane
 
 ## Rozwiązanie 5:
 * git add .
@@ -237,14 +239,48 @@ tags: [AngularJs, Akai, Poznań]
 * git checkout done-5
 * Pytania?
 
- * Zadanie5: directive z ogłoszeniem o ciasteczkach kk
+## Podpinanie js do html
+* zawsze korzystamy z directive!
 
- * linking function - przechwytywanie eventów
- * Zadanie6: unselectable directive
- * izolowanie scope - demonstracja problemów:
-  * @
-  * =
- * Zadanie6: kontrolka dla filtru przedziału
- * demo - hack żeby nie dało się min przekroczyć max
+## Directive blokujący zaznaczanie i klikanie na element
+* git checkout slide-6
+* użycie: app/views/page.html +3
+* implementacja: app/scripts/directives/ws-unselectable.js
+
+## kontrolka w directive
+* git checkout slide-7
+* użycie: app/views/shortcuts.html
+* directive z reużywajną kontrolką
+
+## Nie odizolowane scopy
+* git checkout slide-8
+* chrome: #/shortcuts
+* wszystkie kontrolki działają na tym samym modelu
+
+## Izolowane scopy
+* git checkout slide-9
+* Każdy element żyje w swoim świecie
+* nie mamy kolizji między tymi samymi elementami w tym samym scopie
+* do komunikacji ze światem zewnętrznym
+ * @ - podstawia wartość atrybutu z elementu
+ * = - wiąże dwustronnie wewnętrzną i zewnętrzną wartość
+
+## Zadanie 6: kontrolka dla filtru przedziału
+* git checkout todo-6
+* użycie: app/views/showContacts.html
+* implementacja: app/scripts/directives/ws-interval.js
+* enkapsulacja dwóch suwaków w reużywalną kontrolkę
+
+## Rozwiązanie 6
+* git add .
+* git commit -m '(commit message)'
+* git checkout done-5
+* Pytania?
+
+## Hack
+* git checkout slide-10
+* hack żeby nie dało się min przekroczyć max
 
 ## Instalowanie yeomana
+* Do przyszłych warsztatów będziemy korzytać z yeomana
+* Dla chetnych: sprubujcie teraz zainstalować [yeoman](http://yeoman.io/)
