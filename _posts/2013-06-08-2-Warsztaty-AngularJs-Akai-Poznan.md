@@ -13,20 +13,20 @@ tags: [AngularJs, Akai, Poznań]
  * powinen być slider tutaj: <input type="range">
 
 ## Start (text)
-* Treść slajdów: http://bit.ly/angular-workshop2
-* git clone https://github.com/marcin-wosinek/workshop-2.git
+* Treść slajdów: [http://bit.ly/angular-workshop2](http://bit.ly/angular-workshop2)
+* git clone [https://github.com/marcin-wosinek/workshop-2.git](https://github.com/marcin-wosinek/workshop-2.git)
 * chrome:
  * linux: chromium-browser --disable-web-security
  * windows - skopiować link do chroma i edytować: "(originalny link) --disable-web-security"
 * git config --global alias.tree "log --oneline --graph --decorate --all"
 
-## Projekt (screen appki)
+## Projekt
 * Książka kontaktów
  * lista kontaktów
  * strona osoby
  * formularz edycji
 
-## Struktura plików (screen folderów)
+## Struktura plików
 * git checkout slide-1
 * app/ zawier wszystko co jest potrzebne do zdepoloyowania aplikacji
  * index.html - jedyny plik do użytku bezpośredniego
@@ -47,7 +47,7 @@ tags: [AngularJs, Akai, Poznań]
 2. Odpalenie serwera
 3. Automatyczne odświerzenie na zmianę
 
-## pisanie filtrów
+## Pisanie filtrów
 * pozwalają zmieniać dane z poziomu widoku
 * wbudowane filtry
 
@@ -87,18 +87,22 @@ tags: [AngularJs, Akai, Poznań]
  * ng-include
  * ng-hide
  * ng-show
-* Demo http://www.nganimate.org/
+* Demo [http://www.nganimate.org](/http://www.nganimate.org/)
 
 ## Zadanie 2: zastosowanie animacji
-* animowanie zmiany wyświeltanych elementów
+* animowanię zmiany wyświeltanych elementów
 * git checkout todo-1
 * implementacja: app/views/showContacts.html & app/styles/main.css
 
-## Rozwiązanie 2:
+## Rozwiązanie 2
 * git add .
 * git commit -m '(commit message)'
 * git checkout done-2
 * Pytania?
+
+## Cel: śledzenie userów
+* liczenie odwiedzin
+* śledzenie aktywności
 
 ## Global controller
 * git checkout slide-3
@@ -116,10 +120,6 @@ tags: [AngularJs, Akai, Poznań]
 ## Ciasteczka - cookies
 * do 4 kb danych
 * przesyłane z każdym requestem do serwera
-
-## Cel: śledzenie userów
-* liczenie odwiedzin
-* śledzenie aktywności
 
 ## Zastosowanie
 * śledzenie użytkowników/liczenie odwidzin
@@ -221,7 +221,7 @@ tags: [AngularJs, Akai, Poznań]
 * git checkout done-4
 * Pytania?
 
-## linking function
+## Linking function
 * miejsce na logikę directive
 * argumenty - kolejność jest istotna:
  * scope - zakres. W najprostrzym przypadku dzielony ze światem zewnętrznym
@@ -233,7 +233,7 @@ tags: [AngularJs, Akai, Poznań]
 * dodanie obsługki kliknięcia guzika akceptuj
 * ukrywanie elementu jesli ciasteczka były już zaakceptowane
 
-## Rozwiązanie 5:
+## Rozwiązanie 5
 * git add .
 * git commit -m '(commit message)'
 * git checkout done-5
@@ -247,12 +247,12 @@ tags: [AngularJs, Akai, Poznań]
 * użycie: app/views/page.html +3
 * implementacja: app/scripts/directives/ws-unselectable.js
 
-## kontrolka w directive
+## Kontrolka w directive
 * git checkout slide-7
 * użycie: app/views/shortcuts.html
 * directive z reużywajną kontrolką
 
-## Nie odizolowane scopy
+## Nieizolowane scopy
 * git checkout slide-8
 * chrome: #/shortcuts
 * wszystkie kontrolki działają na tym samym modelu
@@ -280,6 +280,7 @@ tags: [AngularJs, Akai, Poznań]
 ## Hack
 * git checkout slide-10
 * hack żeby nie dało się min przekroczyć max
+* implementacja: app/scripts/directives/ws-interval.js +9
 
 ## Instalowanie yeomana
 * Do przyszłych warsztatów będziemy korzytać z yeomana
