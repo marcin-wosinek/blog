@@ -150,6 +150,18 @@ angular.module('workshop2App')
 <li ng-repeat="element in list | filterName:value1:value2">
 ```
 
+## angular.forEach
+* pętla
+* nie kopiujej danych stworzonych przez angulara
+
+```js
+var array = [1, 2, 3];
+
+angular.forEach(array, function(value){
+    this.push('Value: ' + value);
+});
+```
+
 ## Zadanie 1: filtr przedziału
 * filtr wybierający ludzi z odpowiedniego przedziału wieku
 * git checkout todo-1
