@@ -84,6 +84,21 @@ angular.module('workshop2App')
       get: function (id) {}
 ```
 
+## Underscore
+* użyteczne funkcje
+* [dokumentacja](http://underscorejs.org)
+
+```js
+var evens = _.filter([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; });
+// => [2, 4, 6]
+
+var sum = _.reduce([1, 2, 3], function(memo, num){ return memo + num; }, 0);
+// => 6
+
+_.isString(object)
+_.isNumber(object)
+```
+
 ## Struktura plików
 * git checkout slide-1
 * app/ zawier wszystko co jest potrzebne do zdepoloyowania aplikacji
@@ -105,10 +120,10 @@ angular.module('workshop2App')
 2. Odpalenie serwera
 3. Automatyczne odświerzenie na zmianę
 
-## Pisanie filtrów
 * pozwalają zmieniać dane z poziomu widoku
 * wbudowane filtry
 
+## Filtry
 ```html
 <p>{{ someText | uppercase }}</p>
 
@@ -116,6 +131,23 @@ angular.module('workshop2App')
 
 <tr ng-repeat="friend in friends | filter:searchText">
 </tr>
+```
+
+## Pisanie filtrów
+* zwracamy przetworzony element
+* przyjmujemy dowolną liczę argumentów
+
+```js
+angular.module('workshop2App')
+  .filter('filterName', function () {
+    return function (input, arg1, arg2) {
+      return 'between filter: ' + input;
+    };
+  });
+```
+
+```html
+<li ng-repeat="element in list | filterName:value1:value2">
 ```
 
 ## Zadanie 1: filtr przedziału
