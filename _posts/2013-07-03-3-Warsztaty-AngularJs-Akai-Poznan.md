@@ -7,6 +7,51 @@ tags: [AngularJs, Akai, Poznań]
 ---
 # AngularJs: Warsztaty - stopień 3
 
+
+## Podpinanie js do html
+* zawsze korzystamy z directive!
+
+## Directive blokujący zaznaczanie i klikanie na element
+* git checkout slide-6
+* użycie: app/views/page.html +3
+* implementacja: app/scripts/directives/ws-unselectable.js
+
+## Kontrolka w directive
+* git checkout slide-7
+* użycie: app/views/shortcuts.html
+* directive z reużywajną kontrolką
+
+## Nieizolowane scopy
+* git checkout slide-8
+* chrome: #/shortcuts
+* wszystkie kontrolki działają na tym samym modelu
+
+## Izolowane scopy
+* git checkout slide-9
+* Każdy element żyje w swoim świecie
+* nie mamy kolizji między tymi samymi elementami w tym samym scopie
+* do komunikacji ze światem zewnętrznym
+ * @ - podstawia wartość atrybutu z elementu
+ * = - wiąże dwustronnie wewnętrzną i zewnętrzną wartość
+
+## Zadanie 6: kontrolka dla filtru przedziału
+* git checkout todo-6
+* użycie: app/views/showContacts.html
+* implementacja: app/scripts/directives/ws-interval.js
+* enkapsulacja dwóch suwaków w reużywalną kontrolkę
+
+## Rozwiązanie 6
+* git add .
+* git commit -m '(commit message)'
+* git checkout done-6
+* Pytania?
+
+## Hack
+* git checkout slide-10
+* hack żeby nie dało się min przekroczyć max
+* implementacja: app/scripts/directives/ws-interval.js +9
+
+
 ## Koncepcje
 1. digest & apply
 2. directives
