@@ -205,47 +205,6 @@ tags: [AngularJs, Akai, Poznań]
 
 ## Directive blokujący zaznaczanie i klikanie na element
 * git checkout slide-6
-
-## Directives
-* rozszeżenia do html
-* formy użycia
-
-```html
-<span my-dir="exp"></span>
-<span class="my-dir: exp;"></span>
-<my-dir></my-dir>
-<!-- directive: my-dir exp -->
-```
-
-## Pisanie directives
-* git checkout slide-5
-* plik: app/scripts/directives/ws-accept-cookies.js
-* tak definiujemy tak jak kontrolery serwisy czy filtry
-* properties zwracanego obiektu:
- * template - html który zastąpi zawartość
- * restrict - ograniczenie uzycia directive:
-  * E - element, tag
-  * A - atrybut
-  * C - klasa
-  * M - komentarz
- * link - funkcja opalana po podpięciu directive
-
-## ngTransclude
-* pozwala na wstawienie oryginalnej zawartości tagu wewnątrz templatu
-* wymaga transclude: true
-
-## Zadanie 4: template dla ws-accept-cookies
-* git checkout todo-4
-* przykład użycia: app/index.htm +27
-* implementacja: app/scripts/directives/ws-accept-cookies.js
-* to co jest oryginalnie wewnatrz tagu chcemy mieć wciąż w directive + chcemy mieć guzik 'accept'
-
-## Rozwiązanie 4
-* git add .
-* git commit -m '(commit message)'
-* git checkout done-4
-* Pytania?
-
 * użycie: app/views/page.html +3
 * implementacja: app/scripts/directives/ws-unselectable.js
 
