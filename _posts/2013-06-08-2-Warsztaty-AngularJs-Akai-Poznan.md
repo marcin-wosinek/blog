@@ -27,6 +27,63 @@ tags: [AngularJs, Akai, Poznań]
  * strona osoby
  * formularz edycji
 
+## index.html
+* ng-view - ładujemy ścieżki
+* underscore - użyteczne funkcje
+
+```html
+<!-- Add your site or application content here -->
+<div class="container" ng-view></div>
+
+<script src="components/angular/angular.js"></script>
+<script src="components/underscore/underscore.js"></script>
+```
+
+## Ścieżki
+* konfiguracja aplikacji
+* definicja ścieżek
+
+```js
+$routeProvider
+  .when('/', {
+    templateUrl: 'views/main.html',
+    controller: 'MainCtrl'
+  })
+  .when('/contact/:id', {
+    redirectTo: '/contact/:id/view'
+  })
+```
+
+## Kontrolery
+* $routeParams
+* contacts
+
+```js
+angular.module('workshop2App')
+  .controller('ContactViewCtrl',
+      function ($scope, $routeParams, contacts) {
+    $scope.contact = contacts.get($routeParams.id);
+    $scope.id = $routeParams.id;
+  });
+```
+
+## Serwis z danymi
+* contacts
+* [json-generator](http://www.json-generator.com/)
+
+```js
+angular.module('workshop2App')
+  .factory('contacts', function () {
+    var exampleContacts = [ ... ];
+
+    // Public API here
+    return {
+      getAll: function () {
+        return exampleContacts;
+      },
+      get: function (id) {}
+```
+
 ## Struktura plików
 * git checkout slide-1
 * app/ zawier wszystko co jest potrzebne do zdepoloyowania aplikacji
