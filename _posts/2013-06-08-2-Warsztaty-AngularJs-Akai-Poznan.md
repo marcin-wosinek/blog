@@ -92,7 +92,7 @@ tags: [AngularJs, Akai, Poznań]
 
 ## Zadanie 2: zastosowanie animacji
 * animowanię zmiany wyświeltanych elementów
-* git checkout todo-1
+* git checkout todo-2
 * implementacja: app/views/showContacts.html & app/styles/main.css
 
 ## Rozwiązanie 2
