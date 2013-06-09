@@ -11,6 +11,7 @@ tags: [AngularJs, Akai, Poznań]
 * chrome/chromium
  * korzystamy z `<input type="range">`
  * powinen być slider tutaj: <input type="range">
+* lokalny serwer http - ciasteczka nie działają z file systemu
 
 ## Start (text)
 * Treść slajdów: [http://bit.ly/angular-workshop2](http://bit.ly/angular-workshop2)
