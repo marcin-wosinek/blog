@@ -2,6 +2,7 @@
 layout: default
 category: warsztaty
 title: Warsztaty AngularJs Akai Poznań
+slideShareId: 22844190
 tags: [AngularJs, Akai, Poznań]
 ---
 # AngularJs: Warsztaty - stopień 2 (8 VI sobota)
