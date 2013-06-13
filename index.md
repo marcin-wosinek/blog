@@ -10,3 +10,13 @@ I'm really exicted about 'put more logic in broser js' trend so mostly I speak a
 
 ## Who am I?
 Poznań, Poland based IT specialist; since January 2013 meetup an conference speaker and self proclaimed AngularJs evengelist.
+
+## Contact
+I'm looking forward to hearing from you. Especially if you:
+
+* want to have my talk or workshop on a conference/meetup
+* are interested in AngularJs training
+
+Mail me: marcin.wosinek+blog@gmail.com
+
+Call me: +48 669 632 669
