@@ -52,22 +52,37 @@ tags: [AngularJs, Akai, Poznań]
 * implementacja: app/scripts/directives/ws-interval.js +9
 
 
+## Serwer yeomanowy
+
+
+
 ## Koncepcje
-1. digest & apply
-2. directives
+1. directives
  * izolowanie scope - wywoływanie funcji
   * &
-3. angular-ui
+2. yeoman
+ * przejście na serwer yeomana
+3. Unit testy
+4. angular-ui
  * mask
  * key-press
  * nested routes ?
  * hightlight ?
  * scroll fix ?
-4. Angular bootstrap
+5. Angular bootstrap
  * pagination
  * tooltip
  * dialog
-5. Unit testy
+
+## ngPoznan
+* grupa mailingowa
+* info o eventach w pobliżu
+* wymiana doświadczeń
+
+
+6. digest & apply
+
+
 
 ## Co dalej?
 
