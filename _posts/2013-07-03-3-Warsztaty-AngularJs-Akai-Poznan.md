@@ -12,47 +12,64 @@ tags: [AngularJs, Akai, Poznań]
 * zawsze korzystamy z directive!
 
 ## Directive blokujący zaznaczanie i klikanie na element
-* git checkout slide-6
+* git checkout slide-1
 * użycie: app/views/page.html +3
 * implementacja: app/scripts/directives/ws-unselectable.js
 
 ## Kontrolka w directive
-* git checkout slide-7
+* git checkout slide-2
 * użycie: app/views/shortcuts.html
 * directive z reużywajną kontrolką
 
 ## Nieizolowane scopy
-* git checkout slide-8
+* git checkout slide-3
 * chrome: #/shortcuts
 * wszystkie kontrolki działają na tym samym modelu
 
 ## Izolowane scopy
-* git checkout slide-9
+* git checkout slide-4
 * Każdy element żyje w swoim świecie
 * nie mamy kolizji między tymi samymi elementami w tym samym scopie
 * do komunikacji ze światem zewnętrznym
  * @ - podstawia wartość atrybutu z elementu
  * = - wiąże dwustronnie wewnętrzną i zewnętrzną wartość
 
-## Zadanie 6: kontrolka dla filtru przedziału
-* git checkout todo-6
+## Zadanie 1: kontrolka dla filtru przedziału
+* git checkout todo-1
 * użycie: app/views/showContacts.html
 * implementacja: app/scripts/directives/ws-interval.js
 * enkapsulacja dwóch suwaków w reużywalną kontrolkę
 
-## Rozwiązanie 6
+## Rozwiązanie 1
 * git add .
 * git commit -m '(commit message)'
-* git checkout done-6
+* git checkout done-1
 * Pytania?
 
 ## Hack
-* git checkout slide-10
+* git checkout slide-5
 * hack żeby nie dało się min przekroczyć max
 * implementacja: app/scripts/directives/ws-interval.js +9
 
 
 ## Serwer yeomanowy
+* TODO sprawdzić instalacje na czystym linuxie
+* TODO sprawdzić instalacje na czystym windowsie
+
+## Unit testy - idea
+* trywialne sprawdzanie działania kody
+* weryfikujemy wyizolowaną logikę
+* razem z code review bardzo skuteczny mechanizm łapanie błędów
+
+## Unit testy - Angular
+* karma test runner
+* page runner
+
+## TODO Zadanie 2 z unit testami
+
+## angular-ui
+
+## TODO Zadanie 3 z nested routes
 
 
 
@@ -62,13 +79,15 @@ tags: [AngularJs, Akai, Poznań]
   * &
 2. yeoman
  * przejście na serwer yeomana
+
 3. Unit testy
+ * runner page
+ * karma
 4. angular-ui
- * mask
- * key-press
- * nested routes ?
- * hightlight ?
- * scroll fix ?
+ * mas (slide)
+ * key-pres (slide)
+ * scroll fix (slide)
+ * nested routes (zadanie 3)
 5. Angular bootstrap
  * pagination
  * tooltip
