@@ -17,10 +17,12 @@ tags: [AngularJs, GeekCarrots, Poznań]
 * git checkout slide-1
 * dwu stronne bindowanie
 * działający, nie trywialny kod oparty o sam widok
+* pliki: index.html +8
 
 ## ng-include
 * git checkout slide-2
 * wczytywanie cześci widoku dynamicznie
+* pliki: views/main.html & index.html +7
 
 ## Kontroler
 * wiąże 'swój' widok z resztą aplikacji
@@ -36,11 +38,13 @@ tags: [AngularJs, GeekCarrots, Poznań]
 * git checkout slide-3
 * podpięcie kontrolera do częsci widoku
 * $scope działa tylko wewnątrz tagu na którym jest kontroler
+* pliki: views/hello.html & script/script.js
 
 ## Zadanie 1
 * git checkout todo-1
 * dodanie kontrolera zawierajacego menu
 * dodanie i wyświetlenie menu w index.html
+* implementacja: index.html & script/script.js
 
 ## Rozwiązanie 1
 * git add .
@@ -49,6 +53,8 @@ tags: [AngularJs, GeekCarrots, Poznań]
 
 ## $routeProvider
 * git checkout slide-4
+* definije ścieżki w aplikacji
+* pliki: scripts/script.js
 
 ## ng-repeat
 * directive pętla
@@ -64,6 +70,7 @@ tags: [AngularJs, GeekCarrots, Poznań]
 ## Zadanie 2
 * git checkout todo-2
 * zbudować menu zawierające linki do wszystkich ścieżek
+* implementacja: index.html & script/script.js
 
 ```js
 var object = {};
@@ -87,7 +94,8 @@ var arrayOfObjects = [
 
 ## Zadanie 3
 * git checkout todo-3
-* zbudować własną podstronę, z wyświletaniem listy danych podanych w kontrolerze
+* zbudować własną podstronę, z wyświletaniem listy danych podanych w kontrolerzę
+* implementacja: script/script.js & nowy plik widoku
 
 ## Rozwiązanie 3
 * git add .
@@ -96,6 +104,7 @@ var arrayOfObjects = [
 
 ## OrderBy
 * git checkout slide-5
+* pliki: views/list.html
 
 ```html
 <ul>
@@ -107,6 +116,7 @@ var arrayOfObjects = [
 * git checkout todo-4
 * wymień hardkodowany parametr na pochodzący ze zmiennej
 * użyj ng-model + kilka input type="radio"
+* implementacja: views/list.html +4
 
 ## Rozwiązanie 4
 * git add .
@@ -116,6 +126,7 @@ var arrayOfObjects = [
 ## filter
 * git checkout slide-6
 * składnia filter: {experesion}
+* pliki: views/list.html +7
 
 ```html
 <tr ng-repeat="person in list | orderBy:orderKey | filter:'oo'"
@@ -131,6 +142,7 @@ var arrayOfObjects = [
 ## Zadanie 5
 * git checkout todo-5
 * zmienić filter na wyszukiwarkę z 3 polami: szukanie po firstName, lastName lub wszędzie
+* implementacja: views/list.html +5
 
 ## Rozwiązanie 5
 * git add .
@@ -139,6 +151,7 @@ var arrayOfObjects = [
 
 ## Funkcje w modelu
 * git checkout slide-7
+* pliki: views/main.html +7 & script/script.js + 37
 
 ```html
 <p>{ {displayValueReturnedByFunction()} }</p>
@@ -148,6 +161,7 @@ var arrayOfObjects = [
 
 ## Validowanie formularza
 * git checkout slide-8
+* pliki: views/main.html +10
 
 ## Zadanie 6
 * git checkout todo-6
@@ -155,6 +169,7 @@ var arrayOfObjects = [
 * skorzystać z _ng-click_ do obsługi dodanie
   * dodać do listy newPerson ( nazwaListy.push(nowyElement) )
   * podstawić pusty obiekt za ten podstawiony
+* implementacja: script/script.js +46 & views/list.html +10
 
 ## Rozwiązanie 6
 * git add .
@@ -165,15 +180,18 @@ var arrayOfObjects = [
 * git checkout slide-9
 * strata danych przy przejściu na inną podstronę
 * użycie tego samego controlera 2 razy - jak na #/main
+* pliki: script/script.js +29 & views/main.html +1
 
 ## Services
 * git checkout slide-10
 * nowy serwis - dla kontrolera co 2 razy wystepuje
 * stan jest globalny dla aplikacji
+* pliki: script/script.js +62 & views/hello.html +4 & views/main.html +7
 
 ## Zadanie 7
 * git checkout todo-7
 * dodanie własnego serwisu, People do użytku przez ListCtrl
+* implementacja: script/script.js +42
 
 ## Rozwiązanie 7
 * git add .
@@ -227,6 +245,10 @@ userResource.get({userId: 1});
 
 ## Dane do json
 * git checkout slide-11
+* pliki:
+ * nowa zależność: index.html & script/angular/angular-resource.js
+ * dane: data/people
+ * pobieranie: script/script.js +42
 
 ## Podsumowanie
 * kontroler?
