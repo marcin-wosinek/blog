@@ -14,7 +14,7 @@ tags: [AngularJs, Akai, Poznań]
  * powinen być slider tutaj: <input type="range">
 * lokalny serwer http - ciasteczka nie działają z file systemu
 
-## Start (text)
+## Start
 * Treść slajdów: [http://bit.ly/angular-workshop2](http://bit.ly/angular-workshop2)
 * git clone [https://github.com/marcin-wosinek/workshop-2.git](https://github.com/marcin-wosinek/workshop-2.git)
 * chrome:

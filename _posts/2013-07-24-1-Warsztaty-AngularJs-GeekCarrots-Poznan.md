@@ -1,13 +1,12 @@
 ---
 layout: default
-category: warsztaty event
+category: warsztaty
 title: Warsztaty AngularJs 1 - GeekCarrots Poznań
-slideShareId: 19298860
 tags: [AngularJs, GeekCarrots, Poznań]
 ---
 # AngularJs: Warsztaty - stopień 1
 ## Start
-* treść slajdów: http://bit.ly/angular-workshop
+* treść slajdów: http://bit.ly/angular-workshop-1
 * git clone https://github.com/marcin-wosinek/workshop-1.git
 * chrome:
  * linux: chromium-browser --disable-web-security
