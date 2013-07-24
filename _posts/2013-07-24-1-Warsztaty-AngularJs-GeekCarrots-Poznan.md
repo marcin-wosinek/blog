@@ -6,8 +6,8 @@ tags: [AngularJs, GeekCarrots, Poznań]
 ---
 # AngularJs: Warsztaty - stopień 1
 ## Start
-* treść slajdów: http://bit.ly/angular-workshop-1
-* git clone https://github.com/marcin-wosinek/workshop-1.git
+* treść slajdów: [http://bit.ly/angular-workshop-1](http://bit.ly/angular-workshop-1)
+* git clone [https://github.com/marcin-wosinek/workshop-1.git](https://github.com/marcin-wosinek/workshop-1.git)
 * chrome:
  * linux: chromium-browser --disable-web-security
  * windows - skopiować link do chroma i edytować: "(originalny link) --disable-web-security"
