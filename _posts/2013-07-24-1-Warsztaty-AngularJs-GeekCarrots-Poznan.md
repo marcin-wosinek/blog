@@ -1,7 +1,7 @@
 ---
 layout: default
 category: warsztaty
-title: Warsztaty AngularJs 1 - GeekCarrots Poznań
+title: 1 Warsztaty AngularJs - GeekCarrots Poznań
 tags: [AngularJs, GeekCarrots, Poznań]
 ---
 # AngularJs: Warsztaty - stopień 1
@@ -15,14 +15,32 @@ tags: [AngularJs, GeekCarrots, Poznań]
 
 ## AngularJs "Hello world"
 * git checkout slide-1
-* dwu stronne bindowanie
+* dwustronne bindowanie
 * działający, nie trywialny kod oparty o sam widok
 * pliki: index.html +8
+```html
+<input type="text" ng-model="yourName" placeholder="Enter a name here">
+<hr>
+<h1>Hello {{yourName}}!</h1>
+```
 
 ## ng-include
 * git checkout slide-2
 * wczytywanie cześci widoku dynamicznie
 * pliki: views/main.html & index.html +7
+```html
+<!-- index.html -->
+<div ng-include src="'views/main.html'">
+</div>
+```
+
+```html
+<!-- views/main.html -->
+<label>Name:</label>
+<input type="text" ng-model="yourName" placeholder="Enter a name here">
+<hr>
+<h1>Hello {{yourName}}!</h1>
+```
 
 ## Kontroler
 * wiąże 'swój' widok z resztą aplikacji
@@ -40,6 +58,21 @@ tags: [AngularJs, GeekCarrots, Poznań]
 * $scope działa tylko wewnątrz tagu na którym jest kontroler
 * pliki: views/hello.html & script/script.js
 
+```html
+{{helloMessage}}
+<br>
+<div ng-controller="InputCtrl">
+  <input ng-model="sharedData.value" />
+  <p>{{sharedData.value}}</p>
+</div>
+```
+
+```js
+workshop.controller("HelloCtrl", function($scope) {
+  $scope.helloMessage = "Hello world";
+});
+```
+
 ## Zadanie 1
 * git checkout todo-1
 * dodanie kontrolera zawierajacego menu
@@ -51,10 +84,34 @@ tags: [AngularJs, GeekCarrots, Poznań]
 * git commit -m '(commit message)'
 * git checkout done-1
 
+```html
+<div ng-controller="MenuCtrl">
+  <a ng-href="{{href}}">{{text}}</a>
+</div>
+```
+
+```js
+workshop.controller("MenuCtrl", function($scope) {
+  $scope.href = "http://google.pl";
+  $scope.text = "go to google";
+});
+```
+
 ## $routeProvider
 * git checkout slide-4
 * definije ścieżki w aplikacji
 * pliki: scripts/script.js
+
+```js
+$routeProvider
+  .when("/hello", {
+    templateUrl: "views/hello.html",
+    controller: "HelloCtrl"
+  })
+  .otherwise({
+    redirectTo: '/main'
+  });
+```
 
 ## ng-repeat
 * directive pętla
@@ -92,6 +149,20 @@ var arrayOfObjects = [
 * git commit -m '(commit message)'
 * git checkout done-2
 
+```html
+<li ng-repeat="link in links">
+  <a ng-href="{{link.url}}">{{link.text}}</a>
+</li>
+```
+
+```js
+$scope.links = [
+  {
+    url: '#/main',
+    text: 'Main'
+  }]
+```
+
 ## Zadanie 3
 * git checkout todo-3
 * zbudować własną podstronę, z wyświletaniem listy danych podanych w kontrolerzę
@@ -102,26 +173,47 @@ var arrayOfObjects = [
 * git commit -m '(commit message)'
 * git checkout done-3
 
+```js
+workshop.controller("ListCtrl", function($scope) {
+  // checkout http://www.json-generator.com/
+  $scope.list = [
+    {
+      "firstName": "Serenity",
+      "lastName": "Oldridge",
+      "picture": "http://placehold.it/70x70/632955",
+```
+
+```html
+<table>
+  <tr><th>Picture</th><th>Firstname</th><th>Lastname</th><th>Age</th><th>Gender</th><tr>
+  <tr ng-repeat="person in list">
+  <td><img ng-src='{{person.picture}}'></td>
+```
+
 ## OrderBy
 * git checkout slide-5
 * pliki: views/list.html
 
 ```html
-<ul>
-  <li ng-repeat="product in products | orderBy:'price'">
-</ul>
+<tr ng-repeat="person in list | orderBy:'lastName'">
+  <td><img ng-src='{{person.picture}}'></td>
 ```
 
 ## Zadanie 4
 * git checkout todo-4
 * wymień hardkodowany parametr na pochodzący ze zmiennej
 * użyj ng-model + kilka input type="radio"
-* implementacja: views/list.html +4
+* implementacja: views/list.html +4, script.js +28
 
 ## Rozwiązanie 4
 * git add .
 * git commit -m '(commit message)'
 * git checkout done-4
+
+```html
+First name: <input ng-model="orderKey" type='radio' value='firstName'/><br/>
+Last name: <input ng-model="orderKey" type='radio' value='lastName'/><br/>
+```
 
 ## filter
 * git checkout slide-6
@@ -149,19 +241,43 @@ var arrayOfObjects = [
 * git commit -m '(commit message)'
 * git checkout done-5
 
+```html
+Everywhere: <input ng-model="search.$" type='text'/><br/>
+First name: <input ng-model="search.firstName" type='text'/><br/>
+Last name: <input ng-model="search.lastName" type='text'/><br/>
+```
+
 ## Funkcje w modelu
 * git checkout slide-7
 * pliki: views/main.html +7 & script/script.js + 37
 
-```html
-<p>{ {displayValueReturnedByFunction()} }</p>
+```js
+  $scope.name = function () {
+    return $scope.firstName + " " + $scope.lastName;
+  }
 
-<input ng-change="fireFunctionWhenChangeHappen()">
+  $scope.counter = 0;
+  $scope.valueUpdated = function () {
+    $scope.counter++;
+  };
+```
+
+```html
+<h1>Hello {{name()}}!</h1>
+<input type="text" ng-change="valueUpdated()" ng-model="value" placeholder="Edit me">
 ```
 
 ## Validowanie formularza
 * git checkout slide-8
 * pliki: views/main.html +10
+
+```html
+<form name="exampleForm">
+  Required field: <input ng-model="required" required/><br>
+  Email field: <input ng-model="email" type="email" required/><br>
+  <button ng-disabled='!exampleForm.$valid'>Submit</button>
+</form>
+```
 
 ## Zadanie 6
 * git checkout todo-6
@@ -176,17 +292,50 @@ var arrayOfObjects = [
 * git commit -m '(commit message)'
 * git checkout done-6
 
+```html
+<form>
+  Picture: <input ng-model="newPerson.picture" type='text' placeholder="http://"/><br/>
+  First name: <input ng-model="newPerson.firstName" type='text'/><br/>
+  Last name: <input ng-model="newPerson.lastName" type='text'/><br/>
+```
+
+```js
+$scope.add = function () {
+  $scope.list.push($scope.newPerson);
+  $scope.newPerson = {};
+}
+```
+
 ## Trzymanie danych w controlerze
 * git checkout slide-9
 * strata danych przy przejściu na inną podstronę
 * użycie tego samego controlera 2 razy - jak na #/main
 * pliki: script/script.js +29 & views/main.html +1
 
+```js
+$scope.firstName = 'Jan';
+$scope.lastName = 'Kowalski';
+```
+
+```html
+<input type="text" ng-model="firstName" placeholder="Enter a first name here">
+<input type="text" ng-model="lastName" placeholder="Enter a last name here">
+```
+
 ## Services
 * git checkout slide-10
 * nowy serwis - dla kontrolera co 2 razy wystepuje
 * stan jest globalny dla aplikacji
 * pliki: script/script.js +62 & views/hello.html +4 & views/main.html +7
+
+```js
+// Create serices
+workshop.factory("SharedData", function(){
+  return {
+    value: "Example value"
+  };
+});
+```
 
 ## Zadanie 7
 * git checkout todo-7
@@ -197,6 +346,16 @@ var arrayOfObjects = [
 * git add .
 * git commit -m '(commit message)'
 * git checkout done-7
+
+```js
+workshop.factory("People", function() {
+  return [ {"firstName": "Serenity" /*...*/}];
+```
+
+```js
+workshop.controller("ListCtrl", function($scope, People) {
+  $scope.list = People;
+```
 
 ## Json - obiekty
 
@@ -250,6 +409,13 @@ userResource.get({userId: 1});
  * dane: data/people
  * pobieranie: script/script.js +42
 
+```js
+workshop.factory("People", function($resource){
+  var peopleResource = $resource('data/people', {});
+  return peopleResource.query();
+});
+```
+
 ## Podsumowanie
 * kontroler?
 * widok?
@@ -257,6 +423,7 @@ userResource.get({userId: 1});
 * serice?
 
 ## Materiały do nauki
+* [AngularJs codecademy - widoki](http://www.codecademy.com/courses/javascript-advanced-en-2hJ3J)
 * [http://docs.angularjs.org/tutorial/](http://docs.angularjs.org/tutorial/)
 * [http://egghead.io/](http://egghead.io/)
 
@@ -264,12 +431,14 @@ userResource.get({userId: 1});
 
 Pierwsze warsztaty będą wprowadzeniem do świata frontendowych aplikacji. Następne spotkania będą poruszać takie tematy jak:
 
-* webstorage i inne js api
-* komunikacja z 'backendem'
-* optymalne środowsko programistyczne
-* unit testy i testowalność aplikacji
+* pisanie własnych filtrów i directives
+* korzystanie z animacji
+* ciasteczka
+* unit testy
+* angular-ui & angular bootstrap
 
 ## Stay tuned
-* [http://akai.org.pl/](http://akai.org.pl/)
-* [http://poznan.gtug.pl/](http://poznan.gtug.pl/)
-* [http://www.meetup.com/Hacking-Poznan/](http://www.meetup.com/Hacking-Poznan/)
+* [GeekCarrots Poznań](http://geekgirlscarrots.pl/category/spotkania/poznan/)
+* [Akai](http://akai.org.pl/)
+* [GDG Poznań](https://plus.google.com/110191013153077917985/posts)
+* [Hacking-Poznań](http://www.meetup.com/Hacking-Poznan/)
