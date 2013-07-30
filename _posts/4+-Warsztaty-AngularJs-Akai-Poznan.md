@@ -7,6 +7,10 @@ tags: [AngularJs, Akai, Poznań]
 ---
 # AngularJs: Warsztaty - stopień 4+
 
+## Serwer yeomanowy
+* TODO sprawdzić instalacje na czystym linuxie
+* TODO sprawdzić instalacje na czystym windowsie
+
 ## Temat 
 * webstorage
  * key-value strings
