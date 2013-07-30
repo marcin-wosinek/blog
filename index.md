@@ -18,5 +18,3 @@ I'm looking forward to hearing from you. Especially if you:
 * are interested in AngularJs training
 
 Mail me: marcin.wosinek+blog@gmail.com
-
-Call me: +48 669 632 669
