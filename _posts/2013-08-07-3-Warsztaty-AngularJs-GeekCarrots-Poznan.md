@@ -2,10 +2,21 @@
 layout: default
 category: warsztaty
 title: 3 Warsztaty AngularJs - GeekCarrots Poznań
-published: false
 tags: [AngularJs, Akai, Poznań]
 ---
 # AngularJs: Warsztaty - stopień 3
+
+## Środowisko
+* konsolowy git
+* chrome/chromium
+
+## Start
+* Treść slajdów: [http://bit.ly/angular-workshop3](http://bit.ly/angular-workshop3)
+* git clone [https://github.com/marcin-wosinek/workshop-3.git](https://github.com/marcin-wosinek/workshop-3.git)
+* chrome:
+ * linux: chromium-browser --disable-web-security
+ * windows - skopiować link do chroma i edytować: "(originalny link) --disable-web-security"
+* git config --global alias.tree "log --oneline --graph --decorate --all"
 
 ## Podpinanie js do html
 * zawsze korzystamy z directive!
@@ -47,6 +58,7 @@ return {
 * chrome: #/shortcuts
 * wszystkie kontrolki działają na tym samym modelu
 * pliki: app/scripts/directives/ws-shortcut-input.js
+* demo: #/shortcuts
 
 ```js
 return {
@@ -91,6 +103,7 @@ return {
 * git add .
 * git commit -m '(commit message)'
 * git checkout done-1
+* Demo: #/showContacts
 * Pytania?
 
 ```js
@@ -121,101 +134,300 @@ template: 'Min: <input type="range" max="{{model.max}}" min="{{min}}" ng-model="
           ' <br> Max: <input type="range" max="{{max}}" min="{{model.min}}" ng-model="model.max"> {{model.max}}'
 ```
 
+## Testy
+* Rodzaje testów: 
+ * Unit testy
+ * Testy integracyjne
+ * Testy funkcjonalne
 
-
-
+## Piramida testów
+* Unit testy - blisko logiki
+ * sprawdzamy przekładnie jednego trybika
+* Testy funkcjonalne - logika wszystkich warstw razem
+ * sprawdzamy działanie wielu połaczonych trybików
+ * wykładniczy wzorst liczby przypadków granicznych
 
 ## Unit testy - idea
 * trywialne sprawdzanie działania kody
 * weryfikujemy wyizolowaną logikę
 * razem z code review bardzo skuteczny mechanizm łapanie błędów
 
+## Mocks & stubs
+* sposób na izolowanie elementu
+* zastępcze zależności przekazywane do testowanego obiektu
+* mocks:
+ * obiekt z wymaganiami
+* stubs:
+ * prosty obiekt, który pamieta wywołania fukncji
+
+## Dependecy injection
+* 'Odwrócenie kontroli'
+* funkcja nie woła swoich zależności - dostaje je z zewnątrz
+
+```js
+// Dependecy injection
+function ContactEditCtrl ($scope, $routeParams, contacts) {
+  $scope.contact = contacts.get($routeParams.id);
+  $scope.id = $routeParams.id;
+}
+```
+
+```js
+// Dependecy 'calling'
+function ContactEditCtrl () {
+  var $scope = ScopeFactory.getNewScope(),
+    $routeParams = RouteParams.getSingleton(),
+    contacts = new Contacts();
+
+  $scope.contact = contacts.get($routeParams.id);
+  $scope.id = $routeParams.id;
+}
+```
+
+## Jasmine
+* BDD test framework
+* [http://pivotal.github.io/jasmine/](http://pivotal.github.io/jasmine/)
+
+## Jasmine - składnia
+* describe - blok grupujący 
+* beforeEach - set up testu
+* afterEach - clean up
+* it - test
+
+```js
+describe("Jasmine", function() {
+  it("is aware that true === true", function() {
+    expect(true).toBe(true);
+  });
+
+  it("is aware that false !== true", function() {
+    expect(false).not.toBe(true);
+  });
+});
+```
+
+## Jasmine - matchery (asercje)
+* weryfikuje zastany stan
+* (konieczna) paczka dodatkowych matcherów - [https://github.com/JamieMason/Jasmine-Matchers](https://github.com/JamieMason/Jasmine-Matchers)
+* Zapamiętaj: expect().toEqual()
+
+```js
+// Defaults
+expect(a.foo).toBeDefined();
+expect(message).toMatch(/bar/);
+expect(a).toBe(true);
+expect(a).toEqual(12);
+expect(pi).toBeGreaterThan(e);
+
+// Jasmine matchers
+expect(function).toBeFunction();
+expect(string).toBeString();
+expect(array).toBeArray();
+```
+
+## Jasmine - mokowanie
+* jasmine spy
+* Zapamiętaj: jasmine.createSpy().andReturn() - zadanie 2
+
+```js
+spyOn(foo, 'setBar').andCallThrough();
+foo.setBar(42);
+expect(foo.setBar).toHaveBeenCalled();
+expect(foo.setBar).toHaveBeenCalledWith(42);
+
+var standAloneSpy = jasmine.createSpy('standAloneSpy').andReturn(11);
+```
+
 ## Unit testy - Angular
+* git checkout slide-6
 * karma test runner
 * page runner
 
-## TODO Zadanie 2 z unit testami
+## Angular - testowanie controlera
+* funkcja $controller
+* zasoby do wstrzykiwania
 
-## angular-ui
+```js
+$controller('GlobalCtrl', {
+  $scope: scope});
+```
 
-## TODO Zadanie 3 z nested routes
+## Zadanie 2 - unit testy controlera
+* git checkout todo-2a
+* prosty test sprawdzający czy numer z wsUuidGenerator.createUuid trafia do ciastka
+* pliki: test/spec/controllers/global.js +8
 
-## TODO Zadanie 4 z 
+## Rozwiązanie 2a
+* git add .
+* git commit -m '(commit message)'
+* git checkout done-2a
 
+```js
+beforeEach(inject(function ($controller, $rootScope) {
+  scope = $rootScope.$new();
+  cookies = {};
+  wsUuidGenerator = {
+    createUuid: jasmine.createSpy('createUuid').andReturn('341')
+  };
 
+  GlobalCtrl = $controller('GlobalCtrl', {
+    $scope: scope,
+    $cookies: cookies,
+    wsUuidGenerator: wsUuidGenerator
+  });
+}));
 
-## Koncepcje
-1. directives
- * izolowanie scope - wywoływanie funcji
-  * &
+it('should setup cookies', function () {
+  expect(cookies.trackingId).toEqual('341');
+});
+```
 
-2. Unit testy
- * runner page
-3. angular-ui
- * mask (slide)
- * key-pres (slide)
- * scroll fix (slide)
- * nested routes (zadanie 3)
-4. Angular bootstrap
- * pagination
- * tooltip
- * dialog
+## Zadanie 2b - naiwna implementacja
+* git checkout todo-2b
+* najprostrzy kod przechodzący test
+* pliki: app/scripts/controllers/global.js +9
 
-## ngPoznan
-* grupa mailingowa
-* info o eventach w pobliżu
-* wymiana doświadczeń
-* semi regularne spotkania w ramacha hacking Poznań
+## Rozwiązanie 2b
+* git add .
+* git commit -m '(commit message)'
+* git checkout done-2b
 
+```js
+$cookies.trackingId = '341';
+```
 
-5. digest & apply
-6. yeoman
- * przejście na serwer yeomana
- * karma
+## Refaktoring testu
+* funkcja init, pozwalająca na reinicjalizacje
+* git checkout slide-7
 
+```js
+init = function () {
+  GlobalCtrl = $controller('GlobalCtrl', {
+    $scope: scope,
+    $cookies: cookies,
+    wsUuidGenerator: wsUuidGenerator
+  });
+};
+```
 
+## Zadanie 2c
+* git checkout todo-2c
+* weryfikacja uzycia generatora
+* pliki: test/spec/controllers/global.js +35
 
-## Co dalej?
+## Rozwiązanie 2c
+* git add .
+* git commit -m '(commit message)'
+* git checkout done-2c
 
-Pierwsze warsztaty będą wprowadzeniem do świata frontendowych aplikacji. Następne spotkania będą poruszać takie tematy jak:
+```js
+expect(wsUuidGenerator.createUuid).toHaveBeenCalled();
+```
 
-* webstorage i inne js api
-* komunikacja z 'backendem'
-* optymalne środowsko programistyczne
-* unit testy i testowalność aplikacji
+## Naiwna implementacja
+* git checkout slide-8
 
-## Temat 
-* htmlowy silnik do gier:
-http://news.turbulenz.com/post/49430669886/turbulenz-engine-goes-open-source
+```js
+wsUuidGenerator.createUuid();
+$cookies.trackingId = '341';
+```
 
-* indexDb
- * key-value
- * transaction
- * indexed properties
- * http://www.html5rocks.com/en/tutorials/indexeddb/todo/
-* webworker
- * heavy computation
-* websocket
- * http://www.html5rocks.com/en/tutorials/frameworks/angular-websockets/
- * http://www.netmagazine.com/tutorials/angularjs-collaboration-board-socketio
+## Zadanie 2d
+* git checkout todo-2d
+* test sprawdzający dla różnej wartości
+* pliki: test/spec/controllers/global.js +38
 
-* full screen api
-* cache manifest
+## Rozwiązanie 2d
+* git add .
+* git commit -m '(commit message)'
+* git checkout done-2d
 
-* pointer locking api
-* loading local data api
-* geolokalizacja
-* battery status
-* chrome application (package app)
-* Chromium Embedded Framewor
-* commertial apps:
-  * spotify? access to music
-* no backend - firebase:
- http://ngmodules.org/modules/angularFire
+```js
+// check for some other value   
+wsUuidGenerator.createUuid.andReturn('111');
+init();
+expect(cookies.trackingId).toEqual('111');
+```
 
-## Project
-1. książka kontaktów
- * lista
- * paginacja
- * search
- * dodawanie
+## Pokryty testami kod
+* git checkout slide-8
+
+```js
+$cookies.trackingId = wsUuidGenerator.createUuid();
+```
+
+## Zadanie 2e
+* git checkout todo-2e
+* test sprawdzający zachowanie wartości ciasteczka
+* refaktoring testów - wydzielenie osobnego testu dla innej wartości liczbowej
+* pliki: test/spec/controllers/global.js +42
+
+## Rozwiązanie 2e
+* git add .
+* git commit -m '(commit message)'
+* git checkout done-2e
+
+```js
+// should not override existing cookie value
+wsUuidGenerator.createUuid.andReturn('111');
+init();
+expect(cookies.trackingId).toEqual('341');
+```
+
+## Pokryty testami kod
+* git checkout slide-10
+* całkowite pokrycie testami 
+
+```js
+if (!angular.isString($cookies.trackingId)) {
+  $cookies.trackingId = wsUuidGenerator.createUuid();
+}
+```
+
+## Angular - testowanie serwisu
+* serwis $provide do nadpisywania domyślnych komponentów
+
+```js
+module(function($provide) {
+  $provide.value('ServiceA', ServiceAMock);
+  $provide.value('ServiceB', ServiceBMock);
+});
+
+inject(function(_ServiceInTest_) {
+  ServiceInTest = _ServiceInTest_;
+});
+```
+
+## Przykład testów service
+* git checkout slide-11
+
+```js
+beforeEach(function () {
+  module(function($provide) {
+    $provide.value('$resource', _resource);
+  });
+
+  inject(function(_contacts_) {
+    contacts = _contacts_;
+  });
+});
+
+it('should implement getAll', function () {
+  expect(ContactsResource.query).not.toHaveBeenCalled();
+  var returned = contacts.getAll();
+  expect(ContactsResource.query).toHaveBeenCalled();
+  expect(returned).toEqual('queryTest');
+});
+```
+
+## Podsumowanie
+* directives
+* karma
+* jasmine
+* tdd
+
+## Stay tuned
+* [GeekCarrots Poznań](http://geekgirlscarrots.pl/category/spotkania/poznan/)
+* [Akai](http://akai.org.pl/)
+* [GDG Poznań](https://plus.google.com/110191013153077917985/posts)
+* [Hacking-Poznan](http://www.meetup.com/Hacking-Poznan/)
