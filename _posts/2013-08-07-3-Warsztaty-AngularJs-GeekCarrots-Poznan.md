@@ -46,7 +46,7 @@ return {
 ## Kontrolka w directive
 * git checkout slide-2
 * użycie: app/views/shortcuts.html
-* directive z reużywajną kontrolką
+* directive z reużywalną kontrolką
 
 ```html
 <div ws-shortcut-input ws-label="Special key + 1"></div>
@@ -55,7 +55,6 @@ return {
 
 ## Nieizolowane scopy
 * git checkout slide-3
-* chrome: #/shortcuts
 * wszystkie kontrolki działają na tym samym modelu
 * pliki: app/scripts/directives/ws-shortcut-input.js
 * demo: #/shortcuts
@@ -227,7 +226,7 @@ expect(array).toBeArray();
 
 ## Jasmine - mokowanie
 * jasmine spy
-* Zapamiętaj: jasmine.createSpy().andReturn() - zadanie 2
+* Zapamiętaj: jasmine.createSpy().andReturn()
 
 ```js
 spyOn(foo, 'setBar').andCallThrough();
