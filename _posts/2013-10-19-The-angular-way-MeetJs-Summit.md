@@ -6,13 +6,8 @@ title: The angular way - MeetJs Summit
 # slideShareId: 19963430
 tags: [AngularJs, angular way, MeetJs, Gdańsk]
 ---
-# The angular way (sharp turn)
-
-There is a lot of positive buzz about angular in front end js framework community - directives, two-way bindings, 'by google'. There is as well some critic - it's bigger then backbone, unlike ember it does dirty checking. In this presentation we will take a look on 'the angular way' the set of practice that is necessary to know if we want to fairy judge angular. So we will take a look on:
-* TDD and unit tests with karma test runner
-* yo generators
-* grunt server
-* angular separation of concerns
+# The angular way
+Meet js summit Gdańsk 19 October 2013
 
 ## Who am I?
 * Marcin Wosinek
@@ -43,9 +38,11 @@ There is a lot of positive buzz about angular in front end js framework communit
 * and non of them works without js on the browser side
 * it's tricky to make search engine index your content
 
-## (screen of serverfault site in Lynx)
+## Lynx
+* that still happens
 
-## (screen of ie6 - with tones of bars)
+## Ie6
+* that too
 
 ## Angular strong points (screens - a lot of working apps)
 * one page app
@@ -67,7 +64,6 @@ There is a lot of positive buzz about angular in front end js framework communit
 ## Angular domain - NOT (screens of contre examples)
 * view of wikipedia like sites
 * games
-* animations
 
 ## Angular MV*
 * model provided by services - fed with data from rest service
@@ -128,19 +124,15 @@ There is a lot of positive buzz about angular in front end js framework communit
 * even if we don't plan to use ie any of the tools, everything will be prepared if we change our mind later
 
 ## Materials
-* [https://egghead.io](egghead io)
-* [http://www.youtube.com/user/angularjs/videos](youtube/angularjs)
-* [http://ngmodules.org](ng-module)	
+* [egghead io](https://egghead.io)
+* [youtube/angularjs](http://www.youtube.com/user/angularjs/videos)
+* [ng-module](http://ngmodules.org)	
 * books (disclaimer: neither of them I've read):
- * [http://www.packtpub.com/angularjs-web-application-development/book](Mastering Web Application Development with AngularJS)
- * [http://www.amazon.com/AngularJS-Brad-Green/dp/1449344852](AngularJS from O'Reilly)
-
-* [http://angularjs.org/](http://angularjs.org/)
-* [http://egghead.io/](http://egghead.io/)
-* [http://www.youtube.com/user/angularjs](http://www.youtube.com/user/angularjs)
+ * [Mastering Web Application Development with AngularJS](http://www.packtpub.com/angularjs-web-application-development/book)
+ * [AngularJS from O'Reilly](http://www.amazon.com/AngularJS-Brad-Green/dp/1449344852)
 
 ## AngularJs community
-* group on facebook: url
+* [fb.com/groups/angularjs.polska](https://www.facebook.com/groups/angularjs.polska)
 * There is an idea to make one day angular meeting - ng-camp
 
 ## Summary
@@ -148,11 +140,13 @@ There is a lot of positive buzz about angular in front end js framework communit
 * main advantages is testability
 * while angular offers really nice architecture framework, it is us who shape the quality of code
 
+## Questions?
+
 ## Contact
-* http://marcin-wosinek.github.io/blog/presentation/2013/10/19/The-angular-way-MeetJs-Summit.html
+* [http://bit.ly/angular-meetjs-summit](http://bit.ly/angular-meetjs-summit)
 * @MarcinWosinek
 * marcin.wosinek@gmail.com
-* [google plus]
+* [google plus](https://plus.google.com/108223112357727405944)
 
 ## Credits
 * Audience photo: http://www.flickr.com/photos/dougbelshaw/5604047370/
