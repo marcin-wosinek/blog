@@ -14,30 +14,31 @@ There is a lot of positive buzz about angular in front end js framework communit
 * grunt server
 * angular separation of concerns
 
-## Who am I? (rogale)
+## Who am I?
 * Marcin Wosinek
 * 5 years IT experience
  * WebDev: Javascript
  * C# dev: UnitTests
 * Currently js contractor in Roche in Poznan, Poland
 
-## Questions:
+## You?
 * Who have heard about angular?
  * positives?
  * negatives?
 * Who have used angular?
 
-## The buzz (bees or logos)
+## The buzz
 * 'by google'
 * plenty of talks
 * testability
 * short and readable code
+* two ways binding
 
-## Reality (hummer and scrows)
+## Reality
 * it's not a silver bullet
 * just a tool - and for some problems it's good fit, while for others not
 
-## Common pitfall (angular, backbone, ember logos, etc., around js one)
+## Common pitfall
 * So we have a lot of browser side js frameworks
 * and non of them works without js on the browser side
 * it's tricky to make search engine index your content
@@ -46,14 +47,14 @@ There is a lot of positive buzz about angular in front end js framework communit
 
 ## (screen of ie6 - with tones of bars)
 
-## Angular is good at: (screens - a lot of work)
+## Angular strong points (screens - a lot of working apps)
 * one page app
 * dynamic components of html pages
 * complex forms - fields depending on each other
 * dealing with rest serivices
 * in short: boring busines panges - on which probably most of us works daily
 
-## Note: (refactoring related pic)
+## Note:
 * point 1 \& 2 makes transition form legacy html page to hip one page apps really smooth:
 * we can start writing new features of legacy system in angular
 * gradully refactor old code onto angular
@@ -74,7 +75,7 @@ There is a lot of positive buzz about angular in front end js framework communit
 * controler - code directly binded with view
 * directives - js that deals with DOM manipulation
 
-## Concepts separation (img of three layers model | controler | view; with directive on the border of controler and view, and services betwean model and controler)
+## Concepts separation
 * you can touch DOM only in directives - doing it in controler is very bad idea
 * controlers are supposed to have as little logic as posibile - getting data form REST, and data manipulation should be placed in services
 * while it's possible to have computiation in view, it's more testable to have it in controlers
@@ -109,14 +110,15 @@ There is a lot of positive buzz about angular in front end js framework communit
 * code is run in real browsers
 * extra fast - I have about 300 tests executed in about 4 seconds
 
-## Supported test frameworks
+## Test frameworks
 * core tests in jasmine (veryfiy it)
 * mocka and others frameworks are supported
 
-## Yeoman (yeoman, grunt, bower)
+## Yeoman
 * development workflow
 
 ## Grunt
+* The JavaScript Task Runner
 * build - minification, merging files, sass compliation
 * server - nice server that force reload when we change our files, and helps uns in prototyping
 
@@ -126,12 +128,12 @@ There is a lot of positive buzz about angular in front end js framework communit
 * even if we don't plan to use ie any of the tools, everything will be prepared if we change our mind later
 
 ## Materials
-* egghead io
-* youtube/angularjs
-* ng-module
-* books:
- * Pawel from Paris
- * author's of egghead io
+* [https://egghead.io](egghead io)
+* [http://www.youtube.com/user/angularjs/videos](youtube/angularjs)
+* [http://ngmodules.org](ng-module)	
+* books (disclaimer: neither of them I've read):
+ * [http://www.packtpub.com/angularjs-web-application-development/book](Mastering Web Application Development with AngularJS)
+ * [http://www.amazon.com/AngularJS-Brad-Green/dp/1449344852](AngularJS from O'Reilly)
 
 * [http://angularjs.org/](http://angularjs.org/)
 * [http://egghead.io/](http://egghead.io/)
@@ -153,3 +155,6 @@ There is a lot of positive buzz about angular in front end js framework communit
 * [google plus]
 
 ## Credits
+* Audience photo: http://www.flickr.com/photos/dougbelshaw/5604047370/
+* Bees photo: http://www.flickr.com/photos/theseanster93/4056815767/
+* hammer & screw: http://www.flickr.com/photos/justinbaeder/5317820857
