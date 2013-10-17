@@ -81,7 +81,23 @@ Meet js summit Gdańsk 19 October 2013
 * but only useful to write them
 * before we decide to become senior angular developer - just reuse already existing ones in angular core, angular ui and other libraries
 
-## Modules - idea (draw graf of modules - angular ui; application core; application user and application admin)
+```js
+<ANY ng-show="{expression}">
+<input ng-model="variable">
+
+<ng-view> <any ng-view>
+
+<ANY ng-class="{expression}">
+
+<ANY ng-switch="expression">
+  <ANY ng-switch-when="matchValue1">...</ANY>
+  <ANY ng-switch-when="matchValue2">...</ANY>
+  ...
+  <ANY ng-switch-default>...</ANY>
+</ANY>
+```
+
+## Modules - idea
 * packages containing all code - controllers, services, directives
 * modules can depend on others - then our code can be easily splited into multiple modules
 * only one main module, used as the root of application
@@ -93,6 +109,22 @@ Meet js summit Gdańsk 19 October 2013
 ## Testability
 * dependency injection
 * declarative views
+
+```html
+<div ng-repeat="project in projects | filter:search | orderBy:'name'"> </div>
+
+<form ng-submit="addTodo()">
+  <input ng-model="todoText" />
+</form>
+```
+
+```js
+function HelloCtrl($scope, $window, $log) {
+  $scope.message = 'Display me in view';
+  $window.alert('Use window via $window service - that improves testability');
+  $log.log('We can even test console log calls - thats to $log wrapper');
+}
+```
 
 ## Keeping code testable
 * NEVER touch DOM in controler
