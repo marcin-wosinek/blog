@@ -2,8 +2,8 @@
 layout: default
 category: presentation
 title: The angular way - MeetJs Summit
-# jvideoId: 9sDiy0QIVuA
-# slideShareId: 19963430
+videoId: QfM5aDVSk1M
+slideShareId: 27363497
 tags: [AngularJs, angular way, MeetJs, Gdańsk]
 ---
 # The angular way
@@ -48,17 +48,17 @@ Meet js summit Gdańsk 19 October 2013
 * one page app
 * dynamic components of html pages
 * complex forms - fields depending on each other
-* dealing with rest serivices
-* in short: boring busines panges - on which probably most of us works daily
+* dealing with rest services
+* in short: boring business pages - on which probably most of us works daily
 
 ## Note:
 * point 1 \& 2 makes transition form legacy html page to hip one page apps really smooth:
 * we can start writing new features of legacy system in angular
-* gradully refactor old code onto angular
+* gradually refactor old code onto angular
 * up to removing all jQuery code or even backend rendering
 
 ## Angular domain
-* admin pages - page edits, managing usert etc.
+* admin pages - page edits, managing user etc.
 * shop carts and checkout pages
 
 ## Angular domain - NOT
@@ -67,14 +67,14 @@ Meet js summit Gdańsk 19 October 2013
 
 ## Angular MV*
 * model provided by services - fed with data from rest service
-* view - html with angular-specific extensions: direcitives
-* controler - code directly binded with view
+* view - html with angular-specific extensions: directives
+* controller - code directly bound with view
 * directives - js that deals with DOM manipulation
 
 ## Concepts separation
-* you can touch DOM only in directives - doing it in controler is very bad idea
-* controlers are supposed to have as little logic as posibile - getting data form REST, and data manipulation should be placed in services
-* while it's possible to have computiation in view, it's more testable to have it in controlers
+* you can touch DOM only in directives - doing it in controller is very bad idea
+* controllers are supposed to have as little logic as possibile - getting data form REST, and data manipulation should be placed in services
+* while it's possible to have computation in view, it's more testable to have it in controllers
 
 ## Directives
 * it's essential to use them
@@ -103,7 +103,7 @@ Meet js summit Gdańsk 19 October 2013
 * only one main module, used as the root of application
 
 ## Modules - spliting code
-* keeping directives in seperate files
+* keeping directives in separate files
 * 'one module for one page'
 
 ## Testability
