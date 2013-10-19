@@ -44,7 +44,7 @@ Meet js summit Gdańsk 19 October 2013
 ## Ie6
 * that too
 
-## Angular strong points (screens - a lot of working apps)
+## Angular strong points
 * one page app
 * dynamic components of html pages
 * complex forms - fields depending on each other
@@ -57,11 +57,11 @@ Meet js summit Gdańsk 19 October 2013
 * gradully refactor old code onto angular
 * up to removing all jQuery code or even backend rendering
 
-## Angular domain (screens of examples)
+## Angular domain
 * admin pages - page edits, managing usert etc.
 * shop carts and checkout pages
 
-## Angular domain - NOT (screens of contre examples)
+## Angular domain - NOT
 * view of wikipedia like sites
 * games
 
@@ -139,7 +139,7 @@ function HelloCtrl($scope, $window, $log) {
 * extra fast - I have about 300 tests executed in about 4 seconds
 
 ## Test frameworks
-* core tests in jasmine (veryfiy it)
+* core tests in jasmine
 * mocka and others frameworks are supported
 
 ## Yeoman
@@ -184,3 +184,8 @@ function HelloCtrl($scope, $window, $log) {
 * Audience photo: http://www.flickr.com/photos/dougbelshaw/5604047370/
 * Bees photo: http://www.flickr.com/photos/theseanster93/4056815767/
 * hammer & screw: http://www.flickr.com/photos/justinbaeder/5317820857
+* ie: http://en.wikipedia.org/wiki/File:IE_6_SP3_XP_screenshot.PNG
+* admin page: http://www.flickr.com/photos/juggernautco/10065981863/
+* shopin cart: http://www.flickr.com/photos/sswinehart/4415385405
+* wikipedia: http://upload.wikimedia.org/wikipedia/commons/8/87/Wikipedia_Main_Page.png
+* games: http://www.flickr.com/photos/ian_d/30859899
