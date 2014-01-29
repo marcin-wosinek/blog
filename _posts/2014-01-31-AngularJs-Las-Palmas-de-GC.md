@@ -10,9 +10,4 @@ tags: [AngularJs, Las Palmas de Gran Canaria]
 
 [Event page](http://www.meetup.com/recrea-sessions/events/161900552/) at meetup.org.
 
-# Handout
-## Recommended uses
-## NOT recommended uses
-## Tools
-## Libraries
-## Learning materials
+[Handouts](/blog/angular-js/handouts.html).
