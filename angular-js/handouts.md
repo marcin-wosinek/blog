@@ -32,6 +32,7 @@ Module directory: http://ngmodules.org
 
 ## Tools
 What I use
+
 * **yeoman** http://yeoman.io - not just a tool, but a workflow
  * **yo** - code generators
  * **grunt** http://gruntjs.com - 'task runner' for js. Think rake or maven.
@@ -39,7 +40,9 @@ What I use
 * tests:
  * **jasmine** http://pivotal.github.io/jasmine - test framework with beautify syntax
  * **karma** http://karma-runner.github.io - test runner
+
 That one looks promissing
+
  * **protractor** https://github.com/angular/protractor - angular with selenium
    integration form angular & karma team
 
@@ -59,6 +62,7 @@ That one looks promissing
 * admin pages
 * pages available only for logged user
 * intranet pages
+
 All pages where we have a lot of forms.
 
 ## NOT recommended uses
