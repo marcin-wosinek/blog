@@ -1,7 +1,7 @@
 ---
 layout: default
 category: presentation
-title: AngularJs
+title: AngularJs Las Palmas de Gran Canaria
 tags: [AngularJs, Las Palmas de Gran Canaria]
 ---
 
