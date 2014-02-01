@@ -3,6 +3,8 @@ layout: default
 category: presentation
 title: AngularJs Las Palmas de Gran Canaria
 tags: [AngularJs, Las Palmas de Gran Canaria]
+videoId: 5bZaKrJN1og
+slideShareId: 30686055
 ---
 
 # AngularJs in Las Palmas de Gran Canaria
