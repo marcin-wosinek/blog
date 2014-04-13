@@ -5,18 +5,18 @@ title: AngularJs handouts
 # Handout
 ## Learning materials
 * 50+ free videos covering basic and advanced stuff from angular: [http://egghead.io](http://egghead.io)
-* 25+ presenations form angularJs headquater: [http://www.youtube.com/user/angularjs](http://www.youtube.com/user/angularjs)
-* 25+ presentation form the first angular conference: [http://www.youtube.com/user/ngconfvideos](http://www.youtube.com/user/ngconfvideos)
+* 25+ presenations from angularJs headquater: [http://www.youtube.com/user/angularjs](http://www.youtube.com/user/angularjs)
+* 25+ presentation from the first angular conference: [http://www.youtube.com/user/ngconfvideos](http://www.youtube.com/user/ngconfvideos)
 * official tutorial: [http://docs.angularjs.org/tutorial](http://docs.angularjs.org/tutorial)
 * book:
- * **"AngularJS"** by Brad Green & Shyam Seshadri - basic (I've read and recommend)
+ * **"AngularJS"** by Brad Green & Shyam Seshadri - basic (this book I've read and recommend)
  * **"Mastering Web Application Development with AngularJS"** by Pawel Kozlowski \&
    Peter Bacon Darwin - advanced. Looks good because of author renome and good
-   reviews. I haven't read.
+   reviews. This book I haven't read.
 * course on codecademy - [http://www.codecademy.com/courses/javascript-advanced-en-2hJ3J/0/1](http://www.codecademy.com/courses/javascript-advanced-en-2hJ3J/0/1) . Only views covered for now.
 
 ## Libraries
-That I'm using:
+What I'm using:
 
 * **angular-ui** [http://angular-ui.github.io](http://angular-ui.github.io) - pack of high quality components; eg.:
  * **bootstrap** - twitter bootstrap js rewritten in pure angular js
@@ -25,23 +25,23 @@ That I'm using:
 
 That looks very promissing:
 
-* **restangular** [http://github.com/mgonto/restangular](http://github.com/mgonto/restangular) - rest library
-* **routeSegment** [http://angular-route-segment.com](http://angular-route-segment.com) - when core routing is becoming not enough
+* **restangular** [http://github.com/mgonto/restangular](http://github.com/mgonto/restangular) - REST library
+* **routeSegment** [http://angular-route-segment.com](http://angular-route-segment.com) - if core routing is not enough
 
 Module directory: [http://ngmodules.org](http://ngmodules.org)
 
 ## Tools
-What I use
+What I use:
 
 * **yeoman** [http://yeoman.io](http://yeoman.io) - not just a tool, but a workflow
  * **yo** - code generators
  * **grunt** [http://gruntjs.com](http://gruntjs.com) - 'task runner' for js. Think rake or maven.
  * **bower** [http://bower.io](http://bower.io) - package manage (npm) for frontend
 * tests:
- * **jasmine** [http://pivotal.github.io/jasmine](http://pivotal.github.io/jasmine) - test framework with beautify syntax
+ * **jasmine** [http://pivotal.github.io/jasmine](http://pivotal.github.io/jasmine) - test framework with beautiful syntax
  * **karma** [http://karma-runner.github.io](http://karma-runner.github.io) - test runner
 
-That one looks promissing
+That one looks promissing:
 
  * **protractor** [http://github.com/angular/protractor](http://github.com/angular/protractor) - angular with selenium
    integration form angular & karma team
@@ -56,7 +56,7 @@ That one looks promissing
 
 ## To avoid bad practices
 * never touch DOM in controller, service nor filter. Directives are the single
-  place where you can play with DOM directely.
+  place where you can play with DOM directly.
 
 ## Recommended uses
 * admin pages
