@@ -7,14 +7,14 @@ slideShareId: 27363497
 tags: [AngularJs, angular way, MeetJs, Gdańsk]
 ---
 # The angular way
-Meet js summit Gdańsk 19 October 2013
+Meet JS Summit - Gdańsk, 19 October 2013
 
 ## Who am I?
 * Marcin Wosinek
 * 5 years IT experience
  * WebDev: Javascript
  * C# dev: UnitTests
-* Currently js contractor in Roche in Poznan, Poland
+* Currently JS contractor in Roche in Poznan, Poland
 
 ## You?
 * Who have heard about angular?
@@ -27,15 +27,15 @@ Meet js summit Gdańsk 19 October 2013
 * plenty of talks
 * testability
 * short and readable code
-* two ways binding
+* two-ways data binding
 
 ## Reality
 * it's not a silver bullet
-* just a tool - and for some problems it's good fit, while for others not
+* just a tool - some problems it fixes, the others not
 
 ## Common pitfall
-* So we have a lot of browser side js frameworks
-* and non of them works without js on the browser side
+* So we have a lot of browser side JS frameworks
+* and none of them works without JS on the browser side
 * it's tricky to make search engine index your content
 
 ## Lynx
@@ -49,10 +49,10 @@ Meet js summit Gdańsk 19 October 2013
 * dynamic components of html pages
 * complex forms - fields depending on each other
 * dealing with rest services
-* in short: boring business pages - on which probably most of us works daily
+* in short: boring business pages - on which probably most of us works every day
 
 ## Note:
-* point 1 \& 2 makes transition form legacy html page to hip one page apps really smooth:
+* point 1 \& 2 makes transition from legacy html page to hip one page apps really smooth
 * we can start writing new features of legacy system in angular
 * gradually refactor old code onto angular
 * up to removing all jQuery code or even backend rendering
@@ -66,14 +66,14 @@ Meet js summit Gdańsk 19 October 2013
 * games
 
 ## Angular MV*
-* model provided by services - fed with data from rest service
+* model provided by services - fed with data from rest services
 * view - html with angular-specific extensions: directives
 * controller - code directly bound with view
-* directives - js that deals with DOM manipulation
+* directives - JS that deals with DOM manipulation
 
 ## Concepts separation
 * you can touch DOM only in directives - doing it in controller is very bad idea
-* controllers are supposed to have as little logic as possibile - getting data form REST, and data manipulation should be placed in services
+* controllers are supposed to have as little logic as possible - getting data form REST, and data manipulation should be placed in services
 * while it's possible to have computation in view, it's more testable to have it in controllers
 
 ## Directives
@@ -99,10 +99,10 @@ Meet js summit Gdańsk 19 October 2013
 
 ## Modules - idea
 * packages containing all code - controllers, services, directives
-* modules can depend on others - then our code can be easily splited into multiple modules
+* modules can depend on others - then our code can be easily splitted into multiple modules
 * only one main module, used as the root of application
 
-## Modules - spliting code
+## Modules - splitting code
 * keeping directives in separate files
 * 'one module for one page'
 
@@ -148,12 +148,12 @@ function HelloCtrl($scope, $window, $log) {
 ## Grunt
 * The JavaScript Task Runner
 * build - minification, merging files, sass compliation
-* server - nice server that force reload when we change our files, and helps uns in prototyping
+* server - nice server that force reload when we change our files, and helps us in prototyping
 
 ## Yo generators
 * cool tool that allows us to generate code that fits into really nice scaffolging
-* we don't need to figure out Gruntfile.js, bower packange file, karmaconfig, jshint configuration and test files ourself
-* even if we don't plan to use ie any of the tools, everything will be prepared if we change our mind later
+* we don't need to figure out Gruntfile.js, bower package file, karmaconfig, jshint configuration and test files ourselves
+* even if we don't plan to use IE any of the tools, everything will be prepared if we change our mind later
 
 ## Materials
 * [egghead io](https://egghead.io)
