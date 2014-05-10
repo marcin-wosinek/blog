@@ -2,7 +2,7 @@
 layout: default
 category: warsztaty
 title: 3 Warsztaty AngularJs - GeekCarrots Poznań
-tags: [AngularJs, Akai, Poznań]
+tags: [AngularJs, GeekCarrots, Poznań]
 ---
 # AngularJs: Warsztaty - stopień 3
 
@@ -12,17 +12,17 @@ tags: [AngularJs, Akai, Poznań]
 
 ## Start
 * Treść slajdów: [http://bit.ly/angular-workshop3](http://bit.ly/angular-workshop3)
-* git clone [https://github.com/marcin-wosinek/workshop-3.git](https://github.com/marcin-wosinek/workshop-3.git)
+* `git clone` [https://github.com/marcin-wosinek/workshop-3.git](https://github.com/marcin-wosinek/workshop-3.git)
 * chrome:
  * linux: chromium-browser --disable-web-security
  * windows - skopiować link do chroma i edytować: "(originalny link) --disable-web-security"
-* git config --global alias.tree "log --oneline --graph --decorate --all"
+* `git config --global alias.tree "log --oneline --graph --decorate --all"`
 
 ## Podpinanie js do html
 * zawsze korzystamy z directive!
 
 ## Directive blokujący zaznaczanie i klikanie na element
-* git checkout slide-1
+* `git checkout slide-1`
 * użycie: app/views/page.html +3
 * implementacja: app/scripts/directives/ws-unselectable.js
 
@@ -44,7 +44,7 @@ return {
 ```
 
 ## Kontrolka w directive
-* git checkout slide-2
+* `git checkout slide-2`
 * użycie: app/views/shortcuts.html
 * directive z reużywalną kontrolką
 
@@ -54,7 +54,7 @@ return {
 ```
 
 ## Nieizolowane scopy
-* git checkout slide-3
+* `git checkout slide-3`
 * wszystkie kontrolki działają na tym samym modelu
 * pliki: app/scripts/directives/ws-shortcut-input.js
 * demo: #/shortcuts
@@ -69,8 +69,8 @@ return {
 ```
 
 ## Izolowane scopy
-* git checkout slide-4
-* Każdy element żyje w swoim świecie
+* `git checkout slide-4`
+* każdy element żyje w swoim świecie
 * nie mamy kolizji między tymi samymi elementami w tym samym scopie
 * do komunikacji ze światem zewnętrznym
  * @ - podstawia wartość atrybutu z elementu
@@ -88,7 +88,7 @@ return {
 ```
 
 ## Zadanie 1: kontrolka dla filtru przedziału
-* git checkout todo-1
+* `git checkout todo-1`
 * użycie: app/views/showContacts.html +8
 * implementacja: app/scripts/directives/ws-interval.js
 * enkapsulacja dwóch suwaków w reużywalną kontrolkę
@@ -99,9 +99,9 @@ return {
 ```
 
 ## Rozwiązanie 1
-* git add .
-* git commit -m '(commit message)'
-* git checkout done-1
+* `git add .`
+* `git commit -m '(commit message)'`
+* `git checkout done-1`
 * Demo: #/showContacts
 * Pytania?
 
@@ -124,8 +124,8 @@ return {
 ```
 
 ## Hack
-* git checkout slide-5
-* hack żeby nie dało się min przekroczyć max
+* `git checkout slide-5`
+* hack, żeby nie dało się min przekroczyć max
 * implementacja: app/scripts/directives/ws-interval.js +9
 
 ```js
@@ -143,13 +143,13 @@ template: 'Min: <input type="range" max="{{model.max}}" min="{{min}}" ng-model="
 * Unit testy - blisko logiki
  * sprawdzamy przekładnie jednego trybika
 * Testy funkcjonalne - logika wszystkich warstw razem
- * sprawdzamy działanie wielu połaczonych trybików
- * wykładniczy wzorst liczby przypadków granicznych
+ * sprawdzamy działanie wielu połączonych trybików
+ * wykładniczy wzrost liczby przypadków granicznych
 
 ## Unit testy - idea
-* trywialne sprawdzanie działania kody
+* trywialne sprawdzanie działania kodu
 * weryfikujemy wyizolowaną logikę
-* razem z code review bardzo skuteczny mechanizm łapanie błędów
+* razem z code review bardzo skuteczny mechanizm łapania błędów
 
 ## Mocks & stubs
 * sposób na izolowanie elementu
@@ -157,10 +157,10 @@ template: 'Min: <input type="range" max="{{model.max}}" min="{{min}}" ng-model="
 * mocks:
  * obiekt z wymaganiami
 * stubs:
- * prosty obiekt, który pamieta wywołania fukncji
+ * prosty obiekt, który pamięta wywołania funkcji
 
 ## Dependecy injection
-* 'Odwrócenie kontroli'
+* 'odwrócenie kontroli'
 * funkcja nie woła swoich zależności - dostaje je z zewnątrz
 
 ```js
@@ -238,7 +238,7 @@ var standAloneSpy = jasmine.createSpy('standAloneSpy').andReturn(11);
 ```
 
 ## Unit testy - Angular
-* git checkout slide-6
+* `git checkout slide-6`
 * karma test runner
 * page runner
 
@@ -252,14 +252,14 @@ $controller('GlobalCtrl', {
 ```
 
 ## Zadanie 2 - unit testy controlera
-* git checkout todo-2a
+* `git checkout todo-2a`
 * prosty test sprawdzający czy numer z wsUuidGenerator.createUuid trafia do ciastka
 * pliki: test/spec/controllers/global.js +8
 
 ## Rozwiązanie 2a
-* git add .
-* git commit -m '(commit message)'
-* git checkout done-2a
+* `git add .`
+* `git commit -m '(commit message)'`
+* `git checkout done-2a`
 
 ```js
 beforeEach(inject(function ($controller, $rootScope) {
@@ -282,22 +282,22 @@ it('should setup cookies', function () {
 ```
 
 ## Zadanie 2b - naiwna implementacja
-* git checkout todo-2b
-* najprostrzy kod przechodzący test
+* `git checkout todo-2b`
+* najprostszy kod przechodzący test
 * pliki: app/scripts/controllers/global.js +9
 
 ## Rozwiązanie 2b
-* git add .
-* git commit -m '(commit message)'
-* git checkout done-2b
+* `git add .`
+* `git commit -m '(commit message)'`
+* `git checkout done-2b`
 
 ```js
 $cookies.trackingId = '341';
 ```
 
 ## Refaktoring testu
-* funkcja init, pozwalająca na reinicjalizacje
-* git checkout slide-7
+* funkcja init, pozwalająca na reinicjalizację
+* `git checkout slide-7`
 
 ```js
 init = function () {
@@ -310,21 +310,21 @@ init = function () {
 ```
 
 ## Zadanie 2c
-* git checkout todo-2c
-* weryfikacja uzycia generatora
+* `git checkout todo-2c`
+* weryfikacja użycia generatora
 * pliki: test/spec/controllers/global.js +35
 
 ## Rozwiązanie 2c
-* git add .
-* git commit -m '(commit message)'
-* git checkout done-2c
+* `git add .`
+* `git commit -m '(commit message)'`
+* `git checkout done-2c`
 
 ```js
 expect(wsUuidGenerator.createUuid).toHaveBeenCalled();
 ```
 
 ## Naiwna implementacja
-* git checkout slide-8
+* `git checkout slide-8`
 
 ```js
 wsUuidGenerator.createUuid();
@@ -332,14 +332,14 @@ $cookies.trackingId = '341';
 ```
 
 ## Zadanie 2d
-* git checkout todo-2d
+* `git checkout todo-2d`
 * test sprawdzający dla różnej wartości
 * pliki: test/spec/controllers/global.js +38
 
 ## Rozwiązanie 2d
-* git add .
-* git commit -m '(commit message)'
-* git checkout done-2d
+* `git add .`
+* `git commit -m '(commit message)'`
+* `git checkout done-2d`
 
 ```js
 // check for some other value   
@@ -349,22 +349,22 @@ expect(cookies.trackingId).toEqual('111');
 ```
 
 ## Pokryty testami kod
-* git checkout slide-8
+* `git checkout slide-8`
 
 ```js
 $cookies.trackingId = wsUuidGenerator.createUuid();
 ```
 
 ## Zadanie 2e
-* git checkout todo-2e
+* `git checkout todo-2e`
 * test sprawdzający zachowanie wartości ciasteczka
 * refaktoring testów - wydzielenie osobnego testu dla innej wartości liczbowej
 * pliki: test/spec/controllers/global.js +42
 
 ## Rozwiązanie 2e
-* git add .
-* git commit -m '(commit message)'
-* git checkout done-2e
+* `git add .`
+* `git commit -m '(commit message)'`
+* `git checkout done-2e`
 
 ```js
 // should not override existing cookie value
@@ -374,7 +374,7 @@ expect(cookies.trackingId).toEqual('341');
 ```
 
 ## Pokryty testami kod
-* git checkout slide-10
+* `git checkout slide-10`
 * całkowite pokrycie testami 
 
 ```js
@@ -398,7 +398,7 @@ inject(function(_ServiceInTest_) {
 ```
 
 ## Przykład testów service
-* git checkout slide-11
+* `git checkout slide-11`
 
 ```js
 beforeEach(function () {
