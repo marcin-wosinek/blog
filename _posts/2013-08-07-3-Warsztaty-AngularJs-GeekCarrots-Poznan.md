@@ -253,7 +253,7 @@ $controller('GlobalCtrl', {
 
 ## Zadanie 2 - unit testy controlera
 * `git checkout todo-2a`
-* prosty test sprawdzający czy numer z wsUuidGenerator.createUuid trafia do ciastka
+* prosty test sprawdzający, czy numer z wsUuidGenerator.createUuid trafia do ciastka
 * pliki: test/spec/controllers/global.js +8
 
 ## Rozwiązanie 2a
