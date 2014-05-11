@@ -9,16 +9,16 @@ tags: [AngularJs, GeekCarrots, Poznań]
 * konsolowy git
 * chrome/chromium
  * korzystamy z `<input type="range">`
- * powinen być slider tutaj: <input type="range">
+ * powinien być slider tutaj: <input type="range">
 * lokalny serwer http - ciasteczka nie działają z file systemu
 
 ## Start
 * Treść slajdów: [http://bit.ly/angular-workshop2](http://bit.ly/angular-workshop2)
-* git clone [https://github.com/marcin-wosinek/workshop-2.git](https://github.com/marcin-wosinek/workshop-2.git)
+* `git clone` [https://github.com/marcin-wosinek/workshop-2.git](https://github.com/marcin-wosinek/workshop-2.git)
 * chrome:
  * linux: chromium-browser --disable-web-security
  * windows - skopiować link do chroma i edytować: "(originalny link) --disable-web-security"
-* git config --global alias.tree "log --oneline --graph --decorate --all"
+* `git config --global alias.tree "log --oneline --graph --decorate --all"`
 
 ## Projekt
 * Książka kontaktów
@@ -99,24 +99,24 @@ _.isNumber(object)
 ```
 
 ## Struktura plików
-* git checkout slide-1
-* app/ zawier wszystko co jest potrzebne do zdepoloyowania aplikacji
+* `git checkout slide-1`
+* app/ zawiera wszystko, co jest potrzebne do dostarczenia aplikacji
  * index.html - jedyny plik do użytku bezpośredniego
  * view/ - templaty angulara
- * styles/ - pliki css i nie skopilowany sass
+ * styles/ - pliki css i nie skompilowany sass
  * components/ - zewnętrzne komponenty
  * scripts/ - js
   * app.js - definicja modułu + konfiguracja
 * test/ katalog z testami
 
 ## Yeoman
-* narzedzie do wspierania workflowu developerskiego
+* narzędzie do wspierania workflowu developerskiego
 * generator kodu
 
 ### Prezentacja:
 1. Generowanie ścieżki
 2. Odpalenie serwera
-3. Automatyczne odświerzenie na zmianę
+3. Automatyczne odświeżenie na zmianę
 
 * pozwalają zmieniać dane z poziomu widoku
 * wbudowane filtry
@@ -133,7 +133,7 @@ _.isNumber(object)
 
 ## Pisanie filtrów
 * zwracamy przetworzony element
-* przyjmujemy dowolną liczę argumentów
+* przyjmujemy dowolną liczbę argumentów
 
 ```js
 angular.module('workshop2App')
@@ -150,7 +150,7 @@ angular.module('workshop2App')
 
 ## angular.forEach
 * pętla
-* nie kopiujej danych stworzonych przez angulara (object.$someAngularStuff)
+* nie kopiuje danych stworzonych przez angulara (object.$someAngularStuff)
 
 ```js
 var array = [1, 2, 3];
@@ -162,7 +162,7 @@ angular.forEach(array, function(value){
 
 ## Zadanie 1: filtr przedziału
 * filtr wybierający ludzi z odpowiedniego przedziału wieku
-* git checkout todo-1
+* `git checkout todo-1`
 * użycie: app/views/showContacts.html +9
 * implementacja: app/scripts/filters/between.js
 
@@ -171,9 +171,9 @@ angular.forEach(array, function(value){
 ```
 
 ## Rozwiązanie 1
-* git add .
-* git commit -m '(commit message)'
-* git checkout done-1
+* `git add .`
+* `git commit -m '(commit message)'`
+* `git checkout done-1`
 * Pytania?
 
 ```js
@@ -201,7 +201,7 @@ return function (input, key, min, max) {
 * duży feature animacje
 
 ## Animacje
-* directivy odpowiadają za zmianę dom
+* dyrektywy odpowiadają za zmianę DOM
 * do wersji 1.1.4 nie było wsparcia dla animacji
 
 ## ngAnimation
@@ -213,14 +213,14 @@ return function (input, key, min, max) {
 * Demo [http://www.nganimate.org](/http://www.nganimate.org/)
 
 ## Zadanie 2: zastosowanie animacji
-* animowanię zmiany wyświeltanych elementów
-* git checkout todo-2
+* animowanie zmiany wyświetlanych elementów
+* `git checkout todo-2`
 * implementacja: app/views/showContacts.html & app/styles/main.css
 
 ## Rozwiązanie 2
-* git add .
-* git commit -m '(commit message)'
-* git checkout done-2
+* `git add .`
+* `git commit -m '(commit message)'`
+* `git checkout done-2`
 * Pytania?
 
 ```html
@@ -249,9 +249,9 @@ return function (input, key, min, max) {
 * śledzenie aktywności
 
 ## Global controller
-* git checkout slide-3
+* `git checkout slide-3`
 * pliki: app/index.html +26
-* hack na zawsze uruchamiany kontroler
+* hack - na zawsze uruchamiany kontroler
 
 ```html
 <!-- Before -->
@@ -266,12 +266,12 @@ return function (input, key, min, max) {
 ```
 
 ## Generator UUID (Universally unique identifier)
-* git checkout slide-4
+* `git checkout slide-4`
 * pliki: app/scripts/services/wsUuidGenerator.js
 * prawdopodobieństwo kolizji:
- * miliard co sekunde: w 100 lat mamy 50%
+ * miliard co sekundę: w 100 lat mamy 50%
  * 600 milionów dla każdego człowieka na ziemi: 50%
- * ryzyko że udeży mnie meteor w ciągu roku = kolizja przy kilku dziesiątkach bilionów UUID
+ * ryzyko że uderzy mnie meteor w ciągu roku = kolizja przy kilku dziesiątkach bilionów UUID
 
 ```js
 return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'
@@ -284,23 +284,23 @@ return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'
 * przesyłane z każdym requestem do serwera
 
 ## Zastosowanie
-* śledzenie użytkowników/liczenie odwidzin
+* śledzenie użytkowników/liczenie odwiedzin
 * <del>przechowywanie danych</del>: lepiej użyć [webstorage](http://dev.w3.org/html5/webstorage/)
 * logowanie usera - dobrze zainteresować się tym [http://witoldsz.github.io/angular-http-auth/](http://witoldsz.github.io/angular-http-auth/)
 
 ## Cookies w angularze
 * ngCookies - dodatkowy plik do załadowania
-* $cookies - sewis opakowywujący użycie cookies
+* $cookies - serwis opakowujący użycie cookies
 
 ## Zadanie 3: tracking cookies
-* git checkout todo-3
+* `git checkout todo-3`
 * implementacja: app/scripts/controllers/global.js
-* Jeśli nie ma 'trackingId' na ciasteczku - ustawamy je na nowo wygenerowany UUID
+* jeśli nie ma 'trackingId' na ciasteczku, ustawiamy je na nowo wygenerowany UUID
 
 ## Rozwiązanie 3
-* git add .
-* git commit -m '(commit message)'
-* git checkout done-3
+* `git add .`
+* `git commit -m '(commit message)'`
+* `git checkout done-3`
 * Pytania?
 
 ```js
@@ -314,7 +314,7 @@ angular.module('workshop2App')
 ```
 
 ## Directives
-* rozszeżenia do html
+* rozszerzenia html
 * formy użycia
 
 ```html
@@ -325,17 +325,17 @@ angular.module('workshop2App')
 ```
 
 ## Pisanie directives
-* git checkout slide-5
+* `git checkout slide-5`
 * plik: app/scripts/directives/ws-accept-cookies.js
-* tak definiujemy tak jak kontrolery serwisy czy filtry
+* tak definiujemy, tak jak kontrolery, serwisy czy filtry
 * properties zwracanego obiektu:
- * template - html który zastąpi zawartość
- * restrict - ograniczenie uzycia directive:
+ * template - html, który zastąpi zawartość
+ * restrict - ograniczenie użycia directive:
   * E - element, tag
   * A - atrybut
   * C - klasa
   * M - komentarz
- * link - funkcja opalana po podpięciu directive
+ * link - funkcja odpalana po podpięciu directive
 
 ```js
 angular.module('workshop2App')
@@ -362,15 +362,15 @@ angular.module('workshop2App')
 ```
 
 ## Zadanie 4: template dla ws-accept-cookies
-* git checkout todo-4
+* `git checkout todo-4`
 * przykład użycia: app/index.htm +27
 * implementacja: app/scripts/directives/ws-accept-cookies.js
-* to co jest oryginalnie wewnatrz tagu chcemy mieć wciąż w directive + chcemy mieć guzik 'accept'
+* to, co jest oryginalnie wewnatrz tagu, chcemy mieć wciąż w directive + chcemy mieć guzik 'accept'
 
 ## Rozwiązanie 4
-* git add .
-* git commit -m '(commit message)'
-* git checkout done-4
+* `git add .`
+* `git commit -m '(commit message)'`
+* `git checkout done-4`
 * Pytania?
 
 ```js
@@ -386,19 +386,19 @@ return {
 ## Linking function
 * miejsce na logikę directive
 * argumenty - kolejność jest istotna:
- * scope - zakres. W najprostrzym przypadku dzielony ze światem zewnętrznym
- * element - element jQuery lub jqLite do którego podpinany logikę
- * attrs - obiekt z atrybutami na elemencie do którego się wpinamy
+ * scope - zakres. W najprostszym przypadku dzielony ze światem zewnętrznym
+ * element - element jQuery lub jqLite, do którego podpinany logikę
+ * attrs - obiekt z atrybutami na elemencie, do którego się wpinamy
 
 ## Zadanie 5: ws-accept-cookies - implementacja chowania
-* git checkout todo-5
-* dodanie obsługki kliknięcia guzika akceptuj
-* ukrywanie elementu jesli ciasteczka były już zaakceptowane
+* `git checkout todo-5`
+* dodanie obsługi kliknięcia guzika "akceptuj"
+* ukrywanie elementu, jesli ciasteczka były już zaakceptowane
 
 ## Rozwiązanie 5
-* git add .
-* git commit -m '(commit message)'
-* git checkout done-5
+* `git add .`
+* `git commit -m '(commit message)'`
+* `git checkout done-5`
 * Pytania?
 
 ```js
@@ -419,7 +419,7 @@ link: function postLink(scope, element, attrs)  {
 ## Podsumowanie
 * pisanie filtrów?
 * animacje?
-* pisanie directives?
+* pisanie dyrektyw?
 * ngCookies? - session cookies
 
 ## Materiały do nauki
@@ -427,9 +427,9 @@ link: function postLink(scope, element, attrs)  {
 * [http://www.nganimate.org/](http://www.nganimate.org/)
 
 ## Co na następnych warsztatach?
-* directives - dokończenie
+* dyrektywy - dokończenie
 * unit testy & TDD we frontendzie
-* warte uwagii projekty:
+* warte uwagi projekty:
  * angular-ui
  * angular-bootstrap
 
