@@ -7,14 +7,14 @@ tags: [AngularJs, GeekCarrots, Poznań]
 # AngularJs: Warsztaty - stopień 1
 ## Start
 * treść slajdów: [http://bit.ly/angular-workshop-1](http://bit.ly/angular-workshop-1)
-* git clone [https://github.com/marcin-wosinek/workshop-1.git](https://github.com/marcin-wosinek/workshop-1.git)
+* `git clone` [https://github.com/marcin-wosinek/workshop-1.git](https://github.com/marcin-wosinek/workshop-1.git)
 * chrome:
  * linux: chromium-browser --disable-web-security
  * windows - skopiować link do chroma i edytować: "(originalny link) --disable-web-security"
-* git config --global alias.tree "log --oneline --graph --decorate --all"
+* `git config --global alias.tree "log --oneline --graph --decorate --all"`
 
 ## AngularJs "Hello world"
-* git checkout slide-1
+* `git checkout slide-1`
 * dwustronne bindowanie
 * działający, nie trywialny kod oparty o sam widok
 * pliki: index.html +8
@@ -26,7 +26,7 @@ tags: [AngularJs, GeekCarrots, Poznań]
 
 ## ng-include
 * git checkout slide-2
-* wczytywanie cześci widoku dynamicznie
+* dynamiczne wczytywanie części widoku
 * pliki: views/main.html & index.html +7
 ```html
 <!-- index.html -->
@@ -48,14 +48,14 @@ tags: [AngularJs, GeekCarrots, Poznań]
 
 ## $scope
 * obiekt wiążący kontroler z widokiem
-* $scope.title będzie dostępny jako {{title}} w widoku
+* `$scope.title` będzie dostępny jako {{title}} w widoku
 * ng-model - wiąże elementy formularza z modelem
-* ng-repeat - pozwala interować po tablicach zdefiniowanych na $scope
+* ng-repeat - pozwala iterować po tablicach zdefiniowanych na $scope
 
 ## ng-controller
-* git checkout slide-3
-* podpięcie kontrolera do częsci widoku
-* $scope działa tylko wewnątrz tagu na którym jest kontroler
+* `git checkout slide-3`
+* podpięcie kontrolera do części widoku
+* $scope działa tylko wewnątrz tagu, na którym jest kontroler
 * pliki: views/hello.html & script/script.js
 
 ```html
@@ -74,15 +74,15 @@ workshop.controller("HelloCtrl", function($scope) {
 ```
 
 ## Zadanie 1
-* git checkout todo-1
-* dodanie kontrolera zawierajacego menu
+* `git checkout todo-1`
+* dodanie kontrolera zawierającego menu
 * dodanie i wyświetlenie menu w index.html
 * implementacja: index.html & script/script.js
 
 ## Rozwiązanie 1
-* git add .
-* git commit -m '(commit message)'
-* git checkout done-1
+* `git add .`
+* `git commit -m '(commit message)'`
+* `git checkout done-1`
 
 ```html
 <div ng-controller="MenuCtrl">
@@ -99,7 +99,7 @@ workshop.controller("MenuCtrl", function($scope) {
 
 ## $routeProvider
 * git checkout slide-4
-* definije ścieżki w aplikacji
+* definiuję ścieżki w aplikacji
 * pliki: scripts/script.js
 
 ```js
@@ -125,7 +125,7 @@ $routeProvider
 ```
 
 ## Zadanie 2
-* git checkout todo-2
+* `git checkout todo-2`
 * zbudować menu zawierające linki do wszystkich ścieżek
 * implementacja: index.html & script/script.js
 
@@ -145,9 +145,9 @@ var arrayOfObjects = [
 ```
 
 ## Rozwiązanie 2
-* git add .
-* git commit -m '(commit message)'
-* git checkout done-2
+* `git add .`
+* `git commit -m '(commit message)'`
+* `git checkout done-2`
 
 ```html
 <li ng-repeat="link in links">
@@ -164,14 +164,14 @@ $scope.links = [
 ```
 
 ## Zadanie 3
-* git checkout todo-3
-* zbudować własną podstronę, z wyświletaniem listy danych podanych w kontrolerzę
+* `git checkout todo-3`
+* zbudować własną podstronę, z wyświetlaniem listy danych podanych w kontrolerze
 * implementacja: script/script.js & nowy plik widoku
 
 ## Rozwiązanie 3
-* git add .
-* git commit -m '(commit message)'
-* git checkout done-3
+* `git add .`
+* `git commit -m '(commit message)'`
+* `git checkout done-3`
 
 ```js
 workshop.controller("ListCtrl", function($scope) {
@@ -191,7 +191,7 @@ workshop.controller("ListCtrl", function($scope) {
 ```
 
 ## OrderBy
-* git checkout slide-5
+* `git checkout slide-5`
 * pliki: views/list.html
 
 ```html
@@ -200,15 +200,15 @@ workshop.controller("ListCtrl", function($scope) {
 ```
 
 ## Zadanie 4
-* git checkout todo-4
+* `git checkout todo-4`
 * wymień hardkodowany parametr na pochodzący ze zmiennej
 * użyj ng-model + kilka input type="radio"
 * implementacja: views/list.html +4, script.js +28
 
 ## Rozwiązanie 4
-* git add .
-* git commit -m '(commit message)'
-* git checkout done-4
+* `git add .`
+* `git commit -m '(commit message)'`
+* `git checkout done-4`
 
 ```html
 First name: <input ng-model="orderKey" type='radio' value='firstName'/><br/>
@@ -216,7 +216,7 @@ Last name: <input ng-model="orderKey" type='radio' value='lastName'/><br/>
 ```
 
 ## filter
-* git checkout slide-6
+* `git checkout slide-6`
 * składnia filter: {experesion}
 * pliki: views/list.html +7
 
@@ -228,18 +228,18 @@ Last name: <input ng-model="orderKey" type='radio' value='lastName'/><br/>
 {expresion} zwraca:
 
 * string 'Lorem ipsum' - szukamy stringu w całych obiektach na liście
-* obiekt {key: 'value'} - szukamy obietków które pod *key* mają wartośc pasującą do _value_ 
-* obiekt {$: 'value'} - szukamy obietków które gdziekolwiek mają wartośc pasującą do _value_ 
+* obiekt {key: 'value'} - szukamy obiektów, które pod *key* mają wartość pasującą do _value_ 
+* obiekt {$: 'value'} - szukamy obiektów, które gdziekolwiek mają wartość pasującą do _value_ 
 
 ## Zadanie 5
-* git checkout todo-5
+* `git checkout todo-5`
 * zmienić filter na wyszukiwarkę z 3 polami: szukanie po firstName, lastName lub wszędzie
 * implementacja: views/list.html +5
 
 ## Rozwiązanie 5
-* git add .
-* git commit -m '(commit message)'
-* git checkout done-5
+* `git add .`
+* `git commit -m '(commit message)'`
+* `git checkout done-5`
 
 ```html
 Everywhere: <input ng-model="search.$" type='text'/><br/>
@@ -248,7 +248,7 @@ Last name: <input ng-model="search.lastName" type='text'/><br/>
 ```
 
 ## Funkcje w modelu
-* git checkout slide-7
+* `git checkout slide-7`
 * pliki: views/main.html +7 & script/script.js + 37
 
 ```js
@@ -268,7 +268,7 @@ Last name: <input ng-model="search.lastName" type='text'/><br/>
 ```
 
 ## Validowanie formularza
-* git checkout slide-8
+* `git checkout slide-8`
 * pliki: views/main.html +10
 
 ```html
@@ -280,17 +280,17 @@ Last name: <input ng-model="search.lastName" type='text'/><br/>
 ```
 
 ## Zadanie 6
-* git checkout todo-6
+* `git checkout todo-6`
 * dodać formularz z danym osoby - obiekt newPerson
-* skorzystać z _ng-click_ do obsługi dodanie
+* skorzystać z _ng-click_ do obsługi klikniecia przycisku
   * dodać do listy newPerson ( nazwaListy.push(nowyElement) )
   * podstawić pusty obiekt za ten podstawiony
 * implementacja: script/script.js +46 & views/list.html +10
 
 ## Rozwiązanie 6
-* git add .
-* git commit -m '(commit message)'
-* git checkout done-6
+* `git add .`
+* `git commit -m '(commit message)'`
+* `git checkout done-6`
 
 ```html
 <form>
@@ -306,8 +306,8 @@ $scope.add = function () {
 }
 ```
 
-## Trzymanie danych w controlerze
-* git checkout slide-9
+## Trzymanie danych w kontrolerze
+* `git checkout slide-9`
 * strata danych przy przejściu na inną podstronę
 * użycie tego samego controlera 2 razy - jak na #/main
 * pliki: script/script.js +29 & views/main.html +1
@@ -323,8 +323,8 @@ $scope.lastName = 'Kowalski';
 ```
 
 ## Services
-* git checkout slide-10
-* nowy serwis - dla kontrolera co 2 razy wystepuje
+* `git checkout slide-10`
+* nowy serwis - dla kontrolera co 2 razy występuje
 * stan jest globalny dla aplikacji
 * pliki: script/script.js +62 & views/hello.html +4 & views/main.html +7
 
@@ -338,14 +338,14 @@ workshop.factory("SharedData", function(){
 ```
 
 ## Zadanie 7
-* git checkout todo-7
+* `git checkout todo-7`
 * dodanie własnego serwisu, People do użytku przez ListCtrl
 * implementacja: script/script.js +42
 
 ## Rozwiązanie 7
-* git add .
-* git commit -m '(commit message)'
-* git checkout done-7
+* `git add .`
+* `git commit -m '(commit message)'`
+* `git checkout done-7`
 
 ```js
 workshop.factory("People", function() {
@@ -386,15 +386,15 @@ workshop.controller("ListCtrl", function($scope, People) {
 ```
 
 ## Rest
-* dane dostepne pod url
+* dane dostępne pod url
 * ładne url:
  * http://example.com/products - lista produktów
- * http://example.com/products/1 - pierwszy product
+ * http://example.com/products/1 - pierwszy produkt
 * na ogół dane w json
 
 ## $resource
 * query - pobieranie tablicy
-* get - pobiernie objektu
+* get - pobieranie obiektu
 * parametry
 
 ```js
@@ -403,7 +403,7 @@ userResource.get({userId: 1});
 ```
 
 ## Dane do json
-* git checkout slide-11
+* `git checkout slide-11`
 * pliki:
  * nowa zależność: index.html & script/angular/angular-resource.js
  * dane: data/people
@@ -419,8 +419,8 @@ workshop.factory("People", function($resource){
 ## Podsumowanie
 * kontroler?
 * widok?
-* route?
-* serice?
+* router?
+* service?
 
 ## Materiały do nauki
 * [AngularJs codecademy - widoki](http://www.codecademy.com/courses/javascript-advanced-en-2hJ3J)
@@ -429,7 +429,7 @@ workshop.factory("People", function($resource){
 
 ## Co dalej?
 
-Pierwsze warsztaty będą wprowadzeniem do świata frontendowych aplikacji. Następne spotkania będą poruszać takie tematy jak:
+Pierwsze warsztaty będą wprowadzeniem do świata frontendowych aplikacji. Następne spotkania będą poruszać takie tematy, jak:
 
 * pisanie własnych filtrów i directives
 * korzystanie z animacji
