@@ -2,8 +2,7 @@
 layout: default
 category: presentation
 title: Automation in AngularJs - Las Palmas Dev Ops
-# videoId: 9sDiy0QIVuA
-# slideShareId: 19963430
+slideShareId: 44620848
 tags: [AngularJs, Las Palmas Dev Ops, Las Palmas]
 ---
 # AngularJs
