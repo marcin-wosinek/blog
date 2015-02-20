@@ -8,9 +8,9 @@ tags: [AngularJs, Las Palmas Dev Ops, Las Palmas]
 # AngularJs
 ## Who am I?
 * Marcin Wosinek
-* 7 years IT experience, along the way I've learned
+* 7-years IT experience, along the way I've learned
  * C# dev: UnitTests
- * WebDev: pain of spagetti code
+ * WebDev: pain of spaghetti code
 * from Poland, currently based in Las Palmas
 * remote contractor for Softwear from Amsterdam, Netherlands
 
@@ -38,9 +38,9 @@ tags: [AngularJs, Las Palmas Dev Ops, Las Palmas]
 * pretty comfortable plateau of productivity
 * internal complexity leaks when we start writing own directives or have 1000+ bindings at page
 
-## Softwear loop
-* code is written, build & tested
-* only after passing all tests (automatic or manual) gives us reason to trust the code
+## Software loop
+* code is written, built & tested
+* only after passing all tests (automatic or manual) it gives us a reason to trust the code
 
 ## Recycling 
 * we need to make effort to keep order
@@ -55,12 +55,12 @@ tags: [AngularJs, Las Palmas Dev Ops, Las Palmas]
 * feedback from integration below 15 min
 
 ## Previous project
-* 400-500 unit tests => 10s/2min
-* integration (manual, understaffed) => 3days-3weeks (max 6 months)
+* 400-500 unit tests => 10s to 2min
+* integration (manual, understaffed) => from 3 days to 3 weeks (max 6 months)
 
 ## 3rd party code update fail
 * angular-ui, angular-select2 etc.
-* application used every january:( sometime during the year we break it, and learned that next time when user came
+* application used every january:( sometime during the year we broke it, and learned that next time when user came
 
 ## Profits/costs
 * we save time, and prevent crises
@@ -76,7 +76,7 @@ tags: [AngularJs, Las Palmas Dev Ops, Las Palmas]
 * reusable code patterns
 
 ## example code structure for angular
-* sub generator take care of fitting new files into that structure
+* sub generator takes care of fitting new files into that structure
 
 ## core team supports generators for  
 * backbone
@@ -93,7 +93,7 @@ tags: [AngularJs, Las Palmas Dev Ops, Las Palmas]
 
 ## bower - bower screens
 * module description in bower.json
-* dependecy conflict resolution
+* dependency conflict resolution
 
 ## task menagement
 * automate code build
@@ -134,8 +134,8 @@ tags: [AngularJs, Las Palmas Dev Ops, Las Palmas]
 ## JShint example output
 
 ## Jasmine
-* bdd test framework
-* play nicely in tdd
+* BDD test framework
+* play nicely in TDD
 * nice flexible syntax
 * almost plain english test reports
 * good to install 'jasmine-expect':
@@ -152,8 +152,8 @@ tags: [AngularJs, Las Palmas Dev Ops, Las Palmas]
 ## Phantomjs & dependants
 * webkit browser with (only) js interface
 * headless and scriptable browser
-* casperjs - wrapper on phantomjs, makes api easier to work wiht
-* pageres - cli tool to taking page screens at different resolution
+* casperjs - wrapper on phantomjs, makes api easier to work with
+* pageres - CLI tool to take page screens at different resolution
 
 ## Frisby
 * npm module for testing http api
@@ -163,20 +163,20 @@ tags: [AngularJs, Las Palmas Dev Ops, Las Palmas]
 * (almost) all tools are written in js
 * server side js
 * npm as a dependency manager
-* nvm - cli utility that takes care of managin multiple node version at the same machine
+* nvm - CLI utility that takes care of managin multiple node version at the same machine
 
 ## Dependency tree @ npm
 * nested dependency tree
-* same module can exist in different version
+* the same module can exist in different version
 
 ## CI
 * all QA task should be run as part of CI process
-* projects at github plays nicely with travis-ci
+* projects at GitHub plays nicely with travis-ci
 
 ## Release flow
 * code is kept in source repo
 * after build, code is pushed to separate git repo
-* code is available for bower/npm etc
+* code is available for bower/npm, etc
 * "poor man's artifact repository"
 
 ## Semver
@@ -208,4 +208,4 @@ tags: [AngularJs, Las Palmas Dev Ops, Las Palmas]
 
 ## Contact
 * [marcin.wosinek+lpa@gmail.com](mailto:marcin.wosinek+lpa@gmail.com)
-* [@MarcinWosine](https://twitter.com/MarcinWosine)
+* [@MarcinWosinek](https://twitter.com/MarcinWosinek)
