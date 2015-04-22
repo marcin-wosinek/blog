@@ -5,6 +5,12 @@ title: Marcin Wosinek - blog
 # Hello World
 I'm Marcin Wosinek \[MAR-chin vo-SHE-neck\]. I post here slides, notes and videos of IT presentations I'm giving. Some of the posts are in Polish.
 
+## Do you have some issue related to my experties?
+
+Contact me on codementor!
+
+[![Book session on Codementor](https://cdn.codementor.io/badges/book_session_github.svg)](https://www.codementor.io/marcin.wosinek)
+
 ## Topics
 I'm really excited about 'put more logic in broser js' trend so mostly I speak about that stuff. I enjoy AngularJs framework for it's wonderful testability, out of the box two way bindings and directives - therefore most of my presentations are somewhere around AngularJs. 
 
