@@ -3,6 +3,9 @@ layout: default
 category: presentation
 title: The angular way - MeetJs Summit
 videoId: ZqZ9MGzietg
+slideShareId: 3QYDRW1s51ySFd
+slideShareTitle: The angular way 19 october 2013 Gdańsk
+slideShareHref: http://www.slideshare.net/MarcinWosinek/the-angular-way-19-october-2013-gdask
 tags: [AngularJs, angular way, MeetJs, Gdańsk]
 ---
 # The angular way
